@@ -1,0 +1,676 @@
+<BlackBox.GOStateMachine Version="1.0.0.16">
+	<State FullName="::Revive/Revive/WaitForRevive" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="Pawn_Multi_LyingIdle" />
+		<Parameter Name="layerStateID" Value="Pawn_Generic_Aim" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="0" />
+		<Event Name="down sound first" Type="CGOStateEventSound" Start="0" End="0">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="3" />
+			<Parameter Name="soundToPlay" Value="20" />
+			<Parameter Name="soundTarget" Value="0" />
+		</Event>
+		<Event Name="down sound third" Type="CGOStateEventSound" Start="0" End="0">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="3" />
+			<Parameter Name="soundToPlay" Value="21" />
+			<Parameter Name="soundTarget" Value="1" />
+		</Event>
+		<Event Name="Show down UI" Type="CGOStateEventPawn" Start="0" End="1">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="12" />
+			<Parameter Name="simpleEventID" Value="show_down_ui" />
+		</Event>
+		<Event Name="Hide down UI" Type="CGOStateEventPawn" Start="99" End="100">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="1" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="12" />
+			<Parameter Name="simpleEventID" Value="hide_down_ui" />
+		</Event>
+		<Event Name="validate revive" Type="CGOStateEventFCXPawn" Start="0" End="1">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="5" />
+		</Event>
+	</State>
+	<State FullName="::Revive/Revive/GetUp" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="1" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="0" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Event Name="Stop Down FX" Type="CGOStateEventMovie" Start="90" End="90">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="movieName" Value="downfx" />
+			<Parameter Name="requestType" Value="4" />
+		</Event>
+		<Event Name="Force Displacement" Type="CGOStateEventPawn" Start="0" End="0">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="26" />
+			<Parameter Name="simpleEventID" Value="" />
+		</Event>
+		<Event Name="Unforce Displacement" Type="CGOStateEventPawn" Start="100" End="100">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="1" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="27" />
+			<Parameter Name="simpleEventID" Value="" />
+		</Event>
+		<Event Name="cinematic beautifier" Type="CGOStateEventBeautifier" Start="0" End="1">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="action" Value="1" />
+			<Parameter Name="context" Value="cinematic" />
+		</Event>
+		<Sink Name="unstun" Start="0" End="100">
+			<Connection Target="::Revive/Revive/GetUpOnFeet" Signal="stun_recover" />
+		</Sink>
+	</State>
+	<State FullName="::Revive/Revive/FallDown" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="Pawn_Multi_DieBeforeRevive" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Connection Target="::Revive/Revive/ToLying" />
+		<Event Name="set beautifier" Type="CGOStateEventBeautifier" Start="0" End="0">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="action" Value="1" />
+			<Parameter Name="context" Value="revive" />
+		</Event>
+		<Event Name="set input" Type="CGOStateEventInput" Start="0" End="0">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="1" />
+			<Parameter Name="actionMapName" Value="waitForRevive_multiplayer" />
+		</Event>
+		<Event Name="pawn down" Type="CGOStateEventGameRules" Start="0" End="0">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="1" />
+		</Event>
+		<Event Name="down sound first" Type="CGOStateEventSound" Start="0" End="0">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="3" />
+			<Parameter Name="soundToPlay" Value="18" />
+			<Parameter Name="soundTarget" Value="0" />
+		</Event>
+		<Event Name="down sound third" Type="CGOStateEventSound" Start="0" End="0">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="3" />
+			<Parameter Name="soundToPlay" Value="19" />
+			<Parameter Name="soundTarget" Value="1" />
+		</Event>
+		<Event Name="invulnerability counter" Type="CGOStateEventPawn" Start="0" End="1">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="12" />
+			<Parameter Name="simpleEventID" Value="start_revive_invulnerable_counter" />
+		</Event>
+		<Event Name="Holster weapon" Type="CGOStateEventInventory" Start="20" End="21">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="1" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="4" />
+			<Parameter Name="simpleEventID" Value="" />
+		</Event>
+		<Event Name="Down FX" Type="CGOStateEventMovie" Start="0" End="1">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="movieName" Value="downfx" />
+			<Parameter Name="requestType" Value="3" />
+		</Event>
+		<Event Name="Kill gesture" Type="CGOStateEventPawn" Start="0" End="1">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="25" />
+			<Parameter Name="simpleEventID" Value="" />
+		</Event>
+		<Event Name="Enable Interrupts" Type="CGOStateEventSM" Start="0" End="1">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="2" />
+			<Parameter Name="signalName" Value="" />
+		</Event>
+	</State>
+	<State FullName="::Revive/Revive/DoRevive" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="Pawn_Generic_Revive_Sync" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Connection Target="::Revive/External States/Main Avatar/Common/xIdle" />
+		<Event Name="reset look" Type="CGOStateEventPawn" Start="75" End="75">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="1" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="12" />
+			<Parameter Name="simpleEventID" Value="reset_vertical_look" />
+		</Event>
+		<Event Name="cinematic" Type="CGOStateEventBeautifier" Start="0" End="1">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="action" Value="1" />
+			<Parameter Name="context" Value="cinematic" />
+		</Event>
+		<Event Name="standard" Type="CGOStateEventBeautifier" Start="100" End="100">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="1" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="action" Value="1" />
+			<Parameter Name="context" Value="standard" />
+		</Event>
+		<Event Name="holster" Type="CGOStateEventInventory" Start="0" End="1">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="4" />
+			<Parameter Name="simpleEventID" Value="" />
+		</Event>
+		<Event Name="Force Displacement" Type="CGOStateEventPawn" Start="0" End="0">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="26" />
+			<Parameter Name="simpleEventID" Value="" />
+		</Event>
+		<Event Name="Unforce Displacement" Type="CGOStateEventPawn" Start="100" End="100">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="1" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="27" />
+			<Parameter Name="simpleEventID" Value="" />
+		</Event>
+		<Event Name="GetUp sound first" Type="CGOStateEventSound" Start="0" End="0">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="3" />
+			<Parameter Name="soundToPlay" Value="22" />
+			<Parameter Name="soundTarget" Value="0" />
+		</Event>
+		<Event Name="GetUp sound third" Type="CGOStateEventSound" Start="0" End="0">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="3" />
+			<Parameter Name="soundToPlay" Value="23" />
+			<Parameter Name="soundTarget" Value="1" />
+		</Event>
+	</State>
+	<State FullName="::Revive/Revive/Purgatory" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="8" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="0" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Connection Target="::Revive/Revive/DeathSequenceCompleted" />
+	</State>
+	<State FullName="::Revive/Revive/Ragdoll_Multi" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="1.5" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="1" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="Pawn_Multi_HitReaction" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="-2" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="0" />
+		<Connection Target="::Revive/Revive/DieRagdoll" />
+		<Event Name="Holster" Type="CGOStateEventInventory" Start="20" End="20">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="1" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="4" />
+			<Parameter Name="simpleEventID" Value="" />
+		</Event>
+		<Sink Name="Sink1" Start="0" End="100">
+			<Connection Target="::Revive/Revive/DieRagdoll" Signal="onground" />
+		</Sink>
+	</State>
+	<State FullName="::Revive/Revive/DeathSequenceCompleted" Type="CGOState">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Event Name="Default beautifier" Type="CGOStateEventBeautifier" Start="0" End="1">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="action" Value="1" />
+			<Parameter Name="context" Value="standard" />
+		</Event>
+		<Event Name="Stop Death FX" Type="CGOStateEventMovie" Start="0" End="1">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="movieName" Value="DieFX" />
+			<Parameter Name="requestType" Value="4" />
+		</Event>
+		<Event Name="Stop Down FX" Type="CGOStateEventMovie" Start="0" End="1">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="movieName" Value="downfx" />
+			<Parameter Name="requestType" Value="4" />
+		</Event>
+		<Event Name="Try Spectate" Type="CGOStateEventGameRules" Start="0" End="0">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="2" />
+		</Event>
+		<Sink Name="Spectate" Start="0" End="100">
+			<Connection Target="::Revive/Revive/Spectate" Signal="spectate_now" />
+		</Sink>
+	</State>
+	<State FullName="::Revive/Revive/Holster" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="0" />
+		<Parameter Name="layerStateID" Value="Pawn_Generic_Holster" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Connection Target="::Revive/Revive/DoRevive" />
+	</State>
+	<State FullName="::Revive/Revive/GetUpOnFeet" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="Pawn_Generic_Revive_GetUp_FromSync" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Connection Target="::Revive/External States/Main Avatar/Common/xIdle" />
+		<Event Name="standard beautifier" Type="CGOStateEventBeautifier" Start="100" End="100">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="1" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="action" Value="1" />
+			<Parameter Name="context" Value="standard" />
+		</Event>
+		<Event Name="multiplayer input" Type="CGOStateEventInput" Start="99" End="100">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="1" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="1" />
+			<Parameter Name="actionMapName" Value="multiplayer" />
+		</Event>
+	</State>
+	<State FullName="::Revive/Revive/DieRagdoll" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="Pawn_Multi_DieRagdoll" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Connection Target="::Revive/Revive/Purgatory" />
+	</State>
+	<State FullName="::Revive/Revive/ToLying" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="Pawn_Multi_GoToLying" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Connection Target="::Revive/Revive/WaitForRevive" />
+	</State>
+	<State FullName="::Revive/Revive/Spectate" Type="CGOState">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0.1" />
+		<Parameter Name="signalpriorities" />
+		<Event Name="Spectator Cam" Type="CGOStateEventCamera" Start="0" End="0">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="cameraName" Value="Cameras.Camera.Spectator" />
+			<Parameter Name="requestType" Value="3" />
+		</Event>
+		<Event Name="Show Death UI" Type="CGOStateEventPawn" Start="100" End="100">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="12" />
+			<Parameter Name="simpleEventID" Value="show_death_ui" />
+		</Event>
+		<Event Name="Spectator Action Map" Type="CGOStateEventInput" Start="0" End="0">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="1" />
+			<Parameter Name="actionMapName" Value="fixed_spectator_camera" />
+		</Event>
+		<Event Name="Reset PostFX" Type="CGOStateEventMovie" Start="0" End="1">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="movieName" Value="PostFx.Rescue.FadeOut" />
+			<Parameter Name="requestType" Value="5" />
+		</Event>
+	</State>
+	<State FullName="::Revive/Revive/ReviveGetUpInPlace" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="Pawn_Generic_Revive_GetUp" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Connection Target="::Revive/External States/Main Avatar/Common/xIdle" />
+		<Event Name="standard beautifier" Type="CGOStateEventBeautifier" Start="99" End="100">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="1" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="action" Value="1" />
+			<Parameter Name="context" Value="standard" />
+		</Event>
+		<Event Name="stop down fx" Type="CGOStateEventMovie" Start="90" End="90">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="movieName" Value="downfx" />
+			<Parameter Name="requestType" Value="4" />
+		</Event>
+		<Event Name="cinematic beautifier" Type="CGOStateEventBeautifier" Start="0" End="1">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="action" Value="1" />
+			<Parameter Name="context" Value="cinematic" />
+		</Event>
+		<Event Name="multiplayer input" Type="CGOStateEventInput" Start="99" End="100">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="1" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="1" />
+			<Parameter Name="actionMapName" Value="multiplayer" />
+		</Event>
+	</State>
+	<State FullName="::Revive/Revive/DoReviveInPlace" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="Pawn_Generic_Movement" />
+		<Parameter Name="layerStateID" Value="Pawn_Generic_Revive_Tag" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Connection Target="::Revive/External States/Main Avatar/Common/xIdle" />
+		<Event Name="cinematic input" Type="CGOStateEventInput" Start="0" End="1">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="2" />
+			<Parameter Name="actionMapName" Value="cinematic" />
+		</Event>
+		<Event Name="remove cinematic" Type="CGOStateEventInput" Start="99" End="100">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="1" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="5" />
+			<Parameter Name="actionMapName" Value="cinematic" />
+		</Event>
+		<Event Name="getup sound first" Type="CGOStateEventSound" Start="0" End="1">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="3" />
+			<Parameter Name="soundToPlay" Value="22" />
+			<Parameter Name="soundTarget" Value="0" />
+		</Event>
+		<Event Name="getup sound third" Type="CGOStateEventSound" Start="0" End="1">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="3" />
+			<Parameter Name="soundToPlay" Value="23" />
+			<Parameter Name="soundTarget" Value="1" />
+		</Event>
+	</State>
+	<Group FullName="::Revive/Revive/Allow revive" Type="BaseGroup">
+		<StateRef Path="::Revive/External States/Main Avatar/Common/xIdle" />
+		<StateRef Path="::Revive/External States/Main Avatar/Common/xIdleCycleBreaker" />
+		<StateRef Path="::Revive/External States/Main Avatar/Common/xStun" />
+		<Sink Name="do revive" Start="0" End="100">
+			<Connection Target="::Revive/Revive/Holster" Signal="do_revive" />
+		</Sink>
+		<Sink Name="do revive in place" Start="0" End="100">
+			<Connection Target="::Revive/Revive/DoReviveInPlace" Signal="do_revive_in_place" />
+		</Sink>
+	</Group>
+	<Group FullName="::Revive/Revive/Incapacitated" Type="BaseGroup">
+		<StateRef Path="::Revive/Revive/FallDown" />
+		<StateRef Path="::Revive/Revive/WaitForRevive" />
+		<StateRef Path="::Revive/Revive/ToLying" />
+		<Event Name="restore input" Type="CGOStateEventInput" Position="End">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="1" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="1" />
+			<Parameter Name="actionMapName" Value="multiplayer" />
+		</Event>
+		<Event Name="suicide" Type="CGOStateEventFCXPawn" Start="0" End="100" Signal="suicide">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="2" />
+		</Event>
+		<Sink Name="death" Start="0" End="100">
+			<Connection Target="::Revive/Revive/DieRagdoll" Signal="revive_start_ragdoll" />
+		</Sink>
+	</Group>
+	<Group FullName="::Revive/Revive/DeathSequence" Type="BaseGroup">
+		<StateRef Path="::Revive/Revive/Ragdoll_Multi" />
+		<StateRef Path="::Revive/Revive/DieRagdoll" />
+		<StateRef Path="::Revive/Revive/Purgatory" />
+		<Event Name="Death FX" Type="CGOStateEventMovie" Position="Begin">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="movieName" Value="DieFX" />
+			<Parameter Name="requestType" Value="3" />
+		</Event>
+		<Event Name="Beautifier" Type="CGOStateEventBeautifier" Position="Begin">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="action" Value="1" />
+			<Parameter Name="context" Value="revive" />
+		</Event>
+		<Event Name="Disable interrupts" Type="CGOStateEventSM" Position="Begin">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="1" />
+			<Parameter Name="signalName" Value="" />
+		</Event>
+		<Event Name="Pawn died" Type="CGOStateEventGameRules" Position="Begin">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+		</Event>
+		<Event Name="Hide obj indicators" Type="CGOStateEventPawn" Position="Begin">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="12" />
+			<Parameter Name="simpleEventID" Value="hide_obj_indicators" />
+		</Event>
+		<Event Name="Show obj indicators" Type="CGOStateEventPawn" Position="End">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="12" />
+			<Parameter Name="simpleEventID" Value="show_obj_indicators" />
+		</Event>
+	</Group>
+	<Group FullName="::Revive/Revive/Reviving" Type="BaseGroup">
+		<StateRef Path="::Revive/Revive/DoRevive" />
+		<StateRef Path="::Revive/Revive/DoReviveInPlace" />
+		<StateRef Path="::Revive/Revive/Holster" />
+		<Event Name="revive done" Type="CGOStateEventPawn" Position="End">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="12" />
+			<Parameter Name="simpleEventID" Value="revive_done" />
+		</Event>
+	</Group>
+	<Group FullName="::Revive/Revive/GroupDeathSequenceCompleted" Type="BaseGroup">
+		<StateRef Path="::Revive/Revive/DeathSequenceCompleted" />
+		<StateRef Path="::Revive/Revive/Spectate" />
+	</Group>
+	<State FullName="::Revive/External States/Main Avatar/Common/xIdle" Type="CGOExternalState">
+		<Parameter Name="refState" Value="::Main Avatar/Common/Idle" />
+	</State>
+	<State FullName="::Revive/External States/Main Avatar/Common/xIdleCycleBreaker" Type="CGOExternalState">
+		<Parameter Name="refState" Value="::Main Avatar/Common/IdleCycleBreaker" />
+	</State>
+	<State FullName="::Revive/External States/Main Avatar/Common/xStun" Type="CGOExternalState">
+		<Parameter Name="refState" Value="::Main Avatar/Common/Stun" />
+	</State>
+	<State FullName="::Revive/External States/Main Avatar/Common/Death/xDie" Type="CGOExternalState">
+		<Parameter Name="refState" Value="::Main Avatar/Common/Death/Die" />
+		<Event Name="try revive" Type="CGOStateEventFCXPawn" Start="0" End="0">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="0" />
+		</Event>
+		<Sink Name="wait revive" Start="0" End="100">
+			<Connection Target="::Revive/Revive/FallDown" Signal="wait_for_revive" />
+		</Sink>
+		<Sink Name="instant death" Start="0" End="100">
+			<Connection Target="::Revive/Revive/Ragdoll_Multi" Signal="revive_start_ragdoll" />
+		</Sink>
+	</State>
+</BlackBox.GOStateMachine>

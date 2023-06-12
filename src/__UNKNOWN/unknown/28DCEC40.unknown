@@ -1,0 +1,5 @@
+<CMaterialResource ID="graphics\_materials\jfcarrier2-m-1711200856518995.xbm" crc_ID="1328656251">
+	<CTextureResource ID="graphics\vehicles\air\veh_glider\intel_d.xbt" crc_ID="3298703754" />
+	<CTextureResource ID="graphics\_textures\specular\nylon01_s.xbt" crc_ID="108627841" />
+	<CTextureResource ID="graphics\vehicles\air\veh_glider\glider01_n.xbt" crc_ID="483871460" />
+</CMaterialResource>

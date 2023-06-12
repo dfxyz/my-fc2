@@ -1,0 +1,77 @@
+<package>
+	<configuration>
+		<MAINMENU_OPTION_BRIGHTNESS>
+			<navbar>
+				<default>
+					<b_prompt1 show="1" text="Generic;ACCEPT" />
+					<b_prompt4 show="1" text="Generic;CANCEL" />
+				</default>
+			</navbar>
+		</MAINMENU_OPTION_BRIGHTNESS>
+		<MAINMENU_OPTIONGAME_PAGE_PC>
+			<navbar name="p_prompts_navbar">
+				<default>
+					<b_prompt2 show="1" text="Generic;APPLY" />
+					<b_prompt3 show="2" text="Generic;DEFAULT" />
+				</default>
+			</navbar>
+		</MAINMENU_OPTIONGAME_PAGE_PC>
+		<MAINMENU_OPTION_NETWORK>
+			<navbar name="p_prompts_navbar">
+				<default>
+					<b_prompt2 show="1" text="Generic;APPLY" />
+					<b_prompt3 show="2" text="Generic;DEFAULT" />
+				</default>
+			</navbar>
+		</MAINMENU_OPTION_NETWORK>
+		<MAINMENU_OPTIONGAME_PAGE>
+			<navbar name="p_prompts_navbar">
+				<default>
+					<b_prompt2 show="1" text="Generic;APPLY" />
+					<b_prompt3 show="2" text="Generic;DEFAULT" />
+				</default>
+			</navbar>
+		</MAINMENU_OPTIONGAME_PAGE>
+		<MAINMENU_OPTION_DISPLAY_PC_PAGE>
+			<navbar name="p_prompts_navbar">
+				<default>
+					<b_prompt2 show="1" text="Generic;APPLY" />
+					<b_prompt3 show="2" text="Generic;DEFAULT" />
+				</default>
+			</navbar>
+		</MAINMENU_OPTION_DISPLAY_PC_PAGE>
+		<MAINMENU_OPTIONPERF_PAGE>
+			<navbar name="p_prompts_navbar">
+				<default>
+					<b_prompt2 show="1" text="Generic;APPLY" />
+					<b_prompt3 show="2" text="Generic;DEFAULT" />
+				</default>
+			</navbar>
+		</MAINMENU_OPTIONPERF_PAGE>
+		<MAINMENU_OPTIONSOUND_PAGE>
+			<navbar name="p_prompts_navbar">
+				<default>
+					<b_prompt2 show="1" text="Generic;APPLY" />
+					<b_prompt3 show="2" text="Generic;DEFAULT" />
+				</default>
+			</navbar>
+		</MAINMENU_OPTIONSOUND_PAGE>
+		<MAINMENU_OPTION_DISPLAY_CONSOLE_PAGE>
+			<navbar name="p_prompts_navbar">
+				<default>
+					<b_prompt2 show="1" text="Generic;APPLY" />
+					<b_prompt3 show="2" text="Generic;DEFAULT" />
+				</default>
+			</navbar>
+		</MAINMENU_OPTION_DISPLAY_CONSOLE_PAGE>
+	</configuration>
+	<dependencies>
+		<CMagmaConfigUIResource ID="ui\localized\pc\eng\ui\options.mgb.desc" crc_ID="1766041805" version="2">
+			<CMagmaUIResource ID="ui\localized\pc\eng\ui\options.mgb" crc_ID="3136939932" />
+			<CMagmaConfigUIResource ID="ui\localized\pc\eng\ui\fonts.mgb.desc" crc_ID="615711406" />
+			<CMagmaConfigUIResource ID="ui\localized\pc\eng\ui\common.mgb.desc" crc_ID="3065158306" />
+			<CTextureResource ID="ui\textures\common\option_sketch.xbt" crc_ID="1106929129" />
+			<CTextureResource ID="ui\textures\common\brightness_lines.xbt" crc_ID="238881166" />
+		</CMagmaConfigUIResource>
+	</dependencies>
+</package>

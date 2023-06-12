@@ -1,0 +1,1400 @@
+<BlackBox.GOStateMachine Version="1.0.0.16">
+	<State FullName="::BuddyDown/Player/CradleIdle2" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="1" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="pawn_buddydown_cradleidle2" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Sink Name="SwitchCradleExecute" Start="0" End="100">
+			<Connection Target="::BuddyDown/Player/States/CradleToExecute" Signal="BuddyDown_TrySwitchCradleExecute" />
+		</Sink>
+		<Sink Name="BuddyExit" Start="0" End="100">
+			<Connection Target="::BuddyDown/Player/States/CradleExit" Signal="BuddyDown_Exit" />
+		</Sink>
+		<Sink Name="Degenerate1" Start="0" End="100">
+			<Connection Target="::BuddyDown/Player/States/Degenerate1" Signal="BuddyDown_Degenerate1" />
+		</Sink>
+		<Sink Name="Degenerate2" Start="0" End="100">
+			<Connection Target="::BuddyDown/Player/States/Degenerate2" Signal="BuddyDown_Degenerate2" />
+		</Sink>
+		<Sink Name="BuddyHeal" Start="0" End="100">
+			<Connection Target="::BuddyDown/Player/States/CradleHeal" Signal="BuddyDown_HealBuddy" />
+		</Sink>
+		<Sink Name="BuddyOverdose" Start="0" End="100">
+			<Connection Target="::BuddyDown/Player/States/CradleDie" Signal="BuddyDown_Overdose" />
+		</Sink>
+	</State>
+	<State FullName="::BuddyDown/Player/CradleIdle1" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="1" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="pawn_buddydown_cradleidle1" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Sink Name="SwitchCradleExecute" Start="0" End="100">
+			<Connection Target="::BuddyDown/Player/States/CradleToExecute" Signal="BuddyDown_TrySwitchCradleExecute" />
+		</Sink>
+		<Sink Name="BuddyExit" Start="0" End="100">
+			<Connection Target="::BuddyDown/Player/States/CradleExit" Signal="BuddyDown_Exit" />
+		</Sink>
+		<Sink Name="Degenerate1" Start="0" End="100">
+			<Connection Target="::BuddyDown/Player/States/Degenerate1" Signal="BuddyDown_Degenerate1" />
+		</Sink>
+		<Sink Name="Degenerate2" Start="0" End="100">
+			<Connection Target="::BuddyDown/Player/States/Degenerate2" Signal="BuddyDown_Degenerate2" />
+		</Sink>
+		<Sink Name="BuddyHeal" Start="0" End="100">
+			<Connection Target="::BuddyDown/Player/States/CradleHeal" Signal="BuddyDown_HealBuddy" />
+		</Sink>
+		<Sink Name="BuddyOverdose" Start="0" End="100">
+			<Connection Target="::BuddyDown/Player/States/CradleDie" Signal="BuddyDown_Overdose" />
+		</Sink>
+	</State>
+	<State FullName="::BuddyDown/Player/ExecuteExitChin" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="pawn_buddydown_cradlegunchinexit" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Connection Target="::BuddyDown/External States/Main Avatar/xIdle" />
+		<Event Name="ExecuteToNeutral" Type="CGOStateEventBuddyDown" Start="100" End="100">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="1" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="4" />
+		</Event>
+		<Event Name="Enable interaction" Type="CGOStateEventBuddyDown" Start="99" End="100">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="1" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="1" />
+		</Event>
+	</State>
+	<State FullName="::BuddyDown/Player/ExecuteBuddyChin" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="pawn_buddydown_cradlegunchinexecute" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Connection Target="::BuddyDown/External States/Main Avatar/xIdle" />
+		<Event Name="BuddyDied" Type="CGOStateEventBuddyDown" Start="100" End="100">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="1" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="6" />
+		</Event>
+		<Event Name="BarkExecute" Type="CGOStateEventBuddyDown" Start="0" End="1">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="13" />
+		</Event>
+	</State>
+	<State FullName="::BuddyDown/Player/ExecuteChinToCradle" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="pawn_buddydown_cradlegunchintosyrette" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Connection Target="::BuddyDown/Player/States/CradleIdle" />
+		<Event Name="Holster weapon" Type="CGOStateEventInventory" Start="50" End="50">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="4" />
+			<Parameter Name="simpleEventID" Value="" />
+		</Event>
+	</State>
+	<State FullName="::BuddyDown/Player/CradleGunChinIdle" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="1" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="pawn_buddydown_cradlegunchinidle" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Event Name="Try Heal" Type="CGOStateEventBuddyDown" Start="0" End="100" Signal="BuddyDown_TrySwitchCradleExecute">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="9" />
+		</Event>
+		<Sink Name="ExecuteBuddy" Start="0" End="100">
+			<Connection Target="::BuddyDown/Player/ExecuteBuddyChin" Signal="BuddyDown_ExecuteBuddy" />
+		</Sink>
+		<Sink Name="SwitchCradleExecute" Start="0" End="100">
+			<Connection Target="::BuddyDown/Player/ExecuteChinToCradle" Signal="BuddyDown_SwitchCradleExecute" />
+		</Sink>
+		<Sink Name="BuddyExit" Start="0" End="100">
+			<Connection Target="::BuddyDown/Player/ExecuteExitChin" Signal="BuddyDown_Exit" />
+		</Sink>
+	</State>
+	<State FullName="::BuddyDown/Player/CradleGunAwayToChin" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="1" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="pawn_buddydown_cradlegunawaytochin" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Connection Target="::BuddyDown/Player/CradleGunChinIdle" />
+	</State>
+	<Group FullName="::BuddyDown/Player/BuddyDownIdleGroup" Type="BaseGroup">
+		<StateRef Path="::BuddyDown/External States/Main Avatar/xIdle" />
+		<StateRef Path="::BuddyDown/External States/Main Avatar/xIdleCycleBreaker" />
+		<Sink Name="CradleEntry" Start="0" End="100">
+			<Connection Target="::BuddyDown/Player/States/CradleEntry" Signal="BuddyDown_CradleEntry" />
+		</Sink>
+		<Sink Name="Cradle Entry Gun" Start="0" End="100">
+			<Connection Target="::BuddyDown/Player/States/CradleEntryGun" Signal="BuddyDown_CradleEntryGun" />
+		</Sink>
+	</Group>
+	<Group FullName="::BuddyDown/Player/AllBuddyDown" Type="BaseGroup">
+		<StateRef Path="::BuddyDown/Player/CradleIdle2" />
+		<StateRef Path="::BuddyDown/Player/CradleIdle1" />
+		<StateRef Path="::BuddyDown/Player/ExecuteExitChin" />
+		<StateRef Path="::BuddyDown/Player/ExecuteBuddyChin" />
+		<StateRef Path="::BuddyDown/Player/ExecuteChinToCradle" />
+		<StateRef Path="::BuddyDown/Player/CradleGunChinIdle" />
+		<StateRef Path="::BuddyDown/Player/CradleGunAwayToChin" />
+		<StateRef Path="::BuddyDown/Player/States/CradleEntry" />
+		<StateRef Path="::BuddyDown/Player/States/CradleEntryGun" />
+		<StateRef Path="::BuddyDown/Player/States/CradleIdle" />
+		<StateRef Path="::BuddyDown/Player/States/CradleHeal" />
+		<StateRef Path="::BuddyDown/Player/States/Degenerate1" />
+		<StateRef Path="::BuddyDown/Player/States/Degenerate2" />
+		<StateRef Path="::BuddyDown/Player/States/CradleDie" />
+		<StateRef Path="::BuddyDown/Player/States/CradleGunAwayIdle" />
+		<StateRef Path="::BuddyDown/Player/States/ExecuteBuddy" />
+		<StateRef Path="::BuddyDown/Player/States/CradleExit" />
+		<StateRef Path="::BuddyDown/Player/States/CradleToExecute" />
+		<StateRef Path="::BuddyDown/Player/States/ExecuteToCradle" />
+		<StateRef Path="::BuddyDown/Player/States/ExecuteExit" />
+		<Event Name="enable near Z for buddy" Type="CGOStateEventPawn" Position="Begin">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="16" />
+			<Parameter Name="simpleEventID" Value="" />
+		</Event>
+		<Event Name="disable near Z for buddy" Type="CGOStateEventPawn" Position="End">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="17" />
+			<Parameter Name="simpleEventID" Value="" />
+		</Event>
+		<Event Name="no control beautifier" Type="CGOStateEventBeautifier" Position="Begin">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="action" Value="1" />
+			<Parameter Name="context" Value="firstnocontrol" />
+		</Event>
+		<Event Name="standard beautifier" Type="CGOStateEventBeautifier" Position="End">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="action" Value="1" />
+			<Parameter Name="context" Value="standard" />
+		</Event>
+		<Event Name="draw weapon" Type="CGOStateEventInventory" Position="End">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="3" />
+			<Parameter Name="simpleEventID" Value="" />
+		</Event>
+		<Event Name="remove props" Type="CGOStateEventInventory" Position="End">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="26" />
+			<Parameter Name="simpleEventID" Value="" />
+		</Event>
+		<Event Name="player exit" Type="CGOStateEventBuddyDown" Position="End">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="19" />
+		</Event>
+		<Event Name="holster weapons" Type="CGOStateEventInventory" Position="Begin">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="4" />
+			<Parameter Name="simpleEventID" Value="" />
+		</Event>
+		<Sink Name="Sink1" Start="0" End="100">
+			<Connection Target="::BuddyDown/Player/States/BuddyDownInterruption" Signal="die" />
+		</Sink>
+	</Group>
+	<State FullName="::BuddyDown/Player/States/CradleEntry" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="pawn_buddydown_cradleentry" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Connection Target="::BuddyDown/Player/States/CradleIdle" />
+		<Sink Name="BuddyExit" Start="0" End="100">
+			<Connection Target="::BuddyDown/Player/States/CradleExit" Signal="BuddyDown_Exit" />
+		</Sink>
+	</State>
+	<State FullName="::BuddyDown/Player/States/CradleEntryGun" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="pawn_buddydown_cradleentrygun" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Connection Target="::BuddyDown/Player/States/CradleGunAwayIdle" />
+		<Sink Name="BuddyExit" Start="0" End="100">
+			<Connection Target="::BuddyDown/Player/States/ExecuteExit" Signal="BuddyDown_Exit" />
+		</Sink>
+	</State>
+	<State FullName="::BuddyDown/Player/States/CradleIdle" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="1" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="pawn_buddydown_cradleidle" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Sink Name="SwitchCradleExecute" Start="0" End="100">
+			<Connection Target="::BuddyDown/Player/States/CradleToExecute" Signal="BuddyDown_TrySwitchCradleExecute" />
+		</Sink>
+		<Sink Name="BuddyExit" Start="0" End="100">
+			<Connection Target="::BuddyDown/Player/States/CradleExit" Signal="BuddyDown_Exit" />
+		</Sink>
+		<Sink Name="Degenerate1" Start="0" End="100">
+			<Connection Target="::BuddyDown/Player/States/Degenerate1" Signal="BuddyDown_Degenerate1" />
+		</Sink>
+		<Sink Name="Degenerate2" Start="0" End="100">
+			<Connection Target="::BuddyDown/Player/States/Degenerate2" Signal="BuddyDown_Degenerate2" />
+		</Sink>
+		<Sink Name="BuddyHeal" Start="0" End="100">
+			<Connection Target="::BuddyDown/Player/States/CradleHeal" Signal="BuddyDown_HealBuddy" />
+		</Sink>
+		<Sink Name="BuddyOverdose" Start="0" End="100">
+			<Connection Target="::BuddyDown/Player/States/CradleDie" Signal="BuddyDown_Overdose" />
+		</Sink>
+	</State>
+	<State FullName="::BuddyDown/Player/States/CradleHeal" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="pawn_buddydown_cradlegetheal" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="1" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Connection Target="::BuddyDown/External States/Main Avatar/xIdle" />
+		<Event Name="BarkHealed" Type="CGOStateEventBuddyDown" Start="0" End="1">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="14" />
+		</Event>
+		<Event Name="Buddy Healed" Type="CGOStateEventBuddyDown" Start="100" End="100">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="1" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="5" />
+		</Event>
+	</State>
+	<State FullName="::BuddyDown/Player/States/Degenerate1" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="pawn_buddydown_cradledegenerate1" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Connection Target="::BuddyDown/Player/CradleIdle1" />
+		<Event Name="BarkDegenerate" Type="CGOStateEventBuddyDown" Start="0" End="1">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="12" />
+		</Event>
+	</State>
+	<State FullName="::BuddyDown/Player/States/Degenerate2" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="pawn_buddydown_cradledegenerate2" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Connection Target="::BuddyDown/Player/CradleIdle2" />
+		<Event Name="BarkDegenerate" Type="CGOStateEventBuddyDown" Start="0" End="1">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="12" />
+		</Event>
+	</State>
+	<State FullName="::BuddyDown/Player/States/CradleDie" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="pawn_buddydown_cradledie" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="1" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Connection Target="::BuddyDown/External States/Main Avatar/xIdle" />
+		<Event Name="BuddyDied" Type="CGOStateEventBuddyDown" Start="100" End="100">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="1" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="6" />
+		</Event>
+	</State>
+	<State FullName="::BuddyDown/Player/States/CradleGunAwayIdle" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="1" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="pawn_buddydown_cradlegunawayidles" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Event Name="enable buddy interact" Type="CGOStateEventBuddyDown" Start="0" End="0">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="1" />
+		</Event>
+		<Event Name="try heal" Type="CGOStateEventBuddyDown" Start="0" End="100" Signal="BuddyDown_TrySwitchCradleExecute">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="9" />
+		</Event>
+		<Event Name="Start Cradle Gun Timer" Type="CGOStateEventBuddyDown" Start="0" End="0">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="10" />
+		</Event>
+		<Sink Name="ExecuteBuddy" Start="0" End="100">
+			<Connection Target="::BuddyDown/Player/States/ExecuteBuddy" Signal="BuddyDown_ExecuteBuddy" />
+		</Sink>
+		<Sink Name="SwitchCradleExecute" Start="0" End="100">
+			<Connection Target="::BuddyDown/Player/States/ExecuteToCradle" Signal="BuddyDown_SwitchCradleExecute" />
+		</Sink>
+		<Sink Name="BuddyExit" Start="0" End="100">
+			<Connection Target="::BuddyDown/Player/States/ExecuteExit" Signal="BuddyDown_Exit" />
+		</Sink>
+		<Sink Name="TransitionToChin" Start="0" End="100">
+			<Connection Target="::BuddyDown/Player/CradleGunAwayToChin" Signal="BuddyDown_TransitionToChin" />
+		</Sink>
+	</State>
+	<State FullName="::BuddyDown/Player/States/ExecuteBuddy" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="pawn_buddydown_execute" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Connection Target="::BuddyDown/External States/Main Avatar/xIdle" />
+		<Event Name="BuddyDied" Type="CGOStateEventBuddyDown" Start="100" End="100">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="1" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="6" />
+		</Event>
+		<Event Name="BarkExecute" Type="CGOStateEventBuddyDown" Start="0" End="1">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="13" />
+		</Event>
+	</State>
+	<State FullName="::BuddyDown/Player/States/CradleExit" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="pawn_buddydown_cradleexit" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="1" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Connection Target="::BuddyDown/External States/Main Avatar/xIdle" />
+		<Event Name="CradleToNeutral" Type="CGOStateEventBuddyDown" Start="100" End="100">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="1" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="4" />
+		</Event>
+		<Event Name="Enable interaction" Type="CGOStateEventBuddyDown" Start="99" End="100">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="1" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="1" />
+		</Event>
+	</State>
+	<State FullName="::BuddyDown/Player/States/CradleToExecute" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="pawn_buddydown_cradletoexecuteneutral" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Connection Target="::BuddyDown/Player/States/CradleGunAwayIdle" />
+		<Sink Name="BuddyExit" Start="0" End="100">
+			<Connection Target="::BuddyDown/Player/States/ExecuteExit" Signal="BuddyDown_Exit" />
+		</Sink>
+	</State>
+	<State FullName="::BuddyDown/Player/States/ExecuteToCradle" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="pawn_buddydown_executereturntocradle" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Connection Target="::BuddyDown/Player/States/CradleIdle" />
+		<Event Name="Holster weapon" Type="CGOStateEventInventory" Start="50" End="50">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="4" />
+			<Parameter Name="simpleEventID" Value="" />
+		</Event>
+	</State>
+	<State FullName="::BuddyDown/Player/States/ExecuteExit" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="pawn_buddydown_executeexit" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Connection Target="::BuddyDown/External States/Main Avatar/xIdle" />
+		<Event Name="ExecuteToNeutral" Type="CGOStateEventBuddyDown" Start="100" End="100">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="1" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="4" />
+		</Event>
+		<Event Name="Enable interaction" Type="CGOStateEventBuddyDown" Start="99" End="100">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="1" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="1" />
+		</Event>
+	</State>
+	<State FullName="::BuddyDown/Player/States/BuddyDownInterruption" Type="CGOState">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Connection Target="::BuddyDown/External States/Main Avatar/Death/xDie" />
+		<Event Name="player interruption" Type="CGOStateEventBuddyDown" Start="0" End="1">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="20" />
+		</Event>
+	</State>
+	<Group FullName="::BuddyDown/Player/States/Cinematic States" Type="BaseGroup">
+		<StateRef Path="::BuddyDown/Player/States/CradleEntry" />
+		<StateRef Path="::BuddyDown/Player/States/CradleToExecute" />
+		<StateRef Path="::BuddyDown/Player/States/ExecuteToCradle" />
+		<StateRef Path="::BuddyDown/Player/States/ExecuteBuddy" />
+		<StateRef Path="::BuddyDown/Player/States/CradleHeal" />
+		<StateRef Path="::BuddyDown/Player/States/Degenerate1" />
+		<StateRef Path="::BuddyDown/Player/States/Degenerate2" />
+		<StateRef Path="::BuddyDown/Player/States/CradleExit" />
+		<StateRef Path="::BuddyDown/Player/States/ExecuteExit" />
+		<StateRef Path="::BuddyDown/Player/States/CradleDie" />
+		<StateRef Path="::BuddyDown/Player/States/CradleEntryGun" />
+		<Event Name="cinematic input" Type="CGOStateEventInput" Position="Begin">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="2" />
+			<Parameter Name="actionMapName" Value="cinematic" />
+		</Event>
+		<Event Name="remove cinematic input" Type="CGOStateEventInput" Position="End">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="1" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="5" />
+			<Parameter Name="actionMapName" Value="cinematic" />
+		</Event>
+		<Event Name="disabel buddy interact" Type="CGOStateEventBuddyDown" Start="0" End="0">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="2" />
+		</Event>
+	</Group>
+	<Group FullName="::BuddyDown/Player/States/Exit States" Type="BaseGroup">
+		<StateRef Path="::BuddyDown/Player/States/CradleHeal" />
+		<StateRef Path="::BuddyDown/Player/States/CradleDie" />
+		<StateRef Path="::BuddyDown/Player/States/CradleExit" />
+		<StateRef Path="::BuddyDown/Player/States/ExecuteBuddy" />
+		<StateRef Path="::BuddyDown/Player/States/ExecuteExit" />
+		<StateRef Path="::BuddyDown/Player/ExecuteExitChin" />
+		<StateRef Path="::BuddyDown/Player/ExecuteBuddyChin" />
+		<Event Name="set input default" Type="CGOStateEventInput" Position="End">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="1" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="5" />
+			<Parameter Name="actionMapName" Value="buddydown_cradle" />
+		</Event>
+		<Event Name="remove execute input" Type="CGOStateEventInput" Position="End">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="1" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="5" />
+			<Parameter Name="actionMapName" Value="buddydown_execute" />
+		</Event>
+	</Group>
+	<Group FullName="::BuddyDown/Player/States/Entry States" Type="BaseGroup">
+		<StateRef Path="::BuddyDown/Player/States/CradleEntry" />
+		<StateRef Path="::BuddyDown/Player/States/CradleEntryGun" />
+		<StateRef Path="::BuddyDown/Player/States/CradleToExecute" />
+	</Group>
+	<Group FullName="::BuddyDown/Player/States/CradleActionMap" Type="BaseGroup">
+		<StateRef Path="::BuddyDown/Player/CradleIdle1" />
+		<StateRef Path="::BuddyDown/Player/CradleIdle2" />
+		<StateRef Path="::BuddyDown/Player/States/CradleIdle" />
+		<Event Name="set cradle input" Type="CGOStateEventInput" Position="Begin">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="2" />
+			<Parameter Name="actionMapName" Value="buddydown_cradle" />
+		</Event>
+		<Event Name="remove cradle input" Type="CGOStateEventInput" Position="End">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="1" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="5" />
+			<Parameter Name="actionMapName" Value="buddydown_cradle" />
+		</Event>
+		<Event Name="CGOStateEventBuddyDown1" Type="CGOStateEventBuddyDown" Start="0" End="100" Signal="BuddyDown_CradleHeal">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="3" />
+		</Event>
+		<Event Name="enable buddy interact" Type="CGOStateEventBuddyDown" Start="0" End="0">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="1" />
+		</Event>
+	</Group>
+	<Group FullName="::BuddyDown/Player/States/CradleBarkLoopGroup" Type="BaseGroup">
+		<StateRef Path="::BuddyDown/Player/CradleIdle1" />
+		<StateRef Path="::BuddyDown/Player/CradleIdle2" />
+		<StateRef Path="::BuddyDown/Player/States/CradleIdle" />
+		<StateRef Path="::BuddyDown/Player/States/Degenerate1" />
+		<StateRef Path="::BuddyDown/Player/States/Degenerate2" />
+		<StateRef Path="::BuddyDown/Player/CradleGunChinIdle" />
+		<StateRef Path="::BuddyDown/Player/States/CradleGunAwayIdle" />
+		<Event Name="BarkLoop0" Type="CGOStateEventBuddyDown" Start="2" End="2">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="11" />
+		</Event>
+		<Event Name="BarkLoop1" Type="CGOStateEventBuddyDown" Start="10" End="10">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="11" />
+		</Event>
+		<Event Name="BarkLoop2" Type="CGOStateEventBuddyDown" Start="20" End="20">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="11" />
+		</Event>
+		<Event Name="BarkLoop3" Type="CGOStateEventBuddyDown" Start="30" End="30">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="11" />
+		</Event>
+		<Event Name="BarkLoop4" Type="CGOStateEventBuddyDown" Start="40" End="40">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="11" />
+		</Event>
+		<Event Name="BarkLoop5" Type="CGOStateEventBuddyDown" Start="50" End="50">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="11" />
+		</Event>
+		<Event Name="BarkLoop6" Type="CGOStateEventBuddyDown" Start="60" End="60">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="11" />
+		</Event>
+		<Event Name="BarkLoop7" Type="CGOStateEventBuddyDown" Start="70" End="70">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="11" />
+		</Event>
+		<Event Name="BarkLoop8" Type="CGOStateEventBuddyDown" Start="80" End="80">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="11" />
+		</Event>
+		<Event Name="BarkLoop9" Type="CGOStateEventBuddyDown" Start="90" End="90">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="11" />
+		</Event>
+	</Group>
+	<Group FullName="::BuddyDown/Player/States/ExecuteActionMap" Type="BaseGroup">
+		<StateRef Path="::BuddyDown/Player/States/CradleGunAwayIdle" />
+		<StateRef Path="::BuddyDown/Player/CradleGunChinIdle" />
+		<Event Name="set execute input" Type="CGOStateEventInput" Position="Begin">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="2" />
+			<Parameter Name="actionMapName" Value="buddydown_execute" />
+		</Event>
+		<Event Name="remove execute input" Type="CGOStateEventInput" Position="End">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="5" />
+			<Parameter Name="actionMapName" Value="buddydown_execute" />
+		</Event>
+	</Group>
+	<State FullName="::BuddyDown/Buddy/States/Neutral" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="pawn_buddydown_buddyneutral" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Event Name="standard beautifier" Type="CGOStateEventBeautifier" Start="0" End="0">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="action" Value="1" />
+			<Parameter Name="context" Value="standard" />
+		</Event>
+		<Event Name="Enable Interact from Neutral" Type="CGOStateEventBuddyDown" Start="0" End="0">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="15" />
+		</Event>
+		<Event Name="enable interrupts" Type="CGOStateEventSM" Start="0" End="0">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="2" />
+			<Parameter Name="signalName" Value="" />
+		</Event>
+		<Event Name="Buddy can be killed" Type="CGOStateEventBuddyDown" Start="0" End="0">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="7" />
+		</Event>
+		<Event Name="CallToPlayer" Type="CGOStateEventBuddyDown" Start="0" End="100" Signal="BuddyDown_CallToPlayer">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="8" />
+		</Event>
+		<Event Name="BarkLoop1" Type="CGOStateEventBark" Start="10" End="10">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="9" />
+		</Event>
+		<Event Name="BarkLoop2" Type="CGOStateEventBark" Start="20" End="20">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="9" />
+		</Event>
+		<Event Name="BarkLoop3" Type="CGOStateEventBark" Start="30" End="30">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="9" />
+		</Event>
+		<Event Name="BarkLoop4" Type="CGOStateEventBark" Start="40" End="40">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="9" />
+		</Event>
+		<Event Name="BarkLoop5" Type="CGOStateEventBark" Start="50" End="50">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="9" />
+		</Event>
+		<Event Name="BarkLoop6" Type="CGOStateEventBark" Start="60" End="60">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="9" />
+		</Event>
+		<Event Name="BarkLoop7" Type="CGOStateEventBark" Start="70" End="70">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="9" />
+		</Event>
+		<Event Name="BarkLoop8" Type="CGOStateEventBark" Start="80" End="80">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="9" />
+		</Event>
+		<Event Name="BarkLoop9" Type="CGOStateEventBark" Start="90" End="90">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="9" />
+		</Event>
+		<Sink Name="CallForHelp" Start="0" End="100">
+			<Connection Target="::BuddyDown/Buddy/States/CallForHelp" Signal="BuddyDown_CallForHelp" />
+		</Sink>
+		<Sink Name="Plead" Start="0" End="100">
+			<Connection Target="::BuddyDown/Buddy/States/Plead" Signal="BuddyDown_Plead" />
+		</Sink>
+	</State>
+	<State FullName="::BuddyDown/Buddy/States/Plead" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="pawn_buddydown_buddyplead" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Connection Target="::BuddyDown/Buddy/States/Neutral" />
+		<Event Name="BarkPlead" Type="CGOStateEventBark" Start="0" End="0">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="10" />
+		</Event>
+		<Event Name="BarkLoop1" Type="CGOStateEventBark" Start="10" End="10">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="9" />
+		</Event>
+		<Event Name="BarkLoop2" Type="CGOStateEventBark" Start="20" End="20">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="9" />
+		</Event>
+		<Event Name="BarkLoop3" Type="CGOStateEventBark" Start="30" End="30">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="9" />
+		</Event>
+		<Event Name="BarkLoop4" Type="CGOStateEventBark" Start="40" End="40">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="9" />
+		</Event>
+		<Event Name="BarkLoop5" Type="CGOStateEventBark" Start="50" End="50">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="9" />
+		</Event>
+		<Event Name="BarkLoop6" Type="CGOStateEventBark" Start="60" End="60">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="9" />
+		</Event>
+		<Event Name="BarkLoop7" Type="CGOStateEventBark" Start="70" End="70">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="9" />
+		</Event>
+		<Event Name="BarkLoop8" Type="CGOStateEventBark" Start="80" End="80">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="9" />
+		</Event>
+		<Event Name="BarkLoop9" Type="CGOStateEventBark" Start="90" End="90">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="9" />
+		</Event>
+	</State>
+	<State FullName="::BuddyDown/Buddy/States/CallForHelp" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="pawn_buddydown_buddycall" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Connection Target="::BuddyDown/Buddy/States/Neutral" />
+		<Event Name="BarkCall" Type="CGOStateEventBark" Start="0" End="0">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="8" />
+		</Event>
+		<Event Name="BarkLoop1" Type="CGOStateEventBark" Start="10" End="10">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="9" />
+		</Event>
+		<Event Name="BarkLoop2" Type="CGOStateEventBark" Start="20" End="20">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="9" />
+		</Event>
+		<Event Name="BarkLoop3" Type="CGOStateEventBark" Start="30" End="30">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="9" />
+		</Event>
+		<Event Name="BarkLoop4" Type="CGOStateEventBark" Start="40" End="40">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="9" />
+		</Event>
+		<Event Name="BarkLoop5" Type="CGOStateEventBark" Start="50" End="50">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="9" />
+		</Event>
+		<Event Name="BarkLoop6" Type="CGOStateEventBark" Start="60" End="60">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="9" />
+		</Event>
+		<Event Name="BarkLoop7" Type="CGOStateEventBark" Start="70" End="70">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="9" />
+		</Event>
+		<Event Name="BarkLoop8" Type="CGOStateEventBark" Start="80" End="80">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="9" />
+		</Event>
+		<Event Name="BarkLoop9" Type="CGOStateEventBark" Start="90" End="90">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="9" />
+		</Event>
+	</State>
+	<State FullName="::BuddyDown/Buddy/States/SyncToPlayer" Type="CGOState">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Event Name="cinematic beautifier" Type="CGOStateEventBeautifier" Start="0" End="0">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="action" Value="1" />
+			<Parameter Name="context" Value="cinematic" />
+		</Event>
+		<Event Name="BarkExecute" Type="CGOStateEventBark" Start="0" End="100" Signal="BuddyDown_Bark_Execute">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="12" />
+		</Event>
+		<Event Name="BarkDegenerate" Type="CGOStateEventBark" Start="0" End="100" Signal="BuddyDown_Bark_Degenerate">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="11" />
+		</Event>
+		<Event Name="BarkLoop" Type="CGOStateEventBark" Start="0" End="100" Signal="BuddyDown_Bark_CradleLoop">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="9" />
+		</Event>
+		<Sink Name="CradleToNeutral" Start="0" End="100">
+			<Connection Target="::BuddyDown/Buddy/States/Neutral" Signal="BuddyDown_CradleToNeutral" />
+		</Sink>
+		<Sink Name="HealBuddy" Start="0" End="100">
+			<Connection Target="::BuddyDown/Buddy/States/HealExit" Signal="BuddyDown_HealBuddy" />
+		</Sink>
+		<Sink Name="BuddyDie" Start="0" End="100">
+			<Connection Target="::BuddyDown/Buddy/States/BuddyDied" Signal="BuddyDown_Die" />
+		</Sink>
+	</State>
+	<State FullName="::BuddyDown/Buddy/States/HealExit" Type="CGOState">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Connection Target="::BuddyDown/External States/Main Avatar/xIdle" />
+		<Event Name="FillHealth" Type="CGOStateEventHeal" Start="0" End="0">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="1" />
+		</Event>
+		<Event Name="standard beautifier" Type="CGOStateEventBeautifier" Start="0" End="0">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="action" Value="1" />
+			<Parameter Name="context" Value="standard" />
+		</Event>
+		<Event Name="BuddyHealExit" Type="CGOStateEventBuddyDown" Start="100" End="100">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="1" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="16" />
+		</Event>
+	</State>
+	<State FullName="::BuddyDown/Buddy/States/StandIdle" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="pawn_hmrhealth_standidle" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Event Name="buddydown beautifier" Type="CGOStateEventBeautifier" Start="0" End="0">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="1" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="action" Value="1" />
+			<Parameter Name="context" Value="buddydown" />
+		</Event>
+		<Event Name="Buddy failure event" Type="CGOStateEventPawn" Start="0" End="0">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="12" />
+			<Parameter Name="simpleEventID" Value="BuddyDown_Start" />
+		</Event>
+		<Sink Name="FallToKnee" Start="0" End="100">
+			<Connection Target="::BuddyDown/Buddy/States/StandToKnee" Signal="BuddyDown_FallToKnee" />
+		</Sink>
+		<Sink Name="FallToKnee_Teleport" Start="0" End="100">
+			<Connection Target="::BuddyDown/Buddy/States/StandToKnee1" Signal="BuddyDown_FallToKneeTeleport" />
+		</Sink>
+	</State>
+	<State FullName="::BuddyDown/Buddy/States/StandToKnee" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="pawn_hmrhealth_standtoknee" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Connection Target="::BuddyDown/Buddy/States/KneeExpire" />
+		<Event Name="holster" Type="CGOStateEventInventory" Start="10" End="10">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="4" />
+			<Parameter Name="simpleEventID" Value="" />
+		</Event>
+	</State>
+	<State FullName="::BuddyDown/Buddy/States/KneeExpire" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="pawn_hmrhealth_kneeexpire" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Connection Target="::BuddyDown/Buddy/States/Neutral" />
+		<Event Name="BarkLoop" Type="CGOStateEventBark" Start="0" End="1">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="9" />
+		</Event>
+	</State>
+	<State FullName="::BuddyDown/Buddy/States/BuddyDied" Type="CGOState">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Connection Target="::BuddyDown/External States/Main Avatar/Death/xGuaranteedRagdoll" />
+		<Event Name="Buddy died event" Type="CGOStateEventPawn" Start="0" End="0">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="12" />
+			<Parameter Name="simpleEventID" Value="BuddyDown_Died" />
+		</Event>
+	</State>
+	<State FullName="::BuddyDown/Buddy/States/StandToKnee1" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="pawn_hmrhealth_standtoknee" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Connection Target="::BuddyDown/Buddy/States/KneeIdle" />
+		<Event Name="holster" Type="CGOStateEventInventory" Start="10" End="10">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="4" />
+			<Parameter Name="simpleEventID" Value="" />
+		</Event>
+	</State>
+	<State FullName="::BuddyDown/Buddy/States/KneeIdle" Type="CGOStateAnim">
+		<Parameter Name="groups" />
+		<Parameter Name="duration" Value="0" />
+		<Parameter Name="signalpriorities" />
+		<Parameter Name="forceAnim" Value="0" />
+		<Parameter Name="syncAnimDuration" Value="0" />
+		<Parameter Name="animStateID" Value="pawn_hmrhealth_kneeidle" />
+		<Parameter Name="layerStateID" Value="0" />
+		<Parameter Name="gestureStateID" Value="0" />
+		<Parameter Name="followTerrain" Value="0" />
+		<Parameter Name="MoveLayer" Value="-1" />
+		<Event Name="BarkLoop1" Type="CGOStateEventBark" Start="10" End="10">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="9" />
+		</Event>
+		<Event Name="BarkLoop2" Type="CGOStateEventBark" Start="20" End="20">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="9" />
+		</Event>
+		<Event Name="BarkLoop0" Type="CGOStateEventBark" Start="0" End="1">
+			<Parameter Name="alwaysTrigger" Value="1" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="0" />
+			<Parameter Name="barkEvent" Value="9" />
+		</Event>
+		<Sink Name="KneeToExpire" Start="0" End="100">
+			<Connection Target="::BuddyDown/Buddy/States/KneeExpire" Signal="BuddyDown_IdleToExpire" />
+		</Sink>
+	</State>
+	<Group FullName="::BuddyDown/Buddy/States/NeutralGroup" Type="BaseGroup">
+		<StateRef Path="::BuddyDown/Buddy/States/Neutral" />
+		<StateRef Path="::BuddyDown/Buddy/States/Plead" />
+		<StateRef Path="::BuddyDown/Buddy/States/CallForHelp" />
+		<Event Name="start smoke" Type="CGOStateEventBuddyDown" Position="Begin">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="0" />
+			<Parameter Name="triggeredOnBegin" Value="1" />
+			<Parameter Name="requestType" Value="17" />
+		</Event>
+		<Event Name="stop smoke" Type="CGOStateEventBuddyDown" Position="End">
+			<Parameter Name="alwaysTrigger" Value="0" />
+			<Parameter Name="triggerOnce" Value="0" />
+			<Parameter Name="triggeredOnEnd" Value="1" />
+			<Parameter Name="triggeredOnBegin" Value="0" />
+			<Parameter Name="requestType" Value="18" />
+		</Event>
+		<Sink Name="BuddyDie" Start="0" End="100">
+			<Connection Target="::BuddyDown/Buddy/States/SyncToPlayer" Signal="BuddyDown_CradleEntry" />
+		</Sink>
+		<Sink Name="CradleEntry" Start="0" End="100">
+			<Connection Target="::BuddyDown/Buddy/States/BuddyDied" Signal="BuddyDown_Die" />
+		</Sink>
+		<Sink Name="Cradle entry gun" Start="0" End="100">
+			<Connection Target="::BuddyDown/Buddy/States/SyncToPlayer" Signal="BuddyDown_CradleEntryGun" />
+		</Sink>
+	</Group>
+	<Group FullName="::BuddyDown/Buddy/States/CanBeKilledGroup" Type="BaseGroup">
+		<StateRef Path="::BuddyDown/Buddy/States/StandIdle" />
+		<StateRef Path="::BuddyDown/Buddy/States/StandToKnee" />
+		<StateRef Path="::BuddyDown/Buddy/States/StandToKnee1" />
+		<StateRef Path="::BuddyDown/Buddy/States/KneeExpire" />
+		<StateRef Path="::BuddyDown/Buddy/States/KneeIdle" />
+		<Sink Name="BuddyDie" Start="0" End="100">
+			<Connection Target="::BuddyDown/Buddy/States/BuddyDied" Signal="BuddyDown_Die" />
+		</Sink>
+		<Sink Name="KilledByMachete" Start="0" End="100">
+			<Connection Target="::BuddyDown/External States/Main Avatar/xKilledByMachete" Signal="machete_AI_killground" />
+		</Sink>
+	</Group>
+	<Group FullName="::BuddyDown/Buddy/States/StandToKneeTeleportGroup" Type="BaseGroup">
+		<StateRef Path="::BuddyDown/Buddy/States/StandToKnee1" />
+	</Group>
+	<State FullName="::BuddyDown/External States/Main Avatar/xIdle" Type="CGOExternalState">
+		<Parameter Name="refState" Value="::Main Avatar/Common/Idle" />
+	</State>
+	<State FullName="::BuddyDown/External States/Main Avatar/xIdleCycleBreaker" Type="CGOExternalState">
+		<Parameter Name="refState" Value="::Main Avatar/Common/IdleCycleBreaker" />
+	</State>
+	<State FullName="::BuddyDown/External States/Main Avatar/xKilledByMachete" Type="CGOExternalState">
+		<Parameter Name="refState" Value="::HMR/HMR/Health/States/HMRKilledByMachete" />
+	</State>
+	<State FullName="::BuddyDown/External States/Main Avatar/Death/xDie" Type="CGOExternalState">
+		<Parameter Name="refState" Value="::Main Avatar/Common/Death/Die" />
+		<Sink Name="BuddyDown_Start" Start="0" End="100">
+			<Connection Target="::BuddyDown/Buddy/States/StandIdle" Signal="BuddyDown_Start" />
+		</Sink>
+	</State>
+	<State FullName="::BuddyDown/External States/Main Avatar/Death/xGuaranteedRagdoll" Type="CGOExternalState">
+		<Parameter Name="refState" Value="::Main Avatar/Common/Death/GuaranteedRagdoll" />
+	</State>
+</BlackBox.GOStateMachine>

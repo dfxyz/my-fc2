@@ -1,0 +1,170 @@
+<package>
+	<configuration>
+		<MESSAGEBOXEMPTY />
+		<MESSAGEBOX>
+			<navbar>
+				<default>
+					<b_prompt1 show="1" button="A" />
+					<b_prompt2 show="1" button="B" />
+				</default>
+			</navbar>
+		</MESSAGEBOX>
+		<MESSAGEBOXLIST>
+			<navbar>
+				<default>
+					<b_prompt1 show="1" button="A" />
+					<b_prompt2 show="1" button="B" />
+				</default>
+			</navbar>
+		</MESSAGEBOXLIST>
+		<MESSAGEBOX_SPINNER_SINGLEBTN>
+			<navbar>
+				<default>
+					<b_prompt1 show="1" button="B" />
+				</default>
+			</navbar>
+		</MESSAGEBOX_SPINNER_SINGLEBTN>
+		<PLAYER_POPUP_PAGE>
+			<navbar>
+				<default>
+					<b_prompt1 show="1" button="A" />
+					<b_prompt2 show="1" button="B" />
+				</default>
+			</navbar>
+		</PLAYER_POPUP_PAGE>
+		<MESSAGEBOXLIST_SINGLEBTN>
+			<navbar>
+				<default>
+					<b_prompt1 show="1" button="A" />
+				</default>
+			</navbar>
+		</MESSAGEBOXLIST_SINGLEBTN>
+		<MESSAGEBOXLIST_SCROLL>
+			<navbar>
+				<default>
+					<b_prompt1 show="1" button="A" />
+				</default>
+			</navbar>
+		</MESSAGEBOXLIST_SCROLL>
+		<MESSAGEBOX_SINGLEBTN>
+			<navbar>
+				<default>
+					<b_prompt1 show="1" button="A" />
+				</default>
+			</navbar>
+		</MESSAGEBOX_SINGLEBTN>
+		<MESSAGEBOX_EDIT_BOX>
+			<navbar>
+				<default>
+					<b_prompt1 show="1" button="A" />
+					<b_prompt2 show="0" show_pc="1" />
+				</default>
+			</navbar>
+		</MESSAGEBOX_EDIT_BOX>
+		<MESSAGEBOX_TUTORIAL_POPUP>
+			<navbar>
+				<default>
+					<b_prompt1 text="Generic;OK" show="1" icon_xenon="UI\360.mgb;360_a" icon_ps3="UI\ps3.mgb;ps3_cross" />
+				</default>
+			</navbar>
+		</MESSAGEBOX_TUTORIAL_POPUP>
+		<COMMON_SAVELOADPAGE>
+			<navbar name="p_prompts_navbar">
+				<default>
+					<b_prompt1 show="1" />
+					<b_prompt2 show="0" show_pc="1" />
+				</default>
+			</navbar>
+		</COMMON_SAVELOADPAGE>
+		<GAMEOVER_PAGE>
+			<navbar>
+				<default>
+					<b_prompt1 show="1" button="A" />
+				</default>
+			</navbar>
+		</GAMEOVER_PAGE>
+		<MAP_PROGRESS_PAGE>
+			<navbar>
+				<default>
+					<b_prompt1 show="1" button="B" text="Generic;CANCEL" />
+				</default>
+			</navbar>
+		</MAP_PROGRESS_PAGE>
+	</configuration>
+	<dependencies>
+		<CMagmaConfigUIResource ID="ui\localized\pcwidescreen\rus\ui\common.mgb.desc" crc_ID="371169626" version="2">
+			<CMagmaUIResource ID="ui\localized\pcwidescreen\rus\ui\common.mgb" crc_ID="2307158669" />
+			<CMagmaConfigUIResource ID="ui\localized\pcwidescreen\rus\ui\fonts.mgb.desc" crc_ID="2203222606" />
+			<CSoundResource Type="CSoundResource" crc_Type="1676955864" ID="soundbinary\004b1788.spk" crc_ID="300577836" IsFilename="1" Size="0" nbChildren="0" />
+			<CSoundResource Type="CSoundResource" crc_Type="1676955864" ID="soundbinary\004b178a.spk" crc_ID="619305366" IsFilename="1" Size="0" nbChildren="0" />
+			<CSoundResource Type="CSoundResource" crc_Type="1676955864" ID="soundbinary\004b6451.spk" crc_ID="2605258247" IsFilename="1" Size="0" nbChildren="0" />
+			<CSoundResource Type="CSoundResource" crc_Type="1676955864" ID="soundbinary\004b6452.spk" crc_ID="3706285271" IsFilename="1" Size="0" nbChildren="0" />
+			<CTextureResource ID="ui\textures\common\clip.xbt" crc_ID="568663015" />
+			<CTextureResource ID="ui\textures\common\clouds.xbt" crc_ID="1337721607" />
+			<CTextureResource ID="ui\textures\common\brightness_screen.xbt" crc_ID="2311636953" />
+			<CTextureResource ID="ui\textures\common\brush_stroke.xbt" crc_ID="3345085110" />
+			<CTextureResource ID="ui\textures\common\map.xbt" crc_ID="3637434895" />
+			<CTextureResource ID="ui\video\bink_video.xbt" crc_ID="384318836" />
+			<CTextureResource ID="ui\textures\hud\notebook_flip_01.xbt" crc_ID="2717718874" />
+			<CTextureResource ID="ui\textures\common\circle_glow.xbt" crc_ID="4093590604" />
+			<CTextureResource ID="ui\textures\common\brush_stroke_02.xbt" crc_ID="1297842173" />
+			<CTextureResource ID="ui\textures\common\icon_network_no.xbt" crc_ID="191458914" />
+			<CTextureResource ID="ui\textures\common\frame_color_scratch.xbt" crc_ID="1080644761" />
+			<CTextureResource ID="ui\textures\loading\loading_logo3.xbt" crc_ID="3431741993" />
+			<CTextureResource ID="ui\textures\common\mosquito.xbt" crc_ID="1395470236" />
+			<CTextureResource ID="ui\textures\common\halftone_title_bar.xbt" crc_ID="4275781750" />
+			<CTextureResource ID="ui\textures\common\ui_lock_locked.xbt" crc_ID="3408631795" />
+			<CTextureResource ID="ui\textures\common\crochet.xbt" crc_ID="456222056" />
+			<CTextureResource ID="ui\textures\common\logo_havok.xbt" crc_ID="3947599575" />
+			<CTextureResource ID="ui\textures\common\ubisoft_watermark.xbt" crc_ID="3864290474" />
+			<CTextureResource ID="ui\textures\common\icon_save_empty.xbt" crc_ID="303826427" />
+			<CTextureResource ID="ui\textures\common\icon_network_mid.xbt" crc_ID="811616725" />
+			<CTextureResource ID="ui\textures\common\icon_network_low.xbt" crc_ID="1728990254" />
+			<CTextureResource ID="ui\textures\common\scotchtape.xbt" crc_ID="1666278225" />
+			<CTextureResource ID="ui\textures\common\ui_lock_unlocked.xbt" crc_ID="3290969282" />
+			<CTextureResource ID="ui\textures\common\icon_network_good.xbt" crc_ID="439895660" />
+			<CTextureResource ID="ui\textures\common\slider_knob.xbt" crc_ID="3261564184" />
+			<CTextureResource ID="ui\textures\common\slider_arrow.xbt" crc_ID="1143311332" />
+			<CTextureResource ID="ui\textures\common\logo_ambx.xbt" crc_ID="1486903120" />
+			<CTextureResource ID="ui\textures\common\red_line_2.xbt" crc_ID="152638305" />
+			<CTextureResource ID="ui\textures\common\red_line.xbt" crc_ID="3410417001" />
+			<CTextureResource ID="ui\textures\common\logo_bink.xbt" crc_ID="1927436681" />
+			<CTextureResource ID="ui\textures\common\save_frame.xbt" crc_ID="1055832986" />
+			<CTextureResource ID="ui\textures\common\pc_arrow.xbt" crc_ID="1690050384" />
+			<CTextureResource ID="ui\textures\common\postit.xbt" crc_ID="964027703" />
+			<CTextureResource ID="ui\textures\common\pc_mouse_right.xbt" crc_ID="610299333" />
+			<CTextureResource ID="ui\textures\common\cloudelet.xbt" crc_ID="3568117257" />
+			<CTextureResource ID="ui\textures\common\halftone_splatter.xbt" crc_ID="2396613099" />
+			<CTextureResource ID="ui\textures\common\paperclip.xbt" crc_ID="3264743633" />
+			<CTextureResource ID="ui\textures\common\logo_nvidia.xbt" crc_ID="2335298391" />
+			<CTextureResource ID="ui\textures\common\pc_mouse_left.xbt" crc_ID="2466316708" />
+			<CTextureResource ID="ui\textures\common\icon_plugged.xbt" crc_ID="2472079019" />
+			<CTextureResource ID="ui\textures\common\hardcore.xbt" crc_ID="3581995424" />
+			<CTextureResource ID="ui\textures\hud\page_blur.xbt" crc_ID="3299523030" />
+			<CTextureResource ID="ui\textures\hud\notebook_flip_single.xbt" crc_ID="4025112331" />
+			<CTextureResource ID="ui\textures\hud\notebook_flip_03.xbt" crc_ID="3678227002" />
+			<CTextureResource ID="ui\textures\common\map_snapshot.xbt" crc_ID="2486625050" />
+			<CTextureResource ID="ui\textures\common\logo_intel.xbt" crc_ID="2704572007" />
+			<CTextureResource ID="ui\textures\common\paper_folded.xbt" crc_ID="114927529" />
+			<CTextureResource ID="ui\textures\common\paper_fold.xbt" crc_ID="3413212113" />
+			<CTextureResource ID="ui\textures\hud\notebook_flip_02.xbt" crc_ID="3864880010" />
+			<CTextureResource ID="ui\textures\common\map_thumb_downld.xbt" crc_ID="3602164539" />
+			<CTextureResource ID="ui\textures\cursor.xbt" crc_ID="328221310" />
+			<CTextureResource ID="ui\textures\common\icon_battery.xbt" crc_ID="1682918051" />
+			<CTextureResource ID="ui\textures\hud\hud_text_box.xbt" crc_ID="1025563260" />
+			<CTextureResource ID="ui\textures\hud\notebook.xbt" crc_ID="873979927" />
+			<CSoundResource Type="CSoundResource" crc_Type="1676955864" ID="soundbinary\004ebebc.spk" crc_ID="4173250581" IsFilename="1" Size="0" nbChildren="0" />
+			<CSoundResource Type="CSoundResource" crc_Type="1676955864" ID="soundbinary\004ebebd.spk" crc_ID="1251875845" IsFilename="1" Size="0" nbChildren="0" />
+			<CSoundResource Type="CSoundResource" crc_Type="1676955864" ID="soundbinary\004b1789.spk" crc_ID="747265436" IsFilename="1" Size="0" nbChildren="0" />
+			<CSoundResource Type="CSoundResource" crc_Type="1676955864" ID="soundbinary\004b1789.spk" crc_ID="747265436" IsFilename="1" Size="0" nbChildren="0" />
+			<CSoundResource Type="CSoundResource" crc_Type="1676955864" ID="soundbinary\004b1789.spk" crc_ID="747265436" IsFilename="1" Size="0" nbChildren="0" />
+			<CSoundResource Type="CSoundResource" crc_Type="1676955864" ID="soundbinary\004b1789.spk" crc_ID="747265436" IsFilename="1" Size="0" nbChildren="0" />
+			<CSoundResource Type="CSoundResource" crc_Type="1676955864" ID="soundbinary\004b1789.spk" crc_ID="747265436" IsFilename="1" Size="0" nbChildren="0" />
+			<CSoundResource Type="CSoundResource" crc_Type="1676955864" ID="soundbinary\004b1789.spk" crc_ID="747265436" IsFilename="1" Size="0" nbChildren="0" />
+			<CSoundResource Type="CSoundResource" crc_Type="1676955864" ID="soundbinary\004b1789.spk" crc_ID="747265436" IsFilename="1" Size="0" nbChildren="0" />
+			<CSoundResource Type="CSoundResource" crc_Type="1676955864" ID="soundbinary\004b1789.spk" crc_ID="747265436" IsFilename="1" Size="0" nbChildren="0" />
+			<CSoundResource Type="CSoundResource" crc_Type="1676955864" ID="soundbinary\004b1789.spk" crc_ID="747265436" IsFilename="1" Size="0" nbChildren="0" />
+			<CSoundResource Type="CSoundResource" crc_Type="1676955864" ID="soundbinary\004b178a.spk" crc_ID="619305366" IsFilename="1" Size="0" nbChildren="0" />
+		</CMagmaConfigUIResource>
+	</dependencies>
+</package>

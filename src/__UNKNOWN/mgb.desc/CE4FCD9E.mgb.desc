@@ -1,0 +1,133 @@
+<package>
+	<configuration>
+		<MULTIMENU_MAIN_PAGE>
+			<navbar name="p_prompts_navbar">
+				<default>
+					<b_prompt4 show="1" text="Generic;BACK" />
+				</default>
+			</navbar>
+		</MULTIMENU_MAIN_PAGE>
+		<MULTIMENU_CREATE_PAGE>
+			<navbar name="p_prompts_navbar">
+				<default>
+					<b_prompt2 show="1" button="Start" show_PC="0" text="MultiMenu;LAUNCH" />
+				</default>
+			</navbar>
+		</MULTIMENU_CREATE_PAGE>
+		<MULTIMENU_JOIN_PAGE>
+			<navbar name="p_prompts_navbar">
+				<default>
+					<b_prompt2 show="1" button="Start" show_PC="0" text="MultiMenu;LIST" />
+				</default>
+			</navbar>
+		</MULTIMENU_JOIN_PAGE>
+		<MULTIMENU_MATCHLIST_PAGE>
+			<navbar name="p_prompts_navbar">
+				<default>
+					<b_prompt1 show="1" text="MultiMenu;JOIN" />
+					<b_prompt2 show="0" show_xenon="1" text="MultiMenu;GAMER_CARD" />
+					<b_prompt3 show="1" text="MultiMenu;MAPINFO_REFRESH" />
+				</default>
+			</navbar>
+			<pingIntervals>
+				<ping value="175" frame="2" />
+				<ping value="350" frame="3" />
+				<ping value="-1" frame="4" />
+			</pingIntervals>
+		</MULTIMENU_MATCHLIST_PAGE>
+		<MULTIMENU_ONLINE_PAGE>
+			<navbar name="p_prompts_navbar">
+				<default>
+					<b_prompt4 show="1" text="Generic;BACK" />
+				</default>
+			</navbar>
+			<iconMaterial>
+				<Icon Material="ui_mp_rank1_large" />
+				<Icon Material="ui_mp_rank2_large" />
+				<Icon Material="ui_mp_rank3_large" />
+				<Icon Material="ui_mp_rank4_large" />
+				<Icon Material="ui_mp_rank5_large" />
+				<Icon Material="ui_mp_rank6c_large" />
+			</iconMaterial>
+		</MULTIMENU_ONLINE_PAGE>
+		<MULTIMENU_RANKED_PAGE />
+		<MULTIMENU_CUSTOM_PAGE />
+		<MULTIMENU_LAN_PAGE>
+			<navbar name="p_prompts_navbar">
+				<default>
+					<b_prompt4 show="1" text="Generic;BACK" />
+				</default>
+			</navbar>
+		</MULTIMENU_LAN_PAGE>
+		<MULTIMENU_PROFILE_SELECT_PAGE>
+			<navbar name="p_prompts_navbar">
+				<default>
+					<b_prompt1 show="1" text="MultiMenu;PROFILE_LOAD" />
+					<b_prompt2 show="1" text="MultiMenu;PROFILE_EDIT" />
+					<b_prompt3 show="1" text="MultiMenu;PROFILE_CREATE" />
+					<b_prompt4 show="1" text="Generic;BACK" />
+				</default>
+			</navbar>
+		</MULTIMENU_PROFILE_SELECT_PAGE>
+		<MULTIMENU_PROFILE_EDIT_ONLINE_PAGE>
+			<navbar name="p_prompts_navbar">
+				<default>
+					<b_prompt1 show="1" text="MultiMenu;PROFILE_DELETE" />
+				</default>
+			</navbar>
+		</MULTIMENU_PROFILE_EDIT_ONLINE_PAGE>
+		<MULTIMENU_PROFILE_EDIT_OFFLINE_PAGE>
+			<navbar name="p_prompts_navbar">
+				<default>
+					<b_prompt1 show="1" text="MultiMenu;PROFILE_DELETE" />
+				</default>
+			</navbar>
+		</MULTIMENU_PROFILE_EDIT_OFFLINE_PAGE>
+		<MULTIMENU_PROFILE_PRIVACY_STATEMENT_PAGE>
+			<navbar name="p_prompts_navbar">
+				<default>
+					<b_prompt1 show="1" text="MultiMenu;PRIVACY_ACCEPT" />
+					<b_prompt2 show="1" text="MultiMenu;PRIVACY_DECLINE" />
+					<b_prompt3 show="0" />
+					<b_prompt4 show="0" />
+					<b_prompt5 show="0" />
+				</default>
+			</navbar>
+		</MULTIMENU_PROFILE_PRIVACY_STATEMENT_PAGE>
+		<MULTIMENU_LEADERBOARD_PAGE>
+			<navbar>
+				<default>
+					<b_prompt1 show="1" text="MultiMenu;LEADERBOARDS_SHOWSTATS" />
+					<b_prompt2 show="0" show_xenon="1" text_xenon="MultiMenu;GAMER_CARD" />
+					<b_prompt3 show="1" text="MultiMenu;LEADERBOARDS_FINDME" />
+					<b_previous show="1" text="MultiMenu;LEADERBOARDS_PREVIOUS" button="LT" />
+					<b_next show="1" text="MultiMenu;LEADERBOARDS_NEXT" button="RT" />
+				</default>
+			</navbar>
+		</MULTIMENU_LEADERBOARD_PAGE>
+		<MULTIMENU_ADVANCEDOPTIONS_PAGE>
+			<navbar name="p_prompts_navbar">
+				<default>
+					<b_prompt1 show="0" />
+					<b_prompt4 show="1" text="MultiMenu;APPLY" button="B" />
+				</default>
+			</navbar>
+		</MULTIMENU_ADVANCEDOPTIONS_PAGE>
+	</configuration>
+	<dependencies>
+		<CMagmaConfigUIResource ID="ui\localized\pc\pol\ui\mp_menus.mgb.desc" crc_ID="3461336478" version="2">
+			<CMagmaUIResource ID="ui\localized\pc\pol\ui\mp_menus.mgb" crc_ID="2275186785" />
+			<CMagmaConfigUIResource ID="ui\localized\pc\pol\ui\fonts.mgb.desc" crc_ID="769931021" />
+			<CMagmaConfigUIResource ID="ui\localized\pc\pol\ui\common.mgb.desc" crc_ID="4184096709" />
+			<CMagmaConfigUIResource ID="ui\localized\pc\pol\ui\common_mp.mgb.desc" crc_ID="1879141072" />
+			<CMagmaConfigUIResource ID="ui\localized\pc\pol\ui\options.mgb.desc" crc_ID="3134884499" />
+			<CSoundResource Type="CSoundResource" crc_Type="1676955864" ID="soundbinary\004b178a.spk" crc_ID="619305366" IsFilename="1" Size="0" nbChildren="0" />
+			<CTextureResource ID="ui\textures\common\halftone_soldier.xbt" crc_ID="1207532798" />
+			<CTextureResource ID="ui\textures\common\lan_sketch.xbt" crc_ID="3946156297" />
+			<CTextureResource ID="ui\textures\common\ufll_01.xbt" crc_ID="839823802" />
+			<CTextureResource ID="ui\textures\common\apr_01.xbt" crc_ID="954360255" />
+			<CSoundResource Type="CSoundResource" crc_Type="1676955864" ID="soundbinary\004b1789.spk" crc_ID="747265436" IsFilename="1" Size="0" nbChildren="0" />
+			<CSoundResource Type="CSoundResource" crc_Type="1676955864" ID="soundbinary\004b1789.spk" crc_ID="747265436" IsFilename="1" Size="0" nbChildren="0" />
+		</CMagmaConfigUIResource>
+	</dependencies>
+</package>

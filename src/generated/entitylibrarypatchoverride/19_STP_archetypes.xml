@@ -1,0 +1,340 @@
+﻿<object type="EntityLibrary">
+  <value name="Name" type="String">STP_archetypes</value>
+  <object type="EntityPrototype">
+    <value name="Name" type="String">Rest.MultiActionAtTable_PREFAB</value>
+    <object type="Entity">
+      <value name="hidName" type="String">STP_archetypes.Rest.MultiActionAtTable_PREFAB</value>
+      <value name="disEntityId" type="UInt64">5298</value>
+      <value name="text_hidEntityClass" type="String">CEntity</value>
+      <value name="hidEntityClass" type="Hash">50C95067</value>
+      <value name="hidResourceCount" type="UInt32">1</value>
+      <value name="hidPos" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidAngles" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidPos_precise" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidConstEntity" type="Bool">False</value>
+      <object type="Components">
+        <object type="CFCXAIComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_Type" type="String">CSmartTerrain</value>
+          <value name="Type" type="Hash">8D5B4600</value>
+          <object type="AIObject">
+            <object type="CSmartTerrain">
+              <value name="selNeedType" type="BinHex">00000000</value>
+              <value name="fCoefficient" type="Float">1</value>
+              <value name="fBroadcastRange" type="Float">15</value>
+              <value name="fBroadcastMinHeight" type="Float">-5</value>
+              <value name="fBroadcastMaxHeight" type="Float">50</value>
+              <value name="fExecutionRange" type="Float">-1</value>
+              <value name="fResetTime" type="Float">20</value>
+              <value name="bEnable" type="Bool">True</value>
+              <value name="bLayered" type="Bool">False</value>
+              <value name="bIsMultiUser" type="Bool">False</value>
+              <value name="bIsUnawareSTP" type="Bool">False</value>
+              <value name="bInstantResumeAfterInterruption" type="Bool">False</value>
+              <value name="bDisableErrorCheck" type="Bool">False</value>
+              <value name="bDoSocialTurnOnSpot" type="Bool">False</value>
+              <value name="bAllowLayeredAnim" type="Bool">False</value>
+              <value name="entSecondarySlot" type="BinHex">FFFFFFFFFFFFFFFF</value>
+              <object type="enumNeedType">
+                <object type="enum">
+                  <value name="Value" type="String">Rest</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Duty</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Social</value>
+                </object>
+              </object>
+              <object type="Action">
+                <value name="fMinActionDuration" type="Float">120</value>
+                <value name="fMaxActionDuration" type="Float">120</value>
+                <value name="bInfiniteDurationOverride" type="Bool">False</value>
+                <value name="text_PlanName" type="String">::SmartTerrain/PlaySocialInterruptibleAction</value>
+                <value name="PlanName" type="BinHex">EC15EE2E</value>
+                <value name="text_aiwsPlanWorkspace" type="String">scripts\game\newbrains\smartterrain.ai.rml</value>
+                <value name="aiwsPlanWorkspace" type="BinHex">B8B30A11</value>
+                <value name="selNeededWeapon" type="BinHex">00000000</value>
+                <value name="bOrientingEnabled" type="Bool">True</value>
+                <value name="bInterruptsParentSTP" type="Bool">False</value>
+                <value name="selEffect" type="BinHex">00000000</value>
+                <value name="selSocialType" type="BinHex">00000000</value>
+                <object type="Actions">
+                  <object type="Action">
+                    <value name="mmsAction" type="BinHex">7061776E5F73745F726573745F6561743200</value>
+                    <value name="fMinActionDurationOverride" type="Float">-1</value>
+                    <value name="fMaxActionDurationOverride" type="Float">-1</value>
+                    <value name="selNeededWeaponOverride" type="BinHex">03000000</value>
+                    <object type="enumNeededWeaponOverride">
+                      <object type="enum">
+                        <value name="Value" type="String">None</value>
+                      </object>
+                      <object type="enum">
+                        <value name="Value" type="String">Primary</value>
+                      </object>
+                      <object type="enum">
+                        <value name="Value" type="String">Secondary</value>
+                      </object>
+                      <object type="enum">
+                        <value name="Value" type="String">No Change</value>
+                      </object>
+                    </object>
+                  </object>
+                  <object type="Action">
+                    <value name="mmsAction" type="BinHex">7061776E5F73745F726573745F6472696E6B3200</value>
+                    <value name="fMinActionDurationOverride" type="Float">-1</value>
+                    <value name="fMaxActionDurationOverride" type="Float">-1</value>
+                    <value name="selNeededWeaponOverride" type="BinHex">03000000</value>
+                    <object type="enumNeededWeaponOverride">
+                      <object type="enum">
+                        <value name="Value" type="String">None</value>
+                      </object>
+                      <object type="enum">
+                        <value name="Value" type="String">Primary</value>
+                      </object>
+                      <object type="enum">
+                        <value name="Value" type="String">Secondary</value>
+                      </object>
+                      <object type="enum">
+                        <value name="Value" type="String">No Change</value>
+                      </object>
+                    </object>
+                  </object>
+                  <object type="Action">
+                    <value name="mmsAction" type="BinHex">7061776E5F73745F726573745F7369743200</value>
+                    <value name="fMinActionDurationOverride" type="Float">-1</value>
+                    <value name="fMaxActionDurationOverride" type="Float">-1</value>
+                    <value name="selNeededWeaponOverride" type="BinHex">03000000</value>
+                    <object type="enumNeededWeaponOverride">
+                      <object type="enum">
+                        <value name="Value" type="String">None</value>
+                      </object>
+                      <object type="enum">
+                        <value name="Value" type="String">Primary</value>
+                      </object>
+                      <object type="enum">
+                        <value name="Value" type="String">Secondary</value>
+                      </object>
+                      <object type="enum">
+                        <value name="Value" type="String">No Change</value>
+                      </object>
+                    </object>
+                  </object>
+                  <object type="Action">
+                    <value name="mmsAction" type="BinHex">00</value>
+                    <value name="fMinActionDurationOverride" type="Float">-1</value>
+                    <value name="fMaxActionDurationOverride" type="Float">-1</value>
+                    <value name="selNeededWeaponOverride" type="BinHex">03000000</value>
+                    <object type="enumNeededWeaponOverride">
+                      <object type="enum">
+                        <value name="Value" type="String">None</value>
+                      </object>
+                      <object type="enum">
+                        <value name="Value" type="String">Primary</value>
+                      </object>
+                      <object type="enum">
+                        <value name="Value" type="String">Secondary</value>
+                      </object>
+                      <object type="enum">
+                        <value name="Value" type="String">No Change</value>
+                      </object>
+                    </object>
+                  </object>
+                </object>
+                <object type="enumNeededWeapon">
+                  <object type="enum">
+                    <value name="Value" type="String">None</value>
+                  </object>
+                  <object type="enum">
+                    <value name="Value" type="String">Primary</value>
+                  </object>
+                  <object type="enum">
+                    <value name="Value" type="String">Secondary</value>
+                  </object>
+                  <object type="enum">
+                    <value name="Value" type="String">No Change</value>
+                  </object>
+                </object>
+                <object type="enumEffect">
+                  <object type="enum">
+                    <value name="Value" type="String">Localized</value>
+                  </object>
+                  <object type="enum">
+                    <value name="Value" type="String">Area</value>
+                  </object>
+                  <object type="enum">
+                    <value name="Value" type="String">Visual</value>
+                  </object>
+                  <object type="enum">
+                    <value name="Value" type="String">Patrol</value>
+                  </object>
+                </object>
+                <object type="enumSocialType">
+                  <object type="enum">
+                    <value name="Value" type="String">Dialog Based</value>
+                  </object>
+                  <object type="enum">
+                    <value name="Value" type="String">Spectator</value>
+                  </object>
+                  <object type="enum">
+                    <value name="Value" type="String">Collaborative</value>
+                  </object>
+                  <object type="enum">
+                    <value name="Value" type="String">SynchedAction</value>
+                  </object>
+                </object>
+                <object type="BarkEvent">
+                  <value name="text_IntroBarkEvent" type="String"></value>
+                  <value name="IntroBarkEvent" type="BinHex">FFFFFFFF</value>
+                  <value name="text_MidBarkEvent" type="String"></value>
+                  <value name="MidBarkEvent" type="BinHex">FFFFFFFF</value>
+                  <value name="text_OutroBarkEvent" type="String"></value>
+                  <value name="OutroBarkEvent" type="BinHex">FFFFFFFF</value>
+                </object>
+                <object type="MoveTo">
+                  <value name="text_aiwsMoveToPlanWorkspace" type="String">scripts\game\newbrains\smartterrain.ai.rml</value>
+                  <value name="aiwsMoveToPlanWorkspace" type="BinHex">B8B30A11</value>
+                  <value name="text_MoveToPlanName" type="String">::SmartTerrain/MoveTo</value>
+                  <value name="MoveToPlanName" type="BinHex">8FD3EBE2</value>
+                </object>
+                <object type="Patrol">
+                  <value name="entPathName" type="BinHex">FFFFFFFFFFFFFFFF</value>
+                  <value name="selPatrolType" type="BinHex">02000000</value>
+                  <object type="enumPatrolType">
+                    <object type="enum">
+                      <value name="Value" type="String">Patrol Branch</value>
+                    </object>
+                    <object type="enum">
+                      <value name="Value" type="String">Patrol Linear</value>
+                    </object>
+                    <object type="enum">
+                      <value name="Value" type="String">Patrol Loop</value>
+                    </object>
+                    <object type="enum">
+                      <value name="Value" type="String">Patrol Random</value>
+                    </object>
+                  </object>
+                </object>
+                <object type="Interaction">
+                  <value name="entAnchorEntityId" type="BinHex">FFFFFFFFFFFFFFFF</value>
+                  <value name="entNoCollisionEntityId1" type="BinHex">FFFFFFFFFFFFFFFF</value>
+                  <value name="entNoCollisionEntityId2" type="BinHex">FFFFFFFFFFFFFFFF</value>
+                  <value name="entNoCollisionEntityId3" type="BinHex">FFFFFFFFFFFFFFFF</value>
+                </object>
+                <object type="SwitchWeapon">
+                  <value name="text_aiwsSwitchWeaponPlanWorkspace" type="String">scripts\game\newbrains\smartterrain.ai.rml</value>
+                  <value name="aiwsSwitchWeaponPlanWorkspace" type="BinHex">B8B30A11</value>
+                  <value name="text_SwitchWeaponPlanName" type="String">::SmartTerrain/SwitchWeapon</value>
+                  <value name="SwitchWeaponPlanName" type="BinHex">72309932</value>
+                </object>
+              </object>
+              <object type="Filter">
+                <value name="selAffiliation" type="BinHex">00000000</value>
+                <value name="selClassType" type="BinHex">00000000</value>
+                <object type="enumAffiliation">
+                  <object type="enum">
+                    <value name="Value" type="String">Any</value>
+                  </object>
+                  <object type="enum">
+                    <value name="Value" type="String">Blue Faction</value>
+                  </object>
+                  <object type="enum">
+                    <value name="Value" type="String">Red Faction</value>
+                  </object>
+                  <object type="enum">
+                    <value name="Value" type="String">Allied</value>
+                  </object>
+                  <object type="enum">
+                    <value name="Value" type="String">Civilian</value>
+                  </object>
+                  <object type="enum">
+                    <value name="Value" type="String">Animal</value>
+                  </object>
+                </object>
+                <object type="enumClassType">
+                  <object type="enum">
+                    <value name="Value" type="String">Merc</value>
+                  </object>
+                  <object type="enum">
+                    <value name="Value" type="String">Sniper</value>
+                  </object>
+                  <object type="enum">
+                    <value name="Value" type="String">Domino</value>
+                  </object>
+                </object>
+                <object type="SupportedAnimalSpecies">
+                  <object type="AnimalSpecies">
+                    <value name="selAnimalSpecies" type="BinHex">00000000</value>
+                    <object type="enumAnimalSpecies">
+                      <object type="enum">
+                        <value name="Value" type="String">Unset</value>
+                      </object>
+                      <object type="enum">
+                        <value name="Value" type="String">Gazelle</value>
+                      </object>
+                      <object type="enum">
+                        <value name="Value" type="String">Zebra</value>
+                      </object>
+                      <object type="enum">
+                        <value name="Value" type="String">Cape Buffalo</value>
+                      </object>
+                      <object type="enum">
+                        <value name="Value" type="String">Wildebeest</value>
+                      </object>
+                      <object type="enum">
+                        <value name="Value" type="String">Goat</value>
+                      </object>
+                      <object type="enum">
+                        <value name="Value" type="String">Chicken</value>
+                      </object>
+                    </object>
+                  </object>
+                </object>
+                <object type="EnabledModes">
+                  <value name="bEnabledForIdle" type="Bool">True</value>
+                  <value name="bEnabledForAlert" type="Bool">False</value>
+                </object>
+                <object type="TimeOfDay">
+                  <value name="bSunRiseToNoon" type="Bool">True</value>
+                  <value name="bNoonToSunSet" type="Bool">True</value>
+                  <value name="bSunSetToMidnight" type="Bool">True</value>
+                  <value name="bMidnightToSunRise" type="Bool">True</value>
+                </object>
+              </object>
+            </object>
+          </object>
+        </object>
+        <object type="CPersistComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="selLevel" type="UInt32">1</value>
+          <object type="enumLevel">
+            <object type="enum">
+              <value name="Value" type="String">None</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Limited</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Full</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Critical</value>
+            </object>
+          </object>
+        </object>
+      </object>
+    </object>
+  </object>
+</object>

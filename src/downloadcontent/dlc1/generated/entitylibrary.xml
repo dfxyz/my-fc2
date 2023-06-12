@@ -1,0 +1,5 @@
+﻿<object type="EntityLibraries" hash="BCDD10B4">
+  <object external="1_DLC1Weapons.xml" />
+  <object external="2_vehicle.xml" />
+  <object external="3_WeaponProperties.xml" />
+</object>

@@ -1,0 +1,182 @@
+<!-- Protocol types for anything belonging to FC2 (CryGame): 
+message
+broadcast
+memento
+descriptor
+-->
+<NetObjectTypeRegistry version="1.0">
+
+    <NetObjectType name="NetObject.NetGameCtrlStateMachine"  >
+		<NetDescriptor netDataContainerClassId="CNetDescriptor" />
+		<NetChannel name="NetChannel.Service.GameManager"/>
+		<NetProtocol>
+            <Entry type="broadcast" name="CNetGameCtrlStateMsg"    		transportMode="ReliableOrdered"  netDataContainerClassId="CNetGameCtrlStateMsg"/>		
+            <Entry type="message" 	name="CNetGameCtrlStateResolvedMsg" transportMode="ReliableOrdered"  netDataContainerClassId="CNetGameCtrlStateResolvedMsg"/>					
+            <Entry type="memento" 	name="CNetGameCtrlStateMemento"     transportMode="NetDataContainerStream"  netDataContainerClassId="CNetGameCtrlStateMemento"/>					
+		</NetProtocol>
+    </NetObjectType>	
+
+    <NetObjectType name="NetObject.NetBurnableGrass"  >
+      <NetDescriptor netDataContainerClassId="CNetBurnableGrassNetDescriptor" />
+      <NetChannel name="NetChannel.Simulation.Fire"/>
+      <NetProtocol>
+          <Entry type="memento"   name="NetBurnableGrassMemento"           transportMode="NetDataContainerStream" netDataContainerClassId="CNetBurnableGrassMemento"/>
+      </NetProtocol>
+    </NetObjectType>
+    <NetObjectType name="NetObject.FireStickyStreamThirdParty"  >
+      <NetDescriptor netDataContainerClassId="CFireStickyStreamNetDescriptorThirdParty" />
+      <NetChannel name="NetChannel.Simulation.StickyFire"/>
+      <NetProtocol>
+		  <Entry type="broadcast" name="firestream"  transportMode="Reliable"   netDataContainerClassId="CNetMessageFireStickyStream"/>
+		  <Entry type="unicast" name="firestream_unicast"  transportMode="Reliable"   netDataContainerClassId="CNetMessageFireStickyStream"/>
+      </NetProtocol>
+    </NetObjectType>
+    <NetObjectType name="NetObject.IgnitorThirdParty"  >
+      <NetDescriptor netDataContainerClassId="CIgnitorNetDescriptorThirdParty" />
+      <NetChannel name="NetChannel.Simulation.Fire"/>
+      <NetProtocol>
+            <Entry type="memento"   name="IgnitorMemento"   transportMode="NetDataContainerStream" netDataContainerClassId="CIgnitorMemento"/>
+      </NetProtocol>
+    </NetObjectType>
+       
+    <NetObjectType name="NetObject.LoadOut"  >
+        <NetDescriptor netDataContainerClassId="CFCXLoadOutDescriptor" />
+        <NetChannel name="NetChannel.Service.GameMode"/>
+        <NetProtocol>
+            <Entry type="message"   name="CFCXLoadOutItemsTransaction"         transportMode="Reliable" netDataContainerClassId="CFCXLoadOutItemsTransaction"/>
+            <Entry type="unicast"   name="CFCXLoadOutItemsTransactionResponse" transportMode="Reliable" netDataContainerClassId="CFCXLoadOutItemsTransactionResponse"/>
+        </NetProtocol>
+    </NetObjectType>
+    
+    <NetObjectType name="NetObject.DynamicEnvironmentManager"  >
+        <NetDescriptor netDataContainerClassId="CNetDescriptor" />
+        <NetChannel name="NetChannel.Service.GameManager"/>
+        <NetProtocol>
+            <Entry type="memento"   name="EnvironmentMemento"   transportMode="NetDataContainerStream" netDataContainerClassId="CEnvironmentMemento"/>
+            <Entry type="broadcast" name="TimeOfDayBroadcast"   transportMode="Reliable"                netDataContainerClassId="CEnvironmentBroadcast"/>
+            <Entry type="message"   name="NeedTimeOfDayMessage" transportMode="Reliable"                netDataContainerClassId="CNetMessageEmpty"/>
+        </NetProtocol>
+    </NetObjectType>
+    
+    <NetObjectType name="NetObject.FlagStation">
+        <NetDescriptor netDataContainerClassId="CFlagStationNetDescriptor" />
+        <NetChannel name="NetChannel.Simulation.GameMode"/>
+        <NetProtocol>
+        <Entry type="memento" name="CFlagStationMemento"    transportMode="NetDataContainerStream" netDataContainerClassId="CFlagStationMemento"/>
+        </NetProtocol>
+    </NetObjectType>
+	
+	<NetObjectType name="NetObject.Flag">
+        <NetDescriptor netDataContainerClassId="CFlagNetDescriptor" />
+        <NetChannel name="NetChannel.Simulation.GameMode"/>
+        <NetProtocol>
+            <Entry type="memento" name="CFlagMemento"  transportMode="NetDataContainerStream" netDataContainerClassId="CFlagMemento"/>
+            <Entry type="broadcast" name="ForceRefresh"  transportMode="Reliable" netDataContainerClassId="CFlagMemento"/>
+        </NetProtocol>
+    </NetObjectType>
+    
+    <NetObjectType name="NetObject.PickupContainer">
+        <NetDescriptor netDataContainerClassId="CEntityNetDescriptor" />
+        <NetChannel name="NetChannel.Simulation.Gameplay"/>
+        <NetProtocol>
+            <Entry type="broadcast" name="deactivate"   transportMode="Reliable"                netDataContainerClassId="CNetBroadcastEmpty"/>
+            <Entry type="memento"   name="CPickupMemento" transportMode="NetDataContainerStream" netDataContainerClassId="CPickupMemento"/>
+        </NetProtocol>
+    </NetObjectType>
+    
+    <NetObjectType name="NetObject.CapturePoint">
+        <NetDescriptor netDataContainerClassId="CNetDescriptor" />
+        <NetChannel name="NetChannel.Simulation.GameMode"/>
+        <NetProtocol>
+            <Entry type="memento" name="CCapturePointMemento"    transportMode="NetDataContainerStream" netDataContainerClassId="CCapturePointMemento"/>
+        </NetProtocol>
+    </NetObjectType>
+    
+    <NetObjectType name="NetObject.LoadOutManager">
+        <NetDescriptor netDataContainerClassId="CNetDescriptor" />
+        <NetChannel name="NetChannel.Service.GameMode"/>
+        <NetProtocol>
+            <Entry type="broadcast" name="RequestDisplayLoadOut"     transportMode="Reliable" netDataContainerClassId="CNetMsgLoadOut"/>
+            <Entry type="broadcast" name="RequestHideLoadOut"        transportMode="Reliable" netDataContainerClassId="CNetMsgLoadOut"/>
+            <Entry type="broadcast" name="RequestCommitLoadOut"      transportMode="Reliable" netDataContainerClassId="CNetMsgLoadOut"/>
+            <Entry type="message"   name="NotifyDisplayLoadOut"      transportMode="Reliable" netDataContainerClassId="CNetMsgLoadOut"/>
+            <Entry type="message"   name="NotifyHideLoadOut"        transportMode="Reliable" netDataContainerClassId="CNetMsgLoadOut"/>
+        </NetProtocol>
+    </NetObjectType>
+        
+    <NetObjectType name="NetObject.WaitPlayerSignal">
+        <NetDescriptor netDataContainerClassId="CNetDescriptor" />
+        <NetChannel name="NetChannel.Default"/>
+        <NetProtocol>
+            <Entry type="message" name="PlayerSignalAcknowledged" transportMode="Reliable" netDataContainerClassId="CNetMessageEmpty"/>
+        </NetProtocol>
+    </NetObjectType>
+    
+    <NetObjectType name="NetObject.CustomMapService">
+        <NetDescriptor netDataContainerClassId="CNetDescriptor" />
+        <NetChannel name="NetChannel.Default"/>
+        <NetProtocol>
+            <Entry type="memento" name="CustomMapService"        transportMode="NetDataContainerStream"       netDataContainerClassId="CCustomMapServiceMemento"/>
+        </NetProtocol>
+    </NetObjectType>
+    
+    <NetObjectType name="NetObject.CustomMapDownloadService">
+        <NetDescriptor netDataContainerClassId="CNetDescriptor" />
+        <NetChannel name="NetChannel.Default"/>
+        <NetProtocol>
+            <Entry type="message"   name="RequestDownload"        transportMode="ReliableOrdered"        netDataContainerClassId="CRequestCustomMapDownloadMessage"/>
+            <Entry type="unicast"   name="AcceptRequestDownload"  transportMode="Reliable"               netDataContainerClassId="CAcceptRequestCustomMapDownloadMessage"/>
+            <Entry type="unicast"   name="RefuseRequestDownload"  transportMode="Reliable"               netDataContainerClassId="CRefuseRequestCustomMapDownloadMessage"/>
+        </NetProtocol>
+    </NetObjectType>
+    
+    <NetObjectType name="NetObject.CustomMapDownloadProgress">
+        <NetDescriptor netDataContainerClassId="CNetDescriptor" />
+        <NetChannel name="NetChannel.Service.DownloadProgress"/>
+        <NetProtocol>
+            <Entry type="message"   name="DownloadProgressMessage"  transportMode="ReliableOrdered"        netDataContainerClassId="CDownloadProgressMessage"/>
+            <Entry type="memento"   name="DownloadProgressMemento"  transportMode="NetDataContainerStream" netDataContainerClassId="CDownloadProgressMemento"/>
+        </NetProtocol>
+    </NetObjectType>
+
+    <NetObjectType name="NetObject.MedicStation"  >
+        <NetDescriptor netDataContainerClassId="CEntityNetDescriptor" />
+        <NetChannel name="NetChannel.Simulation.Gameplay"/>
+        <NetProtocol>
+          <Entry type="memento"   name="CPickupMemento" transportMode="NetDataContainerStream" netDataContainerClassId="CPickupMemento"/>
+          <Entry type="memento"   name="CMedicStationInitialMemento" transportMode="NetDataContainerStream" netDataContainerClassId="CMedicStationInitialMemento"/>
+        </NetProtocol>
+    </NetObjectType>
+    
+    <NetObjectType name="NetObject.FCXPublicPlayer"  >
+        <NetDescriptor netDataContainerClassId="CPlayerDescriptor" />
+        <NetChannel name="NetChannel.Service.GameMode"/>
+        <NetProtocol>
+          <Entry type="broadcast" name="PlayerSpawningState"        transportMode="ReliableOrdered"        netDataContainerClassId="CPlayerSpawningState"/>
+          <Entry type="broadcast" name="PlayerSpawningDetails"      transportMode="ReliableOrdered"        netDataContainerClassId="CFCXPlayerSpawningDetails"/>
+          <Entry type="broadcast" name="PlayerSGfxKitPartsLow"      transportMode="ReliableOrdered"        netDataContainerClassId="CPlayerSGfxKitParts"/>
+          <Entry type="broadcast" name="PlayerSGfxKitPartsHigh"     transportMode="ReliableOrdered"        netDataContainerClassId="CPlayerSGfxKitParts"/>
+          <Entry type="broadcast" name="PlayerReadyToPlayBroadcast" transportMode="ReliableOrdered"        netDataContainerClassId="CPlayerReadyToPlayMessage"/>      
+          <Entry type="broadcast" name="PlayerTeamInfo"        		transportMode="ReliableOrdered" 	   netDataContainerClassId="CPlayerTeamInfo"/>		  
+          <Entry type="broadcast" name="PlayerClanTag"              transportMode="ReliableOrdered"        netDataContainerClassId="CPlayerClanTagMessage"/>      		  	  
+          <Entry type="unicast"   name="PlayerSpawningStateUni"     transportMode="ReliableOrdered"        netDataContainerClassId="CPlayerSpawningState"/>
+          <Entry type="unicast"   name="PlayerSpawningDetailsUni"   transportMode="ReliableOrdered"        netDataContainerClassId="CFCXPlayerSpawningDetails"/>
+          <Entry type="unicast"   name="PlayerSGfxKitPartsLowUni"   transportMode="ReliableOrdered"        netDataContainerClassId="CPlayerSGfxKitParts"/>
+          <Entry type="unicast"   name="PlayerSGfxKitPartsHighUni"  transportMode="ReliableOrdered"        netDataContainerClassId="CPlayerSGfxKitParts"/>
+          <Entry type="unicast"   name="PlayerReadyToPlayUni"       transportMode="ReliableOrdered"        netDataContainerClassId="CPlayerReadyToPlayMessage"/>      
+          <Entry type="unicast"   name="PlayerTeamInfoUni"       	transportMode="ReliableOrdered"        netDataContainerClassId="CPlayerTeamInfo"/>      
+          <Entry type="unicast"   name="PlayerClanTagUni"           transportMode="ReliableOrdered"        netDataContainerClassId="CPlayerClanTagMessage"/>      		  	  
+        </NetProtocol>
+  </NetObjectType>
+  
+      <NetObjectType name="NetObject.FCXClassService"  >
+        <NetDescriptor netDataContainerClassId="CNetDescriptor" />
+        <NetChannel name="NetChannel.Service.GameMode"/>
+        <NetProtocol>
+          <Entry type="message" name="UpgradeClassLevel"        transportMode="ReliableOrdered"        netDataContainerClassId="CNetMsgClassServiceRequest"/>
+          <Entry type="message" name="ResetClasses"             transportMode="ReliableOrdered"        netDataContainerClassId="CNetMsgClassServiceRequest"/>
+          <Entry type="unicast" name="UpgradeResponse"          transportMode="ReliableOrdered"        netDataContainerClassId="CNetMsgClassServiceRequestResponse"/>
+        </NetProtocol>
+  </NetObjectType>
+  
+</NetObjectTypeRegistry>

@@ -1,0 +1,93 @@
+<package>
+	<configuration>
+		<HUD_PAGE_MULTI>
+			<hudsetup IconAPRFrameIdx="0" IconUFLLFrameIdx="10" DMPositionElemName="t_position" DMPlayerElemName="t_name" DMScoreElemName="t_score" DMMyScoreFrameIdx="10" DMOtherScoreFrameIdx="0" TDMScoreValue1Elem="t_team_score" TDMScoreValue2Elem="t_enemy_score" CTFScoreValue1Elem="t_team_score" CTFScoreValue2Elem="t_enemy_score" CTFDiamondImage="i_diamond_icon" CTF_Mat_Friend="diamond_friend" CTF_Mat_FriendOut="diamond_friend_out" CTF_Mat_Enemy="diamond_enemy" CTF_Mat_EnemyOut="diamond_enemy_out" CTF_Mat_APR="diamond_apr" CTF_Mat_APROut="diamond_apr_out" CTF_Mat_UFLL="diamond_ufll" CTF_Mat_UFLLOut="diamond_ufll_out" VIP_Mat_PointA="vip_a" VIP_Mat_PointA_Team="vip_a_team" VIP_Mat_PointA_Enemy="vip_a_enemy" VIP_Mat_PointA_UFLL="vip_a_ufll" VIP_Mat_PointA_APR="vip_a_apr" VIP_Mat_PointB="vip_b" VIP_Mat_PointB_Team="vip_b_team" VIP_Mat_PointB_Enemy="vip_b_enemy" VIP_Mat_PointB_UFLL="vip_b_ufll" VIP_Mat_PointB_APR="vip_b_apr" VIP_Mat_PointC="vip_c" VIP_Mat_PointC_Team="vip_c_team" VIP_Mat_PointC_Enemy="vip_c_enemy" VIP_Mat_PointC_UFLL="vip_c_ufll" VIP_Mat_PointC_APR="vip_c_apr" VIP_Status_Image="i_status" VIP_Progress_Img="i_new" VIP_Glow_Team="a_glow_team" VIP_Glow_Enemy="a_glow_enemy" VIP_Glow_Attack="a_glow_attacked" VIP_Glow_UFLL="a_glow_ufll" VIP_Glow_APR="a_glow_apr" VIP_Frame_Progress_Team="60" VIP_Frame_Progress_Enemy="70" VIP_Frame_Progress_Attacked="80" VIP_Frame_Progress_UFLL="90" VIP_Frame_Progress_APR="100" VIP_Frame_Status_Team="10" VIP_Frame_Status_Enemy="20" VIP_Frame_Status_UFLL="30" VIP_Frame_Status_APR="40" TDM_Mat_Red="base_apr" TDM_Mat_Blue="base_ufll" Nav_Page_Text_1="t_text_1" Nav_Page_Text_2="t_text_2" Nav_Page_Text_3="t_text_3" Nav_Page_Text_4="t_text_4" Nav_Page_TokensHeader_Text="t_text" Nav_Page_Tokens_Text="t_star">
+				<DMScoreMainArea path="a_score_dm" />
+				<DMScoreItem1Area path="a_score_dm/1" />
+				<DMScoreItem2Area path="a_score_dm/2" />
+				<DMScoreItem3Area path="a_score_dm/3" />
+				<DMScoreItem4Area path="a_score_dm/4" />
+				<TDMScoreMainArea path="a_score_tdm" />
+				<TDMScoreIcon1 path="a_score_tdm/a_team_icon" />
+				<TDMScoreIcon2 path="a_score_tdm/a_enemy_icon" />
+				<CTFScoreMainArea path="a_score_ctf" />
+				<CTFScoreIcon1 path="a_score_ctf/a_team_icon" />
+				<CTFScoreIcon2 path="a_score_ctf/a_enemy_icon" />
+				<CTFDiamond1 path="a_score_ctf/a_team_diamond" />
+				<CTFDiamond2 path="a_score_ctf/a_enemy_diamond" />
+				<VIPScoreMainArea path="a_score_vip" />
+				<VIPTeamIconArea path="a_score_vip/a_team_icon" />
+				<VIPObjective1Area path="a_score_vip/a_1" />
+				<VIPObjective2Area path="a_score_vip/a_2" />
+				<VIPObjective3Area path="a_score_vip/a_3" />
+				<VIPProgressArea path="a_progress" />
+				<AttackHitArea path="a_crosshair_touch" />
+				<NetworkCongestionArea path="a_congestion" />
+				<NavPageArea path="p_hud_nav" />
+				<NavPageTokensArea path="a_diamond_text" />
+			</hudsetup>
+			<infoBox>
+				<config name="FCXDeathMatch" iconMaterial="ui/hud_mp.mgb;hud_mp_mode_dm" />
+				<config name="FCXTeamDeathMatch" iconMaterial="ui/hud_mp.mgb;hud_mp_mode_td" />
+				<config name="FCXCTF" iconMaterial="ui/hud_mp.mgb;hud_mp_mode_ctf" />
+				<config name="FCXVIP" iconMaterial="ui/hud_mp.mgb;hud_mp_mode_vip" />
+				<config name="VoteCalled" iconMaterial="ui/hud_mp.mgb;hud_mp_vote" />
+				<config name="VoteResult" iconMaterial="ui/hud_mp.mgb;hud_mp_vote" />
+			</infoBox>
+		</HUD_PAGE_MULTI>
+	</configuration>
+	<dependencies>
+		<CMagmaConfigUIResource ID="ui\localized\pc\ger\ui\hud_mp.mgb.desc" crc_ID="2042579309" version="2">
+			<CMagmaUIResource ID="ui\localized\pc\ger\ui\hud_mp.mgb" crc_ID="2480733296" />
+			<CMagmaConfigUIResource ID="ui\localized\pc\ger\ui\fonts.mgb.desc" crc_ID="3754765851" />
+			<CMagmaConfigUIResource ID="ui\localized\pc\ger\ui\common.mgb.desc" crc_ID="222471053" />
+			<CMagmaConfigUIResource ID="ui\localized\pc\ger\ui\common_mp.mgb.desc" crc_ID="24245943" />
+			<CMagmaConfigUIResource ID="ui\localized\pc\ger\ui\hud.mgb.desc" crc_ID="1071020038" />
+			<CTextureResource ID="ui\textures\hud_mp\arrow_player.xbt" crc_ID="3100966764" />
+			<CTextureResource ID="ui\textures\hud_mp\hud_mp_vote.xbt" crc_ID="1992982619" />
+			<CTextureResource ID="ui\textures\hud_mp\hud_score_box.xbt" crc_ID="153267378" />
+			<CTextureResource ID="ui\textures\hud_mp\hud_mp_vip.xbt" crc_ID="1521433723" />
+			<CTextureResource ID="ui\textures\hud_mp\hud_mp_topscore.xbt" crc_ID="975124188" />
+			<CTextureResource ID="ui\textures\hud_mp\hud_mp_mode_vip.xbt" crc_ID="3137637981" />
+			<CTextureResource ID="ui\textures\hud_mp\hud_mp_mode_td.xbt" crc_ID="3001101892" />
+			<CTextureResource ID="ui\textures\hud_mp\hud_mp_mode_dm.xbt" crc_ID="3156692654" />
+			<CTextureResource ID="ui\textures\hud_mp\hud_mp_mode_ctf.xbt" crc_ID="3725217363" />
+			<CTextureResource ID="ui\textures\hud_mp\hud_mp_diamond.xbt" crc_ID="1475263187" />
+			<CTextureResource ID="ui\textures\hud_mp\hud_invinsible.xbt" crc_ID="3144721859" />
+			<CTextureResource ID="ui\textures\hud_mp\hud_score_box_2.xbt" crc_ID="1108083785" />
+			<CTextureResource ID="ui\textures\hud_mp\diamond_friend_out.xbt" crc_ID="2304162753" />
+			<CTextureResource ID="ui\textures\hud_mp\diamond_lobby.xbt" crc_ID="620812676" />
+			<CTextureResource ID="ui\textures\hud_mp\diamond_ufll.xbt" crc_ID="1764085425" />
+			<CTextureResource ID="ui\textures\hud_mp\diamond_ufll_out.xbt" crc_ID="98179130" />
+			<CTextureResource ID="ui\textures\hud_mp\base_ufll.xbt" crc_ID="1891610261" />
+			<CTextureResource ID="ui\textures\hud_mp\diamond_apr.xbt" crc_ID="2826814023" />
+			<CTextureResource ID="ui\textures\hud_mp\diamond_apr_out.xbt" crc_ID="835489119" />
+			<CTextureResource ID="ui\textures\hud_mp\diamond_enemy.xbt" crc_ID="1912136474" />
+			<CTextureResource ID="ui\textures\hud_mp\diamond_enemy_out.xbt" crc_ID="2296344713" />
+			<CTextureResource ID="ui\textures\hud_mp\diamond_friend.xbt" crc_ID="1378204603" />
+			<CTextureResource ID="ui\textures\hud_mp\base_apr.xbt" crc_ID="1579915217" />
+			<CTextureResource ID="ui\textures\hud_mp\arrow_base.xbt" crc_ID="2583513043" />
+			<CTextureResource ID="ui\textures\hud_mp\hud_vip.xbt" crc_ID="4045923713" />
+			<CTextureResource ID="ui\textures\hud_mp\icon_ammo_pile.xbt" crc_ID="2550393063" />
+			<CTextureResource ID="ui\textures\multiplayer\icon_dead.xbt" crc_ID="3897416993" />
+			<CTextureResource ID="ui\textures\hud_mp\logo_apr.xbt" crc_ID="1577567429" />
+			<CTextureResource ID="ui\textures\hud_mp\vip_a_apr.xbt" crc_ID="68735108" />
+			<CTextureResource ID="ui\textures\hud_mp\vip_a_enemy.xbt" crc_ID="1654045370" />
+			<CTextureResource ID="ui\textures\hud_mp\vip_a_team.xbt" crc_ID="391649476" />
+			<CTextureResource ID="ui\textures\hud_mp\vip_a_ufll.xbt" crc_ID="1810118825" />
+			<CTextureResource ID="ui\textures\hud_mp\vip_b.xbt" crc_ID="3474769433" />
+			<CTextureResource ID="ui\textures\hud_mp\vip_b_apr.xbt" crc_ID="1033235521" />
+			<CTextureResource ID="ui\textures\hud_mp\vip_b_enemy.xbt" crc_ID="4218739899" />
+			<CTextureResource ID="ui\textures\hud_mp\vip_b_team.xbt" crc_ID="4235174855" />
+			<CTextureResource ID="ui\textures\hud_mp\vip_c.xbt" crc_ID="4068274089" />
+			<CTextureResource ID="ui\textures\hud_mp\vip_c_apr.xbt" crc_ID="720304130" />
+			<CTextureResource ID="ui\textures\hud_mp\vip_c_enemy.xbt" crc_ID="989463419" />
+			<CTextureResource ID="ui\textures\hud_mp\vip_c_ufll.xbt" crc_ID="1863444628" />
+			<CTextureResource ID="ui\textures\hud_mp\vip_score_zone.xbt" crc_ID="2438989391" />
+			<CTextureResource ID="ui\textures\hud_mp\vip_c_team.xbt" crc_ID="330156281" />
+			<CTextureResource ID="ui\textures\hud_mp\vip_a.xbt" crc_ID="2294070473" />
+			<CTextureResource ID="ui\textures\hud_mp\logo_ufll.xbt" crc_ID="1785026235" />
+			<CTextureResource ID="ui\textures\hud_mp\vip_b_ufll.xbt" crc_ID="2161345450" />
+		</CMagmaConfigUIResource>
+	</dependencies>
+</package>

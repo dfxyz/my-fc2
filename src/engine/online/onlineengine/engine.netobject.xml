@@ -1,0 +1,464 @@
+<!-- Network object types definition for anything at the engine level (CryEngine and lower)-->
+<NetObjectTypeRegistry version="1.0">
+
+  <!-- Players -->
+  <NetObjectType name="NetObject.PrivatePlayer"  >
+    <NetDescriptor netDataContainerClassId="CPlayerDescriptor" />
+    <NetChannel name="NetChannel.Service.GameMode"/>
+    <NetProtocol>
+      <Entry type="message" name="PlayerRequestTeamChange"  transportMode="Reliable"                netDataContainerClassId="CPlayerRequestTeamChange"/>
+      <Entry type="message" name="PlayerRequestSuicide"     transportMode="Reliable"                netDataContainerClassId="CNetMessageEmpty"/>
+      <Entry type="message" name="PlayerReplicaReady"       transportMode="ReliableOrdered"         netDataContainerClassId="CNetMessageEmpty"/>      
+      <Entry type="message" name="PlayerSGfxKitPartsLow"    transportMode="ReliableOrdered"         netDataContainerClassId="CPlayerSGfxKitParts"/>
+      <Entry type="message" name="PlayerSGfxKitPartsHigh"   transportMode="ReliableOrdered"         netDataContainerClassId="CPlayerSGfxKitParts"/>
+      <Entry type="message" name="PlayerReadyToPlayMessage" transportMode="ReliableOrdered"         netDataContainerClassId="CPlayerReadyToPlayMessage"/>      
+      <Entry type="message" name="PlayerClanTag"            transportMode="ReliableOrdered"         netDataContainerClassId="CPlayerClanTagMessage"/>
+    </NetProtocol>
+  </NetObjectType>
+
+  <NetObjectType name="NetObject.PublicPlayer"  >
+    <NetDescriptor netDataContainerClassId="CPlayerDescriptor" />
+    <NetChannel name="NetChannel.Service.GameMode"/>
+    <NetProtocol>
+      <Entry type="broadcast" name="PlayerSpawningState"        transportMode="ReliableOrdered"        netDataContainerClassId="CPlayerSpawningState"/>
+      <Entry type="broadcast" name="PlayerSpawningDetails"      transportMode="ReliableOrdered"        netDataContainerClassId="CPlayerSpawningDetails"/>
+      <Entry type="broadcast" name="PlayerSGfxKitPartsLow"      transportMode="ReliableOrdered"        netDataContainerClassId="CPlayerSGfxKitParts"/>
+      <Entry type="broadcast" name="PlayerSGfxKitPartsHigh"     transportMode="ReliableOrdered"        netDataContainerClassId="CPlayerSGfxKitParts"/>
+      <Entry type="broadcast" name="PlayerReadyToPlayBroadcast" transportMode="ReliableOrdered"        netDataContainerClassId="CPlayerReadyToPlayMessage"/>      
+      <Entry type="broadcast" name="PlayerTeamInfo"        		transportMode="ReliableOrdered" 	   netDataContainerClassId="CPlayerTeamInfo"/>
+      <Entry type="broadcast" name="PlayerClanTag"              transportMode="ReliableOrdered"        netDataContainerClassId="CPlayerClanTagMessage"/>      		  	  
+      <Entry type="unicast"   name="PlayerSpawningStateUni"     transportMode="ReliableOrdered"        netDataContainerClassId="CPlayerSpawningState"/>
+      <Entry type="unicast"   name="PlayerSpawningDetailsUni"   transportMode="ReliableOrdered"        netDataContainerClassId="CPlayerSpawningDetails"/>
+      <Entry type="unicast"   name="PlayerSGfxKitPartsLowUni"   transportMode="ReliableOrdered"        netDataContainerClassId="CPlayerSGfxKitParts"/>
+      <Entry type="unicast"   name="PlayerSGfxKitPartsHighUni"  transportMode="ReliableOrdered"        netDataContainerClassId="CPlayerSGfxKitParts"/>
+      <Entry type="unicast"   name="PlayerReadyToPlayUni"       transportMode="ReliableOrdered"        netDataContainerClassId="CPlayerReadyToPlayMessage"/>      
+      <Entry type="unicast"   name="PlayerTeamInfoUni"       	transportMode="ReliableOrdered"        netDataContainerClassId="CPlayerTeamInfo"/>     
+      <Entry type="unicast"   name="PlayerClanTagUni"           transportMode="ReliableOrdered"        netDataContainerClassId="CPlayerClanTagMessage"/>      		  	  
+    </NetProtocol>
+  </NetObjectType>
+  
+  <NetObjectType name="NetObject.PublicSpectatorPlayer"  >
+    <NetDescriptor netDataContainerClassId="CPlayerDescriptor" />
+    <NetChannel name="NetChannel.Service.GameMode"/>
+    <NetProtocol>
+    </NetProtocol>
+  </NetObjectType>
+
+  <NetObjectType name="NetObject.GameMessageService"  >
+    <NetDescriptor netDataContainerClassId="CNetDescriptor" />
+    <NetChannel name="NetChannel.Service.GameMode"/>
+    <NetProtocol>
+      <Entry type="message"   name="Message_GamePlayText"           transportMode="ReliableOrdered" netDataContainerClassId="CGamePlayMessageText"/>
+      <Entry type="message"   name="Message_MultiText"              transportMode="ReliableOrdered" netDataContainerClassId="CGameMessageMultiText"/>
+      <Entry type="message"   name="Message_SystemText"             transportMode="ReliableOrdered" netDataContainerClassId="CSystemMessageText"/>
+      <Entry type="message"   name="Message_PrivateChat"            transportMode="ReliableOrdered" netDataContainerClassId="CPrivateChatMessage"/>
+      <Entry type="message"   name="Message_PunkBuster"            transportMode="ReliableOrdered" netDataContainerClassId="CPunkBusterMessage"/>
+      <Entry type="message"   name="Message_TeamChat"               transportMode="ReliableOrdered" netDataContainerClassId="CTeamChatMessage"/>
+      <Entry type="message"   name="Message_GameSound"              transportMode="ReliableOrdered" netDataContainerClassId="CGameSoundMessage"/>
+      <Entry type="message"   name="Message_GameSoundSequence"      transportMode="ReliableOrdered" netDataContainerClassId="CGameSoundSequenceMessage"/>
+      <Entry type="message" name="Message_Timer"                  transportMode="ReliableOrdered" netDataContainerClassId="CTimerMessage"/>
+      <Entry type="broadcast" name="Broadcast_GamePlayText"         transportMode="ReliableOrdered" netDataContainerClassId="CGamePlayMessageText"/>
+      <Entry type="broadcast" name="Broadcast_MultiText"            transportMode="ReliableOrdered" netDataContainerClassId="CGameMessageMultiText"/>
+      <Entry type="broadcast" name="Broadcast_SystemText"           transportMode="ReliableOrdered" netDataContainerClassId="CSystemMessageText"/>
+      <Entry type="broadcast" name="Broadcast_GlobalChat"           transportMode="ReliableOrdered" netDataContainerClassId="CGlobalChatMessage"/>
+      <Entry type="broadcast" name="Broadcast_GameSound"            transportMode="ReliableOrdered" netDataContainerClassId="CGameSoundMessage"/>
+      <Entry type="broadcast" name="Broadcast_Death"                transportMode="ReliableOrdered" netDataContainerClassId="CDeathMessage"/>
+      <Entry type="broadcast" name="Broadcast_GameSoundSequence"    transportMode="ReliableOrdered" netDataContainerClassId="CGameSoundSequenceMessage"/>
+      <Entry type="broadcast" name="Broadcast_Timer"                transportMode="ReliableOrdered" netDataContainerClassId="CTimerMessage"/>
+    </NetProtocol>
+  </NetObjectType>
+
+  <!-- Pawn -->
+  <NetObjectType name="NetObject.PawnController"  >
+    <NetDescriptor netDataContainerClassId="CPawnNetDescriptorController" />
+    <NetChannel name="NetChannel.Service.GameplayController"/>
+    <NetProtocol>
+      <Entry type="memento"   name="CPawnControllerMemento"     transportMode="NetDataContainerStream"  netDataContainerClassId="CPawnControllerMemento"/>
+      <Entry type="memento"   name="CLadderPawnMemento"         transportMode="NetDataContainerStream"  netDataContainerClassId="CLadderPawnMemento"/>
+      <Entry type="broadcast" name="reload"                     transportMode="ReliableOrdered"         netDataContainerClassId="CPawnNetMessageReloadInfo"/>
+      <Entry type="broadcast" name="reload_abort"               transportMode="ReliableOrdered"         netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="resurrect"                  transportMode="Reliable"                netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="jump"                       transportMode="Reliable"                netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="entervehicle_new"           transportMode="Reliable"                netDataContainerClassId="CPawnNetMessageEntityID"/>
+      <Entry type="broadcast" name="exitvehicle"                transportMode="Reliable"                netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="abort_repair"               transportMode="Reliable"                netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="push_vehicle"               transportMode="Reliable"                netDataContainerClassId="CPawnNetMessageEntityID"/>
+      <Entry type="broadcast" name="pickup_weapon"              transportMode="ReliableOrdered"                netDataContainerClassId="CPawnNetMessageEntityID"/>
+      <Entry type="broadcast" name="pickup_pile"                transportMode="ReliableOrdered"                netDataContainerClassId="CNetFuncPickupPile"/>
+      <Entry type="broadcast" name="try_revive"                 transportMode="Reliable"                netDataContainerClassId="CNetFuncTryRevive"/>
+      <Entry type="broadcast" name="change_seat"                transportMode="ReliableOrdered"                netDataContainerClassId="CNetFuncChangeSeat"/>
+      <Entry type="broadcast" name="push_object"                 transportMode="Reliable"                netDataContainerClassId="CNetFuncPushObject"/>
+      <Entry type="broadcast" name="use_equipment"              transportMode="ReliableOrdered"                netDataContainerClassId="CPawnNetMessageUseEquipment"/>
+      <Entry type="broadcast" name="use_planted_equipment"      transportMode="ReliableOrdered"         netDataContainerClassId="CPawnNetMessageUsePlantedEquipment"/>
+      <Entry type="broadcast" name="switch_ied_mode"            transportMode="ReliableOrdered"         netDataContainerClassId="CPawnNetMessageSwitchIEDMode"/>
+      <Entry type="broadcast" name="shoot"                      transportMode="ReliableOrdered"         netDataContainerClassId="CPawnNetMessageStartStopShoot"/>
+      <Entry type="broadcast" name="fire_bullet"                transportMode="ReliableOrdered"         netDataContainerClassId="CPawnNetMessageFireBullet"/>
+      <Entry type="broadcast" name="firebullets"                transportMode="ReliableOrdered"         netDataContainerClassId="CNetFuncFireBullets"/>
+      <Entry type="broadcast" name="fireflame"                transportMode="ReliableOrdered"         netDataContainerClassId="CNetFuncFireFlame"/>
+      <Entry type="broadcast" name="melee_attack"                transportMode="ReliableOrdered"         netDataContainerClassId="CNetFuncMeleeAttack"/>
+      <Entry type="broadcast" name="fireprojectile"                transportMode="ReliableOrdered"         netDataContainerClassId="CNetFuncFireProjectile"/>
+      <Entry type="broadcast" name="climb"                      transportMode="Reliable"                netDataContainerClassId="CNetFuncClimb"/>
+      <Entry type="broadcast" name="throw"                		transportMode="ReliableOrdered"         netDataContainerClassId="CNetFuncThrow"/>
+      <Entry type="broadcast" name="use_entity_event"           transportMode="ReliableOrdered"                netDataContainerClassId="CPawnNetMessageUseEntity"/>
+      <Entry type="broadcast" name="leave_ladder_top"           transportMode="Reliable"                netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="leave_ladder_bottom"        transportMode="Reliable"                netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="leave_mounted_weapon"       transportMode="Reliable"                netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="draw_weapon"               transportMode="ReliableOrdered"                netDataContainerClassId="CNetFuncDrawWeapon"/>
+      <Entry type="broadcast" name="gadget_drawn"               transportMode="ReliableOrdered"                netDataContainerClassId="CPawnNetMessageEntityID"/>
+      <Entry type="broadcast" name="unjam_weapon"               transportMode="ReliableOrdered"                netDataContainerClassId="CPawnNetMessageEntityID"/>
+      <Entry type="broadcast" name="start_healing"              transportMode="Reliable"                netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="slide"                      transportMode="Reliable"                netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="process_Landing"            transportMode="Reliable"                netDataContainerClassId="CPawnNetMessageProcessLanding"/>
+      <Entry type="broadcast" name="sticky_fire"                transportMode="Reliable"                netDataContainerClassId="CPawnNetMessageStickyStream"/>
+      <Entry type="broadcast" name="detonate_projectile"        transportMode="ReliableOrdered"                netDataContainerClassId="CNetFuncDetonateProjectile"/>
+      <Entry type="broadcast" name="TryTakeFlag"                transportMode="ReliableOrdered"         netDataContainerClassId="CNetFuncTryTakeFlag"/>
+      <Entry type="broadcast" name="holster_lock"               transportMode="Reliable"                netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="draw_unlock"               transportMode="Reliable"                netDataContainerClassId="CNetBroadcastEmpty"/>
+    </NetProtocol>
+  </NetObjectType>
+
+  <NetObjectType name="NetObject.PawnHost"  >
+    <NetDescriptor netDataContainerClassId="CPawnNetDescriptorHost" />
+    <NetChannel name="NetChannel.Service.GameplayHost"/>
+    <NetProtocol>
+      <Entry type="memento"   name="CPawnHostMemento"           transportMode="NetDataContainerStream"  netDataContainerClassId="CPawnHostMemento"/>
+      <Entry type="memento"   name="CPawnInventoryAmmoMemento"  transportMode="NetDataContainerStream"  netDataContainerClassId="CPawnInventoryAmmoMemento"/>
+      <Entry type="memento"   name="CPawnInventoryEquipmentMemento"  transportMode="NetDataContainerStream" netDataContainerClassId="CPawnInventoryEquipmentMemento"/>
+      <Entry type="broadcast" name="reload_done"                transportMode="ReliableOrdered"         netDataContainerClassId="CPawnNetMessageReloadInfo"/>
+      <Entry type="broadcast" name="reload_abort"               transportMode="ReliableOrdered"         netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="weapon_broke"               transportMode="ReliableOrdered"         netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="get_in_vehicle"             transportMode="Reliable"                netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="abort_get_in_vehicle"       transportMode="Reliable"                netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="revive_get_up"              transportMode="Reliable"                netDataContainerClassId="CNetFuncRevive"/>
+      <Entry type="broadcast" name="revive_failed"                 transportMode="Reliable"                netDataContainerClassId="CNetFuncReviveFailed"/>
+      <Entry type="broadcast" name="revive_start_ragdoll"       transportMode="Reliable"                netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="die"                        transportMode="Reliable"                netDataContainerClassId="CNetFuncDie"/>
+      <Entry type="broadcast" name="refuse_use"                 transportMode="Reliable"                netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="FuncApplyFX"                transportMode="Reliable"                netDataContainerClassId="CNetFuncApplyFX"/>
+      <Entry type="broadcast" name="FuncAbortHealing"           transportMode="Reliable"                netDataContainerClassId="CNetFuncAbortHealing"/>
+      <Entry type="broadcast" name="abort_mounted_weapon"       transportMode="Reliable"                netDataContainerClassId="CNetFuncAbortMountedWeapon"/>
+      <Entry type="broadcast" name="ack_change_seat"            transportMode="Reliable"                netDataContainerClassId="CNetFuncAckChangeSeat"/>
+      <Entry type="broadcast" name="TakeFlag"                   transportMode="ReliableOrdered"         netDataContainerClassId="CNetFuncTakeFlag"/>
+      <Entry type="broadcast" name="forceDetonateExplosive"     transportMode="ReliableOrdered"         netDataContainerClassId="CNetFuncForceDetonateExplosive"/>
+    </NetProtocol>
+  </NetObjectType>
+  
+  <NetObjectType name="NetObject.PawnThirdParty"  >
+    <NetDescriptor netDataContainerClassId="CPawnNetDescriptorThirdParty" />
+    <NetChannel name="NetChannel.Simulation.GameplayThirdParty"/>
+    <NetProtocol>
+      <Entry type="memento"   name="CPawnThirdPartyMemento"     transportMode="NetDataContainerStream"  netDataContainerClassId="CPawnThirdPartyMemento"/>
+      <Entry type="memento"   name="CPawnInventoryEquipmentMemento"  transportMode="NetDataContainerStream" netDataContainerClassId="CPawnInventoryEquipmentMemento"/>
+      <Entry type="broadcast" name="reload"                     transportMode="ReliableOrdered"         netDataContainerClassId="CPawnNetMessageReloadInfo"/>
+      <Entry type="broadcast" name="reload_abort"               transportMode="ReliableOrdered"         netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="resurrect"                  transportMode="Reliable"                netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="weapon_broke"               transportMode="ReliableOrdered"         netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="jump"                       transportMode="Reliable"                netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="entervehicle_new"           transportMode="Reliable"                netDataContainerClassId="CPawnNetMessageEntityID"/>
+      <Entry type="broadcast" name="get_in_vehicle"             transportMode="Reliable"                netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="abort_get_in_vehicle"       transportMode="Reliable"                netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="exitvehicle"                transportMode="Reliable"                netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="abort_repair"               transportMode="Reliable"                netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="revive_get_up"              transportMode="Reliable"                netDataContainerClassId="CNetFuncRevive"/>
+      <Entry type="broadcast" name="revive_start_ragdoll"       transportMode="Reliable"                netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="use_equipment"              transportMode="Reliable"                netDataContainerClassId="CPawnNetMessageUseEquipment"/>
+      <Entry type="broadcast" name="use_planted_equipment"      transportMode="ReliableOrdered"         netDataContainerClassId="CPawnNetMessageUsePlantedEquipment"/>
+      <Entry type="broadcast" name="switch_ied_mode"            transportMode="ReliableOrdered"         netDataContainerClassId="CPawnNetMessageSwitchIEDMode"/>
+      <Entry type="broadcast" name="shoot"                      transportMode="ReliableOrdered"         netDataContainerClassId="CPawnNetMessageStartStopShoot"/>
+      <Entry type="broadcast" name="fire_bullet"                transportMode="ReliableOrdered"         netDataContainerClassId="CPawnNetMessageFireBullet"/>
+      <Entry type="broadcast" name="firebullets"                transportMode="ReliableOrdered"         netDataContainerClassId="CNetFuncFireBullets"/>
+      <Entry type="broadcast" name="fireflame"                  transportMode="ReliableOrdered"         netDataContainerClassId="CNetFuncFireFlame"/>
+      <Entry type="broadcast" name="throw"                      transportMode="ReliableOrdered"         netDataContainerClassId="CNetFuncThrow"/>
+      <Entry type="broadcast" name="die"                        transportMode="Reliable"                netDataContainerClassId="CNetFuncDie"/>
+      <Entry type="broadcast" name="climb"                      transportMode="Reliable"                netDataContainerClassId="CNetFuncClimb"/>
+      <Entry type="broadcast" name="use_entity_event"           transportMode="Reliable"                netDataContainerClassId="CPawnNetMessageUseEntity"/>
+      <Entry type="broadcast" name="leave_ladder_top"           transportMode="Reliable"                netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="leave_ladder_bottom"        transportMode="Reliable"                netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="start_healing"              transportMode="Reliable"                netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="slide"                      transportMode="Reliable"                netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="pickup_weapon"              transportMode="Reliable"                netDataContainerClassId="CPawnNetMessageEntityID"/>
+      <Entry type="broadcast" name="pickup_pile"                transportMode="Reliable"                netDataContainerClassId="CNetFuncPickupPile"/>
+      <Entry type="broadcast" name="FuncAbortHealing"           transportMode="Reliable"                netDataContainerClassId="CNetFuncAbortHealing"/>
+      <Entry type="broadcast" name="TryTakeFlag"                transportMode="ReliableOrdered"         netDataContainerClassId="CNetFuncTryTakeFlag"/>
+      <Entry type="broadcast" name="TakeFlag"                   transportMode="ReliableOrdered"         netDataContainerClassId="CNetFuncTakeFlag"/>
+      <Entry type="broadcast" name="holster_lock"               transportMode="Reliable"                netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="draw_unlock"               transportMode="Reliable"                netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="fireprojectile"                transportMode="ReliableOrdered"         netDataContainerClassId="CNetFuncFireProjectile"/>
+      <Entry type="broadcast" name="unjam_weapon"               transportMode="Reliable"                netDataContainerClassId="CPawnNetMessageEntityID"/>
+      <Entry type="broadcast" name="forceDetonateExplosive"     transportMode="ReliableOrdered"         netDataContainerClassId="CNetFuncForceDetonateExplosive"/>
+    </NetProtocol>
+  </NetObjectType>
+
+  <NetObjectType name="NetObject.PickupEntity"  >
+    <NetDescriptor netDataContainerClassId="CEntityNetDescriptor" />
+    <NetChannel name="NetChannel.Simulation.Gameplay"/>
+    <NetProtocol>
+      <Entry type="memento"   name="CPickupMemento" transportMode="NetDataContainerStream" netDataContainerClassId="CPickupMemento"/>
+      <Entry type="memento"   name="CPhysMemento" transportMode="NetDataContainerStream" netDataContainerClassId="CPhysMemento"/>
+    </NetProtocol>
+  </NetObjectType>
+
+  <NetObjectType name="NetObject.Projectile"  >
+    <NetDescriptor netDataContainerClassId="CEntityNetDescriptor" />
+    <NetChannel name="NetChannel.Simulation.Projectile"/>
+    <NetProtocol>
+      <Entry type="memento"   name="CPhysParticleMemento" transportMode="NetDataContainerStream" netDataContainerClassId="CPhysParticleMemento"/>
+      <Entry type="message"   name="bind_state"               transportMode="ReliableOrdered"           netDataContainerClassId="CGadgetProjectileBindStateMsg"/>
+      <Entry type="broadcast" name="detonate_projectile"  transportMode="ReliableOrdered"           netDataContainerClassId="CNetMessageDetonateProjectile"/>
+    </NetProtocol>
+  </NetObjectType>
+
+  <NetObjectType name="NetObject.MountedWeaponController"  >
+    <NetDescriptor netDataContainerClassId="CMountedWeaponNetDescriptorController" />
+    <NetChannel name="NetChannel.Service.GameplayController"/>
+    <NetProtocol>
+      <Entry type="memento"   name="CMountedWeaponControllerMemento" transportMode="NetDataContainerStream" netDataContainerClassId="CMountedWeaponControllerMemento"/>
+    </NetProtocol>
+  </NetObjectType>
+
+  <NetObjectType name="NetObject.MountedWeaponHost"  >
+    <NetDescriptor netDataContainerClassId="CMountedWeaponNetDescriptorHost" />
+    <NetChannel name="NetChannel.Service.GameplayHost"/>
+    <NetProtocol>
+      <!-- <Entry type="memento"   name="CMountedWeaponHostMemento" transportMode="NetDataContainerStream" netDataContainerClassId="CMountedWeaponHostMemento"/> -->
+    </NetProtocol>
+  </NetObjectType>
+
+  <NetObjectType name="NetObject.MountedWeaponThirdParty"  >
+    <NetDescriptor netDataContainerClassId="CMountedWeaponNetDescriptorThirdParty" />
+    <NetChannel name="NetChannel.Simulation.GameplayThirdParty"/>
+    <NetProtocol>
+      <Entry type="memento"   name="CMountedWeaponThirdPartyMemento" transportMode="NetDataContainerStream" netDataContainerClassId="CMountedWeaponThirdPartyMemento"/>
+    </NetProtocol>
+  </NetObjectType>
+
+  <NetObjectType name="NetObject.VehiculeController"  >
+    <NetDescriptor netDataContainerClassId="CVehicleNetDescriptorController" />
+    <NetChannel name="NetChannel.Service.GameplayController"/>
+    <NetProtocol>
+      <Entry type="memento"   name="CVehicleControllerMemento" transportMode="NetDataContainerStream" netDataContainerClassId="CVehicleControllerMemento"/>
+    </NetProtocol>
+  </NetObjectType>
+
+  <NetObjectType name="NetObject.VehiculeHost"  >
+    <NetDescriptor netDataContainerClassId="CVehicleNetDescriptorHost" />
+    <NetChannel name="NetChannel.Service.GameplayHost"/>
+    <NetProtocol>
+      <!-- <Entry type="memento"   name="CVehicleHostMemento" transportMode="NetDataContainerStream" netDataContainerClassId="CVehicleHostMemento"/> -->
+    </NetProtocol>
+  </NetObjectType>
+
+  <NetObjectType name="NetObject.VehiculeThirdParty"  >
+    <NetDescriptor netDataContainerClassId="CVehicleNetDescriptorThirdParty" />
+    <NetChannel name="NetChannel.Simulation.VehicleThirdParty"/>
+    <NetProtocol>
+      <Entry type="memento"   name="CVehicleThirdPartyMemento" transportMode="NetDataContainerStream" netDataContainerClassId="CVehicleThirdPartyMemento"/>
+      <Entry type="broadcast" name="reset"                     transportMode="ReliableOrdered"               netDataContainerClassId="CNetBroadcastEmpty"/>
+      <Entry type="broadcast" name="vehicle_explosion"         transportMode="ReliableOrdered"               netDataContainerClassId="CVehicleNetMessageExplosion"/>
+    </NetProtocol>
+  </NetObjectType>
+
+  <NetObjectType name="NetObject.PhysicsObject"  >
+    <NetDescriptor netDataContainerClassId="CNetDescriptor" />
+    <NetChannel name="NetChannel.Simulation.PhysicObject"/>
+    <NetProtocol>
+      <Entry type="memento"   name="CPhysMemento" transportMode="NetDataContainerStream" netDataContainerClassId="CPhysMemento"/>
+    </NetProtocol>
+  </NetObjectType>
+
+  <NetObjectType name="NetObject.CompoundPhys"  >
+    <NetDescriptor netDataContainerClassId="CNetDescriptor" />
+    <NetChannel name="NetChannel.Simulation.CompoundObject"/>
+    <NetProtocol>
+      <Entry type="memento"   name="CCompoundPhysMemento" transportMode="NetDataContainerStream" netDataContainerClassId="CCompoundPhysMemento"/>
+      <Entry type="broadcast" name="reset"                transportMode="ReliableOrdered"        netDataContainerClassId="CNetBroadcastEmpty"/>
+    </NetProtocol>
+  </NetObjectType>
+
+  <NetObjectType name="NetObject.CompoundDetachedPhysObject"  >
+    <NetDescriptor netDataContainerClassId="CNetDescriptor" />
+    <NetChannel name="NetChannel.Simulation.PhysicObject"/>
+    <NetProtocol>
+      <Entry type="memento"   name="CPhysMemento" transportMode="NetDataContainerStream" netDataContainerClassId="CPhysMemento"/>
+    </NetProtocol>
+  </NetObjectType>
+
+  <NetObjectType name="NetObject.VehicleDetachedPhysObject"  >
+    <NetDescriptor netDataContainerClassId="CVehicleSpawnedPartNetDescriptor" />
+    <NetChannel name="NetChannel.Simulation.VehicleDetachedPhysObject"/>
+    <NetProtocol>
+      <Entry type="memento"   name="CPhysMemento" transportMode="NetDataContainerStream" netDataContainerClassId="CPhysMemento"/>
+    </NetProtocol>
+  </NetObjectType>
+
+  <NetObjectType name="NetObject.Ladder"  >
+    <NetDescriptor netDataContainerClassId="CEntityNetDescriptor" />
+    <NetChannel name="NetChannel.Service.Gameplay"/>
+    <NetProtocol>
+      <Entry type="memento"   name="CLadderMemento" transportMode="NetDataContainerStream" netDataContainerClassId="CLadderMemento"/>
+    </NetProtocol>
+  </NetObjectType>
+
+  <NetObjectType name="NetObject.GadgetGeneric"  >
+    <NetDescriptor netDataContainerClassId="CEntityNetDescriptor" />
+    <NetChannel name="NetChannel.Service.GameplayHost"/>
+    <NetProtocol>
+      <Entry type="memento"   name="CGadgetMemento" transportMode="NetDataContainerStream" netDataContainerClassId="CGadgetMemento"/>
+    </NetProtocol>
+  </NetObjectType>
+ 
+  <NetObjectType name="NetObject.GadgetProjectile"  >
+    <NetDescriptor netDataContainerClassId="CEntityNetDescriptor" />
+    <NetChannel name="NetChannel.Simulation.Projectile"/>
+    <NetProtocol>
+      <Entry type="memento"   name="CGadgetProjectileMemento" transportMode="NetDataContainerStream" netDataContainerClassId="CGadgetProjectileMemento"/>
+      <Entry type="broadcast" name="synchro_proj"             transportMode="ReliableOrdered"        netDataContainerClassId="CPawnNetMessageEntityID"/>
+    </NetProtocol>
+  </NetObjectType>
+  
+  <NetObjectType name="NetObject.WeaponIED"  >
+    <NetDescriptor netDataContainerClassId="CEntityNetDescriptor" />
+    <NetChannel name="NetChannel.Service.GameplayHost"/>
+    <NetProtocol>
+      <Entry type="memento"   name="CWeaponIEDMemento" transportMode="NetDataContainerStream" netDataContainerClassId="CWeaponIEDMemento"/>
+      <Entry type="broadcast" name="synchro_proj"      transportMode="ReliableOrdered"        netDataContainerClassId="CPawnNetMessageEntityID"/>
+    </NetProtocol>
+  </NetObjectType>
+  
+  <NetObjectType name="NetObject.WeaponGeneric"  >
+    <NetDescriptor netDataContainerClassId="CEntityNetDescriptor" />
+    <NetChannel name="NetChannel.Service.GameplayHost"/>
+    <NetProtocol>
+      <Entry type="memento"   name="CWeaponMemento" transportMode="NetDataContainerStream" netDataContainerClassId="CWeaponMemento"/>
+    </NetProtocol>
+  </NetObjectType>
+  
+  <NetObjectType name="NetObject.WeaponProjectile"  >
+    <NetDescriptor netDataContainerClassId="CEntityNetDescriptor" />
+    <NetChannel name="NetChannel.Simulation.Projectile"/>
+    <NetProtocol>
+      <Entry type="memento"   name="CWeaponProjectileMemento"   transportMode="NetDataContainerStream" netDataContainerClassId="CWeaponProjectileMemento"/>
+      <Entry type="broadcast" name="synchro_proj"               transportMode="ReliableOrdered"               netDataContainerClassId="CPawnNetMessageEntityID"/>
+    </NetProtocol>
+  </NetObjectType>
+  
+  <NetObjectType name="NetObject.WeaponProjectileAimAt"  >
+    <NetDescriptor netDataContainerClassId="CEntityNetDescriptor" />
+    <NetChannel name="NetChannel.Service.GameplayController"/>
+    <NetProtocol>
+      <Entry type="memento"   name="CWeaponProjectileControllerMemento"   transportMode="NetDataContainerStream" netDataContainerClassId="CWeaponProjectileControllerMemento"/>
+    </NetProtocol>
+  </NetObjectType>
+  
+  <NetObjectType name="NetObject.PickupPileEntity"  >
+    <NetDescriptor netDataContainerClassId="CEntityNetDescriptor" />
+    <NetChannel name="NetChannel.Simulation.Gameplay"/>
+    <NetProtocol>
+      <Entry type="memento"   name="CPickupPileMemento"          transportMode="NetDataContainerStream"         netDataContainerClassId="CPickupPileNetData"/>
+      <Entry type="broadcast" name="ForceUpdate"                 transportMode="ReliableOrdered"                netDataContainerClassId="CPickupPileNetData"/>
+      <Entry type="broadcast" name="fire_projectile_world"       transportMode="ReliableOrdered"                netDataContainerClassId="CPickupPileNetMessageFireRocket"/>
+      <Entry type="broadcast" name="pile_respawn"                transportMode="ReliableOrdered"                netDataContainerClassId="CNetBroadcastEmpty"/>
+    </NetProtocol>
+  </NetObjectType>
+  
+<!-- Real-tree manager -->
+  <NetObjectType name="NetObject.RealTreeManager"  >
+    <NetDescriptor netDataContainerClassId="CNetDescriptor" />
+    <NetChannel name="NetChannel.Service.Realtree"/>
+    <NetProtocol>
+      <Entry type="broadcast" name="Realtre_BrokenBranch"       transportMode="ReliableOrdered"                	netDataContainerClassId="RTcNetRTBrokenBranchMsg"/>      
+      <Entry type="broadcast" name="Realtre_CacheTreeID_BC"     transportMode="ReliableOrdered"                	netDataContainerClassId="RTcNetRTCacheTreeIDMsg"/>      
+      <Entry type="unicast"   name="Realtre_CacheTreeID_UC"   	transportMode="ReliableOrdered"        					netDataContainerClassId="RTcNetRTCacheTreeIDMsg"/>      
+    </NetProtocol>
+  </NetObjectType>
+
+  <!-- Authorization service -->
+  <NetObjectType name="NetObject.AuthorizationService"  >
+    <NetDescriptor netDataContainerClassId="CAuthorizationServiceDescriptor" />
+    <NetChannel name="NetChannel.Service.GameMode"/>
+    <NetProtocol>
+      <Entry type="memento" name="AuthorizationMemento" transportMode="NetDataContainerStream" netDataContainerClassId="CAuthorizationServiceMemento"/>
+    </NetProtocol>
+  </NetObjectType>
+
+  <!-- Stats service -->
+  <NetObjectType name="NetObject.GameStats"  >
+    <NetDescriptor netDataContainerClassId="CNetDescriptor" />
+    <NetChannel name="NetChannel.Service.Statistics"/>
+    <NetProtocol>
+      <Entry type="memento" name="CGameStatsMemento" transportMode="NetDataContainerStream" netDataContainerClassId="CGameStatsMemento"/>
+    </NetProtocol>
+  </NetObjectType>
+    
+  <NetObjectType name="NetObject.PlayerStats"  >
+    <NetDescriptor netDataContainerClassId="CNetDescriptor" />
+    <NetChannel name="NetChannel.Service.Statistics"/>
+    <NetProtocol>
+      <Entry type="memento"   name="PlayerStatsDelta_InGame"        	transportMode="NetDataContainerStream" netDataContainerClassId="CPlayerStatsMementoNetDataContainer"/>
+      <Entry type="message"   name="PlayerStatsInit_JoinStats"      	transportMode="ReliableOrdered"        netDataContainerClassId="CPlayerStatsNetDataContainer"/>
+      <Entry type="unicast"   name="PlayerStatsInit_UnicastInitStats"       transportMode="ReliableOrdered"        netDataContainerClassId="CPlayerStatsNetDataContainer"/>
+      <Entry type="broadcast" name="PlayerStatsInit_BroadcastInitStats"     transportMode="ReliableOrdered"        netDataContainerClassId="CPlayerStatsNetDataContainer"/> 
+      <Entry type="broadcast" name="PlayerStatsInit_BroadcastInitStat"      transportMode="ReliableOrdered"        netDataContainerClassId="CPlayerStatRefreshOneNetDataContainer"/> 
+      <Entry type="broadcast" name="PlayerStats_BroadcastRefreshStats"      transportMode="ReliableOrdered"        netDataContainerClassId="CPlayerStatsFullNetDataContainer"/>
+	    <Entry type="unicast"   name="PlayerStats_UnicastRefreshOneStat"      transportMode="ReliableOrdered"        netDataContainerClassId="CPlayerStatRefreshOneNetDataContainer"/>
+      <Entry type="broadcast" name="PlayerStatsDelta_BroadcastEndStats"     transportMode="ReliableOrdered"        netDataContainerClassId="CPlayerStatsNetDataContainer"/>
+    </NetProtocol>
+  </NetObjectType>
+    
+  <!-- Leaderboard Arbitrated -->
+  <NetObjectType name="NetObject.LeaderboardArbitrated"  >
+    <NetDescriptor netDataContainerClassId="CNetDescriptor" />
+    <NetChannel name="NetChannel.Service.Statistics"/>
+    <NetProtocol>
+      <Entry type="message"     name="ArbitrationJoin"      transportMode="ReliableOrdered"  netDataContainerClassId="CArbitrationJoinDataContainer"/>
+      <Entry type="broadcast"   name="ArbitrationCompleted" transportMode="ReliableOrdered"  netDataContainerClassId="CArbitrationCompletedDataContainer"/>
+    </NetProtocol>
+  </NetObjectType>    
+    
+  <!-- Gamesettings service -->
+  <NetObjectType name="NetObject.GameSettingsService"  >
+    <NetDescriptor netDataContainerClassId="CGameSettingsServiceDescriptor" />
+    <NetChannel name="NetChannel.Service.GameMode"/>
+    <NetProtocol>
+      <Entry type="memento" name="GameSettingsMemento" transportMode="NetDataContainerStream" netDataContainerClassId="CGameSettingsServiceMemento"/>
+    </NetProtocol>
+  </NetObjectType>
+     
+  <!-- Voting service -->
+  <NetObjectType name="NetObject.VotingService"  >
+    <NetDescriptor netDataContainerClassId="CNetDescriptor" />
+    <NetChannel name="NetChannel.Service.GameMode"/>
+    <NetProtocol>
+      <!-- Request to call a vote -->
+      <Entry type="broadcast" name="RequestCallVoteChangeSetting"  transportMode="ReliableOrdered" netDataContainerClassId="CVoteQuestionChangeSetting"/>
+      <Entry type="broadcast" name="RequestCallVotePlayer"         transportMode="ReliableOrdered" netDataContainerClassId="CVoteQuestionPlayer"/>
+      <Entry type="broadcast" name="RequestCallVoteMatch"          transportMode="ReliableOrdered" netDataContainerClassId="CVoteQuestionMatch"/>
+      
+      <!-- Accept/refuse request -->
+      <Entry type="message"   name="RefuseRequestCallVote"         transportMode="ReliableOrdered" netDataContainerClassId="CRequestCallVoteReplyMessage"/>
+      <Entry type="message"   name="AcceptRequestCallVote"         transportMode="ReliableOrdered" netDataContainerClassId="CRequestCallVoteReplyMessage"/>
+      
+      <!-- Call a vote -->
+      <Entry type="message"   name="CallVoteChangeSetting"         transportMode="ReliableOrdered" netDataContainerClassId="CVoteQuestionChangeSetting"/>
+      <Entry type="message"   name="CallVotePlayer"                transportMode="ReliableOrdered" netDataContainerClassId="CVoteQuestionPlayer"/>
+      <Entry type="message"   name="CallVoteMatch"                 transportMode="ReliableOrdered" netDataContainerClassId="CVoteQuestionMatch"/>
+            
+      <!-- Vote -->
+      <Entry type="broadcast" name="Vote"                          transportMode="ReliableOrdered" netDataContainerClassId="CVoteMessage"/>
+      
+      <!-- Send vote result -->
+      <Entry type="message"   name="VoteResult"                    transportMode="ReliableOrdered" netDataContainerClassId="CVoteResultMessage"/>
+    </NetProtocol>
+  </NetObjectType>
+
+    <!-- host admin service -->
+    <NetObjectType name="NetObject.HostAdminService"  >
+        <NetDescriptor netDataContainerClassId="CNetDescriptor" />
+        <NetChannel name="NetChannel.Service.GameMode"/>
+        <NetProtocol>
+            <Entry type="message" name="RemoteCommandMsg"        	transportMode="ReliableOrdered"        netDataContainerClassId="CHostAdminRemoteConsoleCmdMessage"/>
+            <Entry type="unicast" name="ResultMsg"          		transportMode="ReliableOrdered"        netDataContainerClassId="CHostAdminResultMessage"/>
+        </NetProtocol>
+    </NetObjectType>
+    
+</NetObjectTypeRegistry>

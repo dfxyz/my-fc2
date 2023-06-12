@@ -1,0 +1,353 @@
+﻿<object type="EntityLibrary">
+  <value name="Name" type="String">StimEmitters</value>
+  <object type="EntityPrototype">
+    <value name="Name" type="String">Burn.BurnEmitter.multi</value>
+    <object type="Entity">
+      <value name="hidName" type="String">StimEmitters.Burn.BurnEmitter.multi</value>
+      <value name="disEntityId" type="UInt64">5217</value>
+      <value name="text_hidEntityClass" type="String">CEntity</value>
+      <value name="hidEntityClass" type="Hash">50C95067</value>
+      <value name="hidResourceCount" type="UInt32">0</value>
+      <value name="hidPos" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidAngles" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidPos_precise" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidConstEntity" type="Bool">False</value>
+      <object type="Components">
+        <object type="CStimsEmitterComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="bEnable" type="Bool">True</value>
+          <value name="fRateOfEmission" type="Float">1</value>
+          <object type="Stims">
+            <object type="Stim">
+              <value name="hidEventName" type="String">Stims</value>
+              <value name="eventMask" type="UInt32">2</value>
+              <value name="hidTargetEntityId" type="UInt64">18446744073709551615</value>
+              <value name="text_sDetail" type="String"></value>
+              <value name="sDetail" type="Hash">FFFFFFFF</value>
+              <value name="selType" type="UInt32">7</value>
+              <value name="nLevel" type="UInt32">15</value>
+              <value name="fRadius" type="Float">1</value>
+              <value name="bFalloff" type="Bool">True</value>
+              <value name="nFalloffMinLevel" type="UInt32">1</value>
+              <value name="hidShowType" type="BinHex">01</value>
+              <value name="hidShowRadius" type="BinHex">01</value>
+              <object type="enumType">
+                <object type="enum">
+                  <value name="Value" type="String">None</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Bang</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Snap</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Pierce</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Crush</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Cut</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Health</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Burn</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Water</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Panic</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Fear</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Morale</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Dirt</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Reliability</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Interest</value>
+                </object>
+              </object>
+            </object>
+            <object type="Stim">
+              <value name="hidEventName" type="String">Stims</value>
+              <value name="eventMask" type="UInt32">2</value>
+              <value name="hidTargetEntityId" type="UInt64">18446744073709551615</value>
+              <value name="text_sDetail" type="String"></value>
+              <value name="sDetail" type="Hash">FFFFFFFF</value>
+              <value name="selType" type="UInt32">0</value>
+              <value name="nLevel" type="UInt32">0</value>
+              <value name="fRadius" type="Float">0</value>
+              <value name="bFalloff" type="Bool">False</value>
+              <value name="nFalloffMinLevel" type="UInt32">0</value>
+              <value name="hidShowType" type="BinHex">01</value>
+              <value name="hidShowRadius" type="BinHex">01</value>
+              <object type="enumType">
+                <object type="enum">
+                  <value name="Value" type="String">None</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Bang</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Snap</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Pierce</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Crush</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Cut</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Health</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Burn</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Water</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Panic</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Fear</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Morale</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Dirt</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Reliability</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Interest</value>
+                </object>
+              </object>
+            </object>
+          </object>
+        </object>
+        <object type="CPersistComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="selLevel" type="UInt32">0</value>
+          <object type="enumLevel">
+            <object type="enum">
+              <value name="Value" type="String">None</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Limited</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Full</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Critical</value>
+            </object>
+          </object>
+        </object>
+      </object>
+    </object>
+  </object>
+  <object type="EntityPrototype">
+    <value name="Name" type="String">Burn.BurnEmitter_Medium.Multi</value>
+    <object type="Entity">
+      <value name="hidName" type="String">StimEmitters.Burn.BurnEmitter_Medium.Multi</value>
+      <value name="disEntityId" type="UInt64">5220</value>
+      <value name="text_hidEntityClass" type="String">CEntity</value>
+      <value name="hidEntityClass" type="Hash">50C95067</value>
+      <value name="hidResourceCount" type="UInt32">0</value>
+      <value name="hidPos" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidAngles" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidPos_precise" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidConstEntity" type="Bool">False</value>
+      <object type="Components">
+        <object type="CStimsEmitterComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="bEnable" type="Bool">True</value>
+          <value name="fRateOfEmission" type="Float">1</value>
+          <object type="Stims">
+            <object type="Stim">
+              <value name="hidEventName" type="String">Stims</value>
+              <value name="eventMask" type="UInt32">2</value>
+              <value name="hidTargetEntityId" type="UInt64">18446744073709551615</value>
+              <value name="text_sDetail" type="String"></value>
+              <value name="sDetail" type="Hash">FFFFFFFF</value>
+              <value name="selType" type="UInt32">7</value>
+              <value name="nLevel" type="UInt32">15</value>
+              <value name="fRadius" type="Float">3.5</value>
+              <value name="bFalloff" type="Bool">True</value>
+              <value name="nFalloffMinLevel" type="UInt32">1</value>
+              <value name="hidShowType" type="BinHex">01</value>
+              <value name="hidShowRadius" type="BinHex">01</value>
+              <object type="enumType">
+                <object type="enum">
+                  <value name="Value" type="String">None</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Bang</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Snap</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Pierce</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Crush</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Cut</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Health</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Burn</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Water</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Panic</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Fear</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Morale</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Dirt</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Reliability</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Interest</value>
+                </object>
+              </object>
+            </object>
+            <object type="Stim">
+              <value name="hidEventName" type="String">Stims</value>
+              <value name="eventMask" type="UInt32">2</value>
+              <value name="hidTargetEntityId" type="UInt64">18446744073709551615</value>
+              <value name="text_sDetail" type="String"></value>
+              <value name="sDetail" type="Hash">FFFFFFFF</value>
+              <value name="selType" type="UInt32">0</value>
+              <value name="nLevel" type="UInt32">0</value>
+              <value name="fRadius" type="Float">0</value>
+              <value name="bFalloff" type="Bool">False</value>
+              <value name="nFalloffMinLevel" type="UInt32">0</value>
+              <value name="hidShowType" type="BinHex">01</value>
+              <value name="hidShowRadius" type="BinHex">01</value>
+              <object type="enumType">
+                <object type="enum">
+                  <value name="Value" type="String">None</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Bang</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Snap</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Pierce</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Crush</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Cut</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Health</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Burn</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Water</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Panic</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Fear</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Morale</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Dirt</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Reliability</value>
+                </object>
+                <object type="enum">
+                  <value name="Value" type="String">Interest</value>
+                </object>
+              </object>
+            </object>
+          </object>
+        </object>
+        <object type="CPersistComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="selLevel" type="UInt32">0</value>
+          <object type="enumLevel">
+            <object type="enum">
+              <value name="Value" type="String">None</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Limited</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Full</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Critical</value>
+            </object>
+          </object>
+        </object>
+      </object>
+    </object>
+  </object>
+</object>

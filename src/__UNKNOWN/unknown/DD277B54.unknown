@@ -1,0 +1,5 @@
+<CGeometryResource ID="graphics\vehicles\air\veh_glider\veh_glider_intel.xbg" crc_ID="1055803619">
+	<CMaterialResource ID="graphics\_materials\jfcarrier2-m-1711200856518995.xbm" crc_ID="1328656251" />
+	<CMaterialResource ID="graphics\_materials\jfcarrier2-m-1711200855837624.xbm" crc_ID="1964298618" />
+	<CMaterialResource ID="graphics\_materials\sdore2-m-2008042137587217.xbm" crc_ID="698072320" />
+</CGeometryResource>

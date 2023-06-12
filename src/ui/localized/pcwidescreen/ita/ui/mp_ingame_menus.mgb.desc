@@ -1,0 +1,98 @@
+<package>
+	<configuration>
+		<MULTI_LOBBY_PAGE>
+			<navbar name="p_prompts_navbar">
+				<default>
+					<b_prompt1 show="1" show_pc="0" text="Generic;ACCEPT" />
+					<b_prompt2 show="0" />
+					<b_prompt3 show="0" show_xenon="1" text="MultiMenu;SCOREBOARD_DISCONNECT_PLAYER" />
+					<b_prompt4 show="1" text="MultiMenu;LOBBY_LEAVEGAME" />
+				</default>
+			</navbar>
+		</MULTI_LOBBY_PAGE>
+		<MULTI_INGAME_PAUSE_PAGE>
+			<navbar name="p_prompts_navbar">
+				<default>
+					<b_prompt4 show="1" text="Generic;BACK" />
+				</default>
+			</navbar>
+		</MULTI_INGAME_PAUSE_PAGE>
+		<MULTI_LOBBY_MATCHOPTIONS_PAGE>
+			<navbar name="p_prompts_navbar">
+				<default>
+					<b_prompt2 show="1" text="Generic;APPLY" />
+				</default>
+			</navbar>
+		</MULTI_LOBBY_MATCHOPTIONS_PAGE>
+		<VICTORY_FFA_PAGE>
+			<navbar name="p_prompts_navbar">
+				<default>
+					<b_prompt1 show="0" />
+					<b_prompt2 show="1" text="MultiMenu;MULTI_RATE_MAP" />
+					<b_prompt3 show="0" show_xenon="1" text="MultiMenu;GAMER_CARD" />
+					<b_prompt4 show="0" />
+				</default>
+			</navbar>
+		</VICTORY_FFA_PAGE>
+		<RATE_MAP_PAGE>
+			<navbar>
+				<default>
+					<b_prompt1 show="1" text="MultiMenu;MULTI_SERVER_PROGRESS_SUBMIT" button="A" />
+					<b_prompt2 show="1" text="MultiMenu;MULTI_SERVER_PROGRESS_CANCEL" button="B" />
+					<b_prompt3 show="1" text="MultiMenu;MULTI_SERVER_PROGRESS_REPORTMAP" button="Y" />
+				</default>
+			</navbar>
+		</RATE_MAP_PAGE>
+		<VICTORY_TEAM_PAGE>
+			<navbar name="p_prompts_navbar">
+				<default>
+					<b_prompt1 show="0" />
+					<b_prompt2 show="1" text="MultiMenu;MULTI_RATE_MAP" />
+					<b_prompt3 show="0" />
+					<b_prompt4 show="0" />
+				</default>
+			</navbar>
+		</VICTORY_TEAM_PAGE>
+		<SCOREBOARD_TEAM_PAGE>
+			<navbar name="p_prompts_navbar">
+				<default>
+					<b_prompt1 show="0" />
+					<b_prompt2 show="0" />
+					<b_prompt3 show="0" show_xenon="1" text="MultiMenu;SCOREBOARD_DISCONNECT_PLAYER" />
+					<b_prompt4 show="1" show_pc="0" text="Generic;BACK" />
+				</default>
+			</navbar>
+		</SCOREBOARD_TEAM_PAGE>
+		<SCOREBOARD_FFA_PAGE>
+			<navbar name="p_prompts_navbar">
+				<default>
+					<b_prompt1 show="0" />
+					<b_prompt2 show="0" />
+					<b_prompt3 show="0" show_xenon="1" text="MultiMenu;SCOREBOARD_DISCONNECT_PLAYER" />
+					<b_prompt4 show="1" show_pc="0" text="Generic;BACK" />
+				</default>
+			</navbar>
+		</SCOREBOARD_FFA_PAGE>
+		<SCOREBOARD_DISCONNECTPLAYER_PAGE>
+			<navbar name="p_prompts_navbar">
+				<default>
+					<b_prompt1 show="0" show_xenon="1" text="MultiMenu;SCOREBOARD_DISCONNECT_REVIEW" />
+					<b_prompt2 show="0" show_xenon="1" text="MultiMenu;GAMER_CARD" />
+					<b_prompt3 show="0" />
+				</default>
+			</navbar>
+		</SCOREBOARD_DISCONNECTPLAYER_PAGE>
+	</configuration>
+	<dependencies>
+		<CMagmaConfigUIResource ID="ui\localized\pcwidescreen\ita\ui\mp_ingame_menus.mgb.desc" crc_ID="3406219115" version="2">
+			<CMagmaUIResource ID="ui\localized\pcwidescreen\ita\ui\mp_ingame_menus.mgb" crc_ID="1808374631" />
+			<CMagmaConfigUIResource ID="ui\localized\pcwidescreen\ita\ui\fonts.mgb.desc" crc_ID="2496339338" />
+			<CMagmaConfigUIResource ID="ui\localized\pcwidescreen\ita\ui\common.mgb.desc" crc_ID="2315322988" />
+			<CMagmaConfigUIResource ID="ui\localized\pcwidescreen\ita\ui\common_mp.mgb.desc" crc_ID="2515801121" />
+			<CMagmaConfigUIResource ID="ui\localized\pcwidescreen\ita\ui\hud.mgb.desc" crc_ID="3046332357" />
+			<CTextureResource ID="ui\textures\hud_mp\diamond_lobby.xbt" crc_ID="620812676" />
+			<CTextureResource ID="ui\textures\common\halftone_notile.xbt" crc_ID="2782825627" />
+			<CTextureResource ID="ui\textures\hud_mp\hud_vip.xbt" crc_ID="4045923713" />
+		</CMagmaConfigUIResource>
+	</dependencies>
+</package>

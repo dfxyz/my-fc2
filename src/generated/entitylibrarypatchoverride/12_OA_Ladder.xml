@@ -1,0 +1,1851 @@
+﻿<object type="EntityLibrary">
+  <value name="Name" type="String">OA_Ladder</value>
+  <object type="EntityPrototype">
+    <value name="Name" type="String">Ladders.LadderDogon14steps.Multi</value>
+    <object type="Entity">
+      <value name="hidName" type="String">OA_Ladder.Ladders.LadderDogon14steps.Multi</value>
+      <value name="disEntityId" type="UInt64">4304</value>
+      <value name="text_hidEntityClass" type="String">CEntity</value>
+      <value name="hidEntityClass" type="Hash">50C95067</value>
+      <value name="hidResourceCount" type="UInt32">4</value>
+      <value name="hidPos" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidAngles" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidPos_precise" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidConstEntity" type="Bool">False</value>
+      <object type="Components">
+        <object type="CFileDescriptorComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_fileName" type="String">graphics\objects\ladders\ladderdogon14steps.xml</value>
+          <value name="fileName" type="Hash">818F5BCF</value>
+          <value name="hidDescriptor" type="Rml">
+            <hidDescriptor>
+              <component class="GraphicComponent" version="2" detail="0">
+                <object index="0" boneName="ladderdogon14steps_LOD0" bboxMin="-0.325364,-0.172522,0.00254174" bboxMax="0.318076,0.381734,4.34913" />
+                <resource fileName="graphics\Objects\Ladders\ladderdogon14steps.xbg" bboxMin="-0.325364,-0.172522,-6.64711e-006" bboxMax="0.318076,0.381734,4.34913" />
+                <skeleton name="ladderdogon14steps" pos="0,0,0" rot="1,-0,-0,-0" />
+              </component>
+              <component class="StaticPhysComponent">
+                <resource fileName="graphics\Objects\Ladders\ladderdogon14steps.hkx" />
+              </component>
+            </hidDescriptor>
+          </value>
+        </object>
+        <object type="CGraphicComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="bIntelHackGliderOn" type="Bool">False</value>
+          <value name="bCastShadow" type="Bool">True</value>
+          <value name="bReceiveShadow" type="Bool">True</value>
+          <value name="bCastAmbientShadow" type="Bool">True</value>
+          <value name="olgLightGroup" type="Hash">00000001</value>
+          <value name="bAllowCullBySize" type="Bool">True</value>
+          <value name="agAmbientGroup" type="Hash">00000000</value>
+          <value name="bBehaveLikeAPickup" type="Bool">False</value>
+          <value name="bShowInReflection" type="Bool">True</value>
+          <value name="bAlwaysShowInReflection" type="Bool">False</value>
+          <value name="bOverrideLODSphere" type="Bool">False</value>
+          <value name="fLODSphereRadius" type="Float">0</value>
+          <value name="hidSkyOcclusion0" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion1" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion2" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion3" type="Hash">FFFFFFFF</value>
+          <value name="hidGroundColor" type="Hash">FFFFFFFF</value>
+          <value name="hidObjectHeight" type="Float">3</value>
+          <value name="hidHeightAbove" type="Float">0</value>
+          <value name="hidHasAmbientValues" type="Bool">False</value>
+          <object type="object">
+            <value name="hidIndex" type="UInt32">0</value>
+            <value name="text_objModel" type="String">graphics\objects\ladders\ladderdogon14steps.xbg</value>
+            <value name="objModel" type="Hash">91C59E88</value>
+            <value name="hidMeshName" type="String"></value>
+            <value name="text_hidNodeName" type="String">ladderdogon14steps</value>
+            <value name="hidNodeName" type="Hash">6189EB1F</value>
+            <value name="text_hidNodeNameLOD0" type="String">ladderdogon14steps_LOD0</value>
+            <value name="hidNodeNameLOD0" type="Hash">15658451</value>
+            <value name="hidDetailObject" type="Bool">False</value>
+          </object>
+        </object>
+        <object type="CStaticPhysComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_hidResourceId" type="String">graphics\objects\ladders\ladderdogon14steps.hkx</value>
+          <value name="hidResourceId" type="Hash">D1298B44</value>
+          <value name="bUseMaxTerrainSlope" type="Bool">False</value>
+          <value name="bIgnoreInExplosions" type="Bool">False</value>
+          <value name="bAnimateable" type="Bool">False</value>
+          <value name="bLargeEntity" type="Bool">False</value>
+          <value name="hidResourceIndex" type="BinHex">00000000</value>
+        </object>
+        <object type="CLadder">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="iOverrideLadderSteps" type="BinHex">FFFFFFFF</value>
+          <value name="sndClimbSound" type="BinHex">3078303034433634383900</value>
+          <value name="sndtpClimbSoundType" type="BinHex">0B000000</value>
+        </object>
+        <object type="CPersistComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="selLevel" type="UInt32">1</value>
+          <object type="enumLevel">
+            <object type="enum">
+              <value name="Value" type="String">None</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Limited</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Full</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Critical</value>
+            </object>
+          </object>
+        </object>
+        <object type="CCountersComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="archStimEffectTable" type="String">tables.StimEffectTables.ObjectDefault</value>
+        </object>
+        <object type="CParticleFXComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <object type="ParticleSystems" />
+        </object>
+        <object type="CLadderNetworkComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+        </object>
+        <object type="CMissionComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_hidMissionLayerPath" type="String"></value>
+          <value name="hidMissionLayerPath" type="Hash">FFFFFFFF</value>
+          <value name="text_hidCategory" type="String"></value>
+          <value name="hidCategory" type="Hash">FFFFFFFF</value>
+          <value name="ForceMerge" type="Bool">True</value>
+        </object>
+      </object>
+    </object>
+  </object>
+  <object type="EntityPrototype">
+    <value name="Name" type="String">Ladders.LadderDogon22steps.Multi</value>
+    <object type="Entity">
+      <value name="hidName" type="String">OA_Ladder.Ladders.LadderDogon22steps.Multi</value>
+      <value name="disEntityId" type="UInt64">4306</value>
+      <value name="text_hidEntityClass" type="String">CEntity</value>
+      <value name="hidEntityClass" type="Hash">50C95067</value>
+      <value name="hidResourceCount" type="UInt32">4</value>
+      <value name="hidPos" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidAngles" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidPos_precise" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidConstEntity" type="Bool">False</value>
+      <object type="Components">
+        <object type="CFileDescriptorComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_fileName" type="String">graphics\objects\ladders\ladderdogon22steps.xml</value>
+          <value name="fileName" type="Hash">15734D89</value>
+          <value name="hidDescriptor" type="Rml">
+            <hidDescriptor>
+              <component class="GraphicComponent" version="2" detail="0">
+                <object index="0" boneName="LadderDogon22steps_LOD0" bboxMin="-0.317968,-0.172522,-0.00548128" bboxMax="0.325472,0.381734,6.73679" />
+                <resource fileName="graphics\Objects\Ladders\LadderDogon22steps.xbg" bboxMin="-0.317968,-0.172522,-0.00834094" bboxMax="0.325472,0.381734,6.74047" />
+                <skeleton name="LadderDogon22steps" pos="0,0,0" rot="1,-0,-0,-0" />
+              </component>
+              <component class="StaticPhysComponent">
+                <resource fileName="graphics\Objects\Ladders\LadderDogon22steps.hkx" />
+              </component>
+            </hidDescriptor>
+          </value>
+        </object>
+        <object type="CGraphicComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="bIntelHackGliderOn" type="Bool">False</value>
+          <value name="bCastShadow" type="Bool">True</value>
+          <value name="bReceiveShadow" type="Bool">True</value>
+          <value name="bCastAmbientShadow" type="Bool">True</value>
+          <value name="olgLightGroup" type="Hash">00000001</value>
+          <value name="bAllowCullBySize" type="Bool">True</value>
+          <value name="agAmbientGroup" type="Hash">00000000</value>
+          <value name="bBehaveLikeAPickup" type="Bool">False</value>
+          <value name="bShowInReflection" type="Bool">True</value>
+          <value name="bAlwaysShowInReflection" type="Bool">False</value>
+          <value name="bOverrideLODSphere" type="Bool">False</value>
+          <value name="fLODSphereRadius" type="Float">0</value>
+          <value name="hidSkyOcclusion0" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion1" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion2" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion3" type="Hash">FFFFFFFF</value>
+          <value name="hidGroundColor" type="Hash">FFFFFFFF</value>
+          <value name="hidObjectHeight" type="Float">3</value>
+          <value name="hidHeightAbove" type="Float">0</value>
+          <value name="hidHasAmbientValues" type="Bool">False</value>
+          <object type="object">
+            <value name="hidIndex" type="UInt32">0</value>
+            <value name="text_objModel" type="String">graphics\objects\ladders\ladderdogon22steps.xbg</value>
+            <value name="objModel" type="Hash">053988CE</value>
+            <value name="hidMeshName" type="String"></value>
+            <value name="text_hidNodeName" type="String">LadderDogon22steps</value>
+            <value name="hidNodeName" type="Hash">C34F7157</value>
+            <value name="text_hidNodeNameLOD0" type="String">LadderDogon22steps_LOD0</value>
+            <value name="hidNodeNameLOD0" type="Hash">A608A280</value>
+            <value name="hidDetailObject" type="Bool">False</value>
+          </object>
+        </object>
+        <object type="CStaticPhysComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_hidResourceId" type="String">graphics\objects\ladders\ladderdogon22steps.hkx</value>
+          <value name="hidResourceId" type="Hash">45D59D02</value>
+          <value name="bUseMaxTerrainSlope" type="Bool">False</value>
+          <value name="bIgnoreInExplosions" type="Bool">False</value>
+          <value name="bAnimateable" type="Bool">False</value>
+          <value name="bLargeEntity" type="Bool">False</value>
+          <value name="hidResourceIndex" type="BinHex">00000000</value>
+        </object>
+        <object type="CLadder">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="iOverrideLadderSteps" type="BinHex">FFFFFFFF</value>
+          <value name="sndClimbSound" type="BinHex">3078303034433634383900</value>
+          <value name="sndtpClimbSoundType" type="BinHex">0B000000</value>
+        </object>
+        <object type="CPersistComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="selLevel" type="UInt32">1</value>
+          <object type="enumLevel">
+            <object type="enum">
+              <value name="Value" type="String">None</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Limited</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Full</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Critical</value>
+            </object>
+          </object>
+        </object>
+        <object type="CCountersComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="archStimEffectTable" type="String">tables.StimEffectTables.ObjectDefault</value>
+        </object>
+        <object type="CParticleFXComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <object type="ParticleSystems" />
+        </object>
+        <object type="CLadderNetworkComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+        </object>
+        <object type="CMissionComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_hidMissionLayerPath" type="String"></value>
+          <value name="hidMissionLayerPath" type="Hash">FFFFFFFF</value>
+          <value name="text_hidCategory" type="String"></value>
+          <value name="hidCategory" type="Hash">FFFFFFFF</value>
+          <value name="ForceMerge" type="Bool">True</value>
+        </object>
+      </object>
+    </object>
+  </object>
+  <object type="EntityPrototype">
+    <value name="Name" type="String">Ladders.LadderDogon29steps.Multi</value>
+    <object type="Entity">
+      <value name="hidName" type="String">OA_Ladder.Ladders.LadderDogon29steps.Multi</value>
+      <value name="disEntityId" type="UInt64">4308</value>
+      <value name="text_hidEntityClass" type="String">CEntity</value>
+      <value name="hidEntityClass" type="Hash">50C95067</value>
+      <value name="hidResourceCount" type="UInt32">4</value>
+      <value name="hidPos" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidAngles" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidPos_precise" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidConstEntity" type="Bool">False</value>
+      <object type="Components">
+        <object type="CFileDescriptorComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_fileName" type="String">graphics\objects\ladders\ladderdogon29steps.xml</value>
+          <value name="fileName" type="Hash">ED93B67E</value>
+          <value name="hidDescriptor" type="Rml">
+            <hidDescriptor>
+              <component class="GraphicComponent" version="2" detail="0">
+                <object index="0" boneName="LadderDogon29steps_LOD0" bboxMin="-0.317968,-0.172522,-0.000473471" bboxMax="0.325472,0.381734,8.83856" />
+                <resource fileName="graphics\Objects\Ladders\LadderDogon29steps.xbg" bboxMin="-0.317968,-0.172522,-0.00610798" bboxMax="0.325472,0.381734,8.84007" />
+                <skeleton name="LadderDogon29steps" pos="0,0,0" rot="1,-0,-0,-0" />
+              </component>
+              <component class="StaticPhysComponent">
+                <resource fileName="graphics\Objects\Ladders\LadderDogon29steps.hkx" />
+              </component>
+            </hidDescriptor>
+          </value>
+        </object>
+        <object type="CGraphicComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="bIntelHackGliderOn" type="Bool">False</value>
+          <value name="bCastShadow" type="Bool">True</value>
+          <value name="bReceiveShadow" type="Bool">True</value>
+          <value name="bCastAmbientShadow" type="Bool">True</value>
+          <value name="olgLightGroup" type="Hash">00000001</value>
+          <value name="bAllowCullBySize" type="Bool">True</value>
+          <value name="agAmbientGroup" type="Hash">00000000</value>
+          <value name="bBehaveLikeAPickup" type="Bool">False</value>
+          <value name="bShowInReflection" type="Bool">True</value>
+          <value name="bAlwaysShowInReflection" type="Bool">False</value>
+          <value name="bOverrideLODSphere" type="Bool">False</value>
+          <value name="fLODSphereRadius" type="Float">0</value>
+          <value name="hidSkyOcclusion0" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion1" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion2" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion3" type="Hash">FFFFFFFF</value>
+          <value name="hidGroundColor" type="Hash">FFFFFFFF</value>
+          <value name="hidObjectHeight" type="Float">3</value>
+          <value name="hidHeightAbove" type="Float">0</value>
+          <value name="hidHasAmbientValues" type="Bool">False</value>
+          <object type="object">
+            <value name="hidIndex" type="UInt32">0</value>
+            <value name="text_objModel" type="String">graphics\objects\ladders\ladderdogon29steps.xbg</value>
+            <value name="objModel" type="Hash">FDD97339</value>
+            <value name="hidMeshName" type="String"></value>
+            <value name="text_hidNodeName" type="String">LadderDogon29steps</value>
+            <value name="hidNodeName" type="Hash">A9888194</value>
+            <value name="text_hidNodeNameLOD0" type="String">LadderDogon29steps_LOD0</value>
+            <value name="hidNodeNameLOD0" type="Hash">852925C4</value>
+            <value name="hidDetailObject" type="Bool">False</value>
+          </object>
+        </object>
+        <object type="CStaticPhysComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_hidResourceId" type="String">graphics\objects\ladders\ladderdogon29steps.hkx</value>
+          <value name="hidResourceId" type="Hash">BD3566F5</value>
+          <value name="bUseMaxTerrainSlope" type="Bool">False</value>
+          <value name="bIgnoreInExplosions" type="Bool">False</value>
+          <value name="bAnimateable" type="Bool">False</value>
+          <value name="bLargeEntity" type="Bool">False</value>
+          <value name="hidResourceIndex" type="BinHex">00000000</value>
+        </object>
+        <object type="CLadder">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="iOverrideLadderSteps" type="BinHex">FFFFFFFF</value>
+          <value name="sndClimbSound" type="BinHex">3078303034433634383900</value>
+          <value name="sndtpClimbSoundType" type="BinHex">0B000000</value>
+        </object>
+        <object type="CPersistComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="selLevel" type="UInt32">1</value>
+          <object type="enumLevel">
+            <object type="enum">
+              <value name="Value" type="String">None</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Limited</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Full</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Critical</value>
+            </object>
+          </object>
+        </object>
+        <object type="CCountersComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="archStimEffectTable" type="String">tables.StimEffectTables.ObjectDefault</value>
+        </object>
+        <object type="CParticleFXComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <object type="ParticleSystems" />
+        </object>
+        <object type="CLadderNetworkComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+        </object>
+        <object type="CMissionComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_hidMissionLayerPath" type="String"></value>
+          <value name="hidMissionLayerPath" type="Hash">FFFFFFFF</value>
+          <value name="text_hidCategory" type="String"></value>
+          <value name="hidCategory" type="Hash">FFFFFFFF</value>
+          <value name="ForceMerge" type="Bool">True</value>
+        </object>
+      </object>
+    </object>
+  </object>
+  <object type="EntityPrototype">
+    <value name="Name" type="String">Ladders.LadderWood10steps.Multi</value>
+    <object type="Entity">
+      <value name="hidName" type="String">OA_Ladder.Ladders.LadderWood10steps.Multi</value>
+      <value name="disEntityId" type="UInt64">4310</value>
+      <value name="text_hidEntityClass" type="String">CEntity</value>
+      <value name="hidEntityClass" type="Hash">50C95067</value>
+      <value name="hidResourceCount" type="UInt32">4</value>
+      <value name="hidPos" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidAngles" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidPos_precise" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidConstEntity" type="Bool">False</value>
+      <object type="Components">
+        <object type="CFileDescriptorComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_fileName" type="String">graphics\objects\ladders\ladderwood10steps.xml</value>
+          <value name="fileName" type="Hash">30EDF8BD</value>
+          <value name="hidDescriptor" type="Rml">
+            <hidDescriptor>
+              <component class="GraphicComponent" version="2" detail="0">
+                <object index="0" boneName="LadderWood10steps_LOD0" bboxMin="-0.300001,-0.025,3.8147e-008" bboxMax="0.300001,0.025,3.17196" />
+                <resource fileName="graphics\Objects\Ladders\LadderWood10steps.xbg" bboxMin="-0.300001,-0.025,0" bboxMax="0.300001,0.025,3.17196" />
+                <skeleton name="LadderWood10steps" pos="0,0,0" rot="1,-0,-0,-0" />
+              </component>
+              <component class="StaticPhysComponent">
+                <resource fileName="graphics\Objects\Ladders\LadderWood10steps.hkx" />
+              </component>
+            </hidDescriptor>
+          </value>
+        </object>
+        <object type="CGraphicComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="bIntelHackGliderOn" type="Bool">False</value>
+          <value name="bCastShadow" type="Bool">True</value>
+          <value name="bReceiveShadow" type="Bool">True</value>
+          <value name="bCastAmbientShadow" type="Bool">True</value>
+          <value name="olgLightGroup" type="Hash">00000001</value>
+          <value name="bAllowCullBySize" type="Bool">True</value>
+          <value name="agAmbientGroup" type="Hash">00000000</value>
+          <value name="bBehaveLikeAPickup" type="Bool">False</value>
+          <value name="bShowInReflection" type="Bool">True</value>
+          <value name="bAlwaysShowInReflection" type="Bool">False</value>
+          <value name="bOverrideLODSphere" type="Bool">False</value>
+          <value name="fLODSphereRadius" type="Float">0</value>
+          <value name="hidSkyOcclusion0" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion1" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion2" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion3" type="Hash">FFFFFFFF</value>
+          <value name="hidGroundColor" type="Hash">FFFFFFFF</value>
+          <value name="hidObjectHeight" type="Float">3</value>
+          <value name="hidHeightAbove" type="Float">0</value>
+          <value name="hidHasAmbientValues" type="Bool">False</value>
+          <object type="object">
+            <value name="hidIndex" type="UInt32">0</value>
+            <value name="text_objModel" type="String">graphics\objects\ladders\ladderwood10steps.xbg</value>
+            <value name="objModel" type="Hash">20A73DFA</value>
+            <value name="hidMeshName" type="String"></value>
+            <value name="text_hidNodeName" type="String">LadderWood10steps</value>
+            <value name="hidNodeName" type="Hash">4E7A95D0</value>
+            <value name="text_hidNodeNameLOD0" type="String">LadderWood10steps_LOD0</value>
+            <value name="hidNodeNameLOD0" type="Hash">505ED910</value>
+            <value name="hidDetailObject" type="Bool">False</value>
+          </object>
+        </object>
+        <object type="CStaticPhysComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_hidResourceId" type="String">graphics\objects\ladders\ladderwood10steps.hkx</value>
+          <value name="hidResourceId" type="Hash">604B2836</value>
+          <value name="bUseMaxTerrainSlope" type="Bool">False</value>
+          <value name="bIgnoreInExplosions" type="Bool">False</value>
+          <value name="bAnimateable" type="Bool">False</value>
+          <value name="bLargeEntity" type="Bool">False</value>
+          <value name="hidResourceIndex" type="BinHex">00000000</value>
+        </object>
+        <object type="CLadder">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="iOverrideLadderSteps" type="BinHex">FFFFFFFF</value>
+          <value name="sndClimbSound" type="BinHex">3078303034433634383900</value>
+          <value name="sndtpClimbSoundType" type="BinHex">0B000000</value>
+        </object>
+        <object type="CPersistComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="selLevel" type="UInt32">1</value>
+          <object type="enumLevel">
+            <object type="enum">
+              <value name="Value" type="String">None</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Limited</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Full</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Critical</value>
+            </object>
+          </object>
+        </object>
+        <object type="CCountersComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="archStimEffectTable" type="String">tables.StimEffectTables.ObjectDefault</value>
+        </object>
+        <object type="CParticleFXComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <object type="ParticleSystems" />
+        </object>
+        <object type="CLadderNetworkComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+        </object>
+        <object type="CMissionComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_hidMissionLayerPath" type="String"></value>
+          <value name="hidMissionLayerPath" type="Hash">FFFFFFFF</value>
+          <value name="text_hidCategory" type="String"></value>
+          <value name="hidCategory" type="Hash">FFFFFFFF</value>
+          <value name="ForceMerge" type="Bool">True</value>
+        </object>
+      </object>
+    </object>
+  </object>
+  <object type="EntityPrototype">
+    <value name="Name" type="String">Ladders.LadderWood12steps.Multi</value>
+    <object type="Entity">
+      <value name="hidName" type="String">OA_Ladder.Ladders.LadderWood12steps.Multi</value>
+      <value name="disEntityId" type="UInt64">4312</value>
+      <value name="text_hidEntityClass" type="String">CEntity</value>
+      <value name="hidEntityClass" type="Hash">50C95067</value>
+      <value name="hidResourceCount" type="UInt32">4</value>
+      <value name="hidPos" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidAngles" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidPos_precise" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidConstEntity" type="Bool">False</value>
+      <object type="Components">
+        <object type="CFileDescriptorComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_fileName" type="String">graphics\objects\ladders\ladderwood12steps.xml</value>
+          <value name="fileName" type="Hash">34182880</value>
+          <value name="hidDescriptor" type="Rml">
+            <hidDescriptor>
+              <component class="GraphicComponent" version="2" detail="0">
+                <object index="0" boneName="LadderWood12steps_LOD0" bboxMin="-0.300001,-0.025,3.8147e-008" bboxMax="0.300001,0.025,3.74909" />
+                <resource fileName="graphics\Objects\Ladders\LadderWood12steps.xbg" bboxMin="-0.300001,-0.025,0" bboxMax="0.300001,0.025,3.74909" />
+                <skeleton name="LadderWood12steps" pos="0,0,0" rot="1,-0,-0,-0" />
+              </component>
+              <component class="StaticPhysComponent">
+                <resource fileName="graphics\Objects\Ladders\LadderWood12steps.hkx" />
+              </component>
+            </hidDescriptor>
+          </value>
+        </object>
+        <object type="CGraphicComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="bIntelHackGliderOn" type="Bool">False</value>
+          <value name="bCastShadow" type="Bool">True</value>
+          <value name="bReceiveShadow" type="Bool">True</value>
+          <value name="bCastAmbientShadow" type="Bool">True</value>
+          <value name="olgLightGroup" type="Hash">00000001</value>
+          <value name="bAllowCullBySize" type="Bool">True</value>
+          <value name="agAmbientGroup" type="Hash">00000000</value>
+          <value name="bBehaveLikeAPickup" type="Bool">False</value>
+          <value name="bShowInReflection" type="Bool">True</value>
+          <value name="bAlwaysShowInReflection" type="Bool">False</value>
+          <value name="bOverrideLODSphere" type="Bool">False</value>
+          <value name="fLODSphereRadius" type="Float">0</value>
+          <value name="hidSkyOcclusion0" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion1" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion2" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion3" type="Hash">FFFFFFFF</value>
+          <value name="hidGroundColor" type="Hash">FFFFFFFF</value>
+          <value name="hidObjectHeight" type="Float">3</value>
+          <value name="hidHeightAbove" type="Float">0</value>
+          <value name="hidHasAmbientValues" type="Bool">False</value>
+          <object type="object">
+            <value name="hidIndex" type="UInt32">0</value>
+            <value name="text_objModel" type="String">graphics\objects\ladders\ladderwood12steps.xbg</value>
+            <value name="objModel" type="Hash">2452EDC7</value>
+            <value name="hidMeshName" type="String"></value>
+            <value name="text_hidNodeName" type="String">LadderWood12steps</value>
+            <value name="hidNodeName" type="Hash">03B234DB</value>
+            <value name="text_hidNodeNameLOD0" type="String">LadderWood12steps_LOD0</value>
+            <value name="hidNodeNameLOD0" type="Hash">083260D1</value>
+            <value name="hidDetailObject" type="Bool">False</value>
+          </object>
+        </object>
+        <object type="CStaticPhysComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_hidResourceId" type="String">graphics\objects\ladders\ladderwood12steps.hkx</value>
+          <value name="hidResourceId" type="Hash">64BEF80B</value>
+          <value name="bUseMaxTerrainSlope" type="Bool">False</value>
+          <value name="bIgnoreInExplosions" type="Bool">False</value>
+          <value name="bAnimateable" type="Bool">False</value>
+          <value name="bLargeEntity" type="Bool">False</value>
+          <value name="hidResourceIndex" type="BinHex">00000000</value>
+        </object>
+        <object type="CLadder">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="iOverrideLadderSteps" type="BinHex">FFFFFFFF</value>
+          <value name="sndClimbSound" type="BinHex">3078303034433634383900</value>
+          <value name="sndtpClimbSoundType" type="BinHex">0B000000</value>
+        </object>
+        <object type="CPersistComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="selLevel" type="UInt32">1</value>
+          <object type="enumLevel">
+            <object type="enum">
+              <value name="Value" type="String">None</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Limited</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Full</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Critical</value>
+            </object>
+          </object>
+        </object>
+        <object type="CCountersComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="archStimEffectTable" type="String">tables.StimEffectTables.ObjectDefault</value>
+        </object>
+        <object type="CParticleFXComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <object type="ParticleSystems" />
+        </object>
+        <object type="CLadderNetworkComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+        </object>
+        <object type="CMissionComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_hidMissionLayerPath" type="String"></value>
+          <value name="hidMissionLayerPath" type="Hash">FFFFFFFF</value>
+          <value name="text_hidCategory" type="String"></value>
+          <value name="hidCategory" type="Hash">FFFFFFFF</value>
+          <value name="ForceMerge" type="Bool">True</value>
+        </object>
+      </object>
+    </object>
+  </object>
+  <object type="EntityPrototype">
+    <value name="Name" type="String">Ladders.LadderWood14steps.Multi</value>
+    <object type="Entity">
+      <value name="hidName" type="String">OA_Ladder.Ladders.LadderWood14steps.Multi</value>
+      <value name="disEntityId" type="UInt64">4314</value>
+      <value name="text_hidEntityClass" type="String">CEntity</value>
+      <value name="hidEntityClass" type="Hash">50C95067</value>
+      <value name="hidResourceCount" type="UInt32">4</value>
+      <value name="hidPos" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidAngles" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidPos_precise" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidConstEntity" type="Bool">False</value>
+      <object type="Components">
+        <object type="CFileDescriptorComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_fileName" type="String">graphics\objects\ladders\ladderwood14steps.xml</value>
+          <value name="fileName" type="Hash">390658C7</value>
+          <value name="hidDescriptor" type="Rml">
+            <hidDescriptor>
+              <component class="GraphicComponent" version="2" detail="0">
+                <object index="0" boneName="LadderWood14steps_LOD0" bboxMin="-0.300001,-0.025,3.8147e-008" bboxMax="0.300001,0.025,4.33393" />
+                <resource fileName="graphics\Objects\Ladders\LadderWood14steps.xbg" bboxMin="-0.300001,-0.025,0" bboxMax="0.300001,0.025,4.33393" />
+                <skeleton name="LadderWood14steps" pos="0,0,0" rot="1,-0,-0,-0" />
+              </component>
+              <component class="StaticPhysComponent">
+                <resource fileName="graphics\Objects\Ladders\LadderWood14steps.hkx" />
+              </component>
+            </hidDescriptor>
+          </value>
+        </object>
+        <object type="CGraphicComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="bIntelHackGliderOn" type="Bool">False</value>
+          <value name="bCastShadow" type="Bool">True</value>
+          <value name="bReceiveShadow" type="Bool">True</value>
+          <value name="bCastAmbientShadow" type="Bool">True</value>
+          <value name="olgLightGroup" type="Hash">00000001</value>
+          <value name="bAllowCullBySize" type="Bool">True</value>
+          <value name="agAmbientGroup" type="Hash">00000000</value>
+          <value name="bBehaveLikeAPickup" type="Bool">False</value>
+          <value name="bShowInReflection" type="Bool">True</value>
+          <value name="bAlwaysShowInReflection" type="Bool">False</value>
+          <value name="bOverrideLODSphere" type="Bool">False</value>
+          <value name="fLODSphereRadius" type="Float">0</value>
+          <value name="hidSkyOcclusion0" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion1" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion2" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion3" type="Hash">FFFFFFFF</value>
+          <value name="hidGroundColor" type="Hash">FFFFFFFF</value>
+          <value name="hidObjectHeight" type="Float">3</value>
+          <value name="hidHeightAbove" type="Float">0</value>
+          <value name="hidHasAmbientValues" type="Bool">False</value>
+          <object type="object">
+            <value name="hidIndex" type="UInt32">0</value>
+            <value name="text_objModel" type="String">graphics\objects\ladders\ladderwood14steps.xbg</value>
+            <value name="objModel" type="Hash">294C9D80</value>
+            <value name="hidMeshName" type="String"></value>
+            <value name="text_hidNodeName" type="String">LadderWood14steps</value>
+            <value name="hidNodeName" type="Hash">D5EBD7C6</value>
+            <value name="text_hidNodeNameLOD0" type="String">LadderWood14steps_LOD0</value>
+            <value name="hidNodeNameLOD0" type="Hash">E087AA92</value>
+            <value name="hidDetailObject" type="Bool">False</value>
+          </object>
+        </object>
+        <object type="CStaticPhysComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_hidResourceId" type="String">graphics\objects\ladders\ladderwood14steps.hkx</value>
+          <value name="hidResourceId" type="Hash">69A0884C</value>
+          <value name="bUseMaxTerrainSlope" type="Bool">False</value>
+          <value name="bIgnoreInExplosions" type="Bool">False</value>
+          <value name="bAnimateable" type="Bool">False</value>
+          <value name="bLargeEntity" type="Bool">False</value>
+          <value name="hidResourceIndex" type="BinHex">00000000</value>
+        </object>
+        <object type="CLadder">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="iOverrideLadderSteps" type="BinHex">FFFFFFFF</value>
+          <value name="sndClimbSound" type="BinHex">3078303034433634383900</value>
+          <value name="sndtpClimbSoundType" type="BinHex">0B000000</value>
+        </object>
+        <object type="CPersistComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="selLevel" type="UInt32">1</value>
+          <object type="enumLevel">
+            <object type="enum">
+              <value name="Value" type="String">None</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Limited</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Full</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Critical</value>
+            </object>
+          </object>
+        </object>
+        <object type="CCountersComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="archStimEffectTable" type="String">tables.StimEffectTables.ObjectDefault</value>
+        </object>
+        <object type="CParticleFXComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <object type="ParticleSystems" />
+        </object>
+        <object type="CLadderNetworkComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+        </object>
+        <object type="CMissionComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_hidMissionLayerPath" type="String"></value>
+          <value name="hidMissionLayerPath" type="Hash">FFFFFFFF</value>
+          <value name="text_hidCategory" type="String"></value>
+          <value name="hidCategory" type="Hash">FFFFFFFF</value>
+          <value name="ForceMerge" type="Bool">True</value>
+        </object>
+      </object>
+    </object>
+  </object>
+  <object type="EntityPrototype">
+    <value name="Name" type="String">Ladders.LadderWood16steps.Multi</value>
+    <object type="Entity">
+      <value name="hidName" type="String">OA_Ladder.Ladders.LadderWood16steps.Multi</value>
+      <value name="disEntityId" type="UInt64">4316</value>
+      <value name="text_hidEntityClass" type="String">CEntity</value>
+      <value name="hidEntityClass" type="Hash">50C95067</value>
+      <value name="hidResourceCount" type="UInt32">4</value>
+      <value name="hidPos" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidAngles" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidPos_precise" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidConstEntity" type="Bool">False</value>
+      <object type="Components">
+        <object type="CFileDescriptorComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_fileName" type="String">graphics\objects\ladders\ladderwood16steps.xml</value>
+          <value name="fileName" type="Hash">3DF388FA</value>
+          <value name="hidDescriptor" type="Rml">
+            <hidDescriptor>
+              <component class="GraphicComponent" version="2" detail="0">
+                <object index="0" boneName="LadderWood16steps_LOD0" bboxMin="-0.300001,-0.025,3.8147e-008" bboxMax="0.300001,0.025,5.01033" />
+                <resource fileName="graphics\Objects\Ladders\LadderWood16steps.xbg" bboxMin="-0.300001,-0.025,3.8147e-008" bboxMax="0.300001,0.025,5.01033" />
+                <skeleton name="LadderWood16steps" pos="0,0,0" rot="1,-0,-0,-0" />
+              </component>
+              <component class="StaticPhysComponent">
+                <resource fileName="graphics\Objects\Ladders\LadderWood16steps.hkx" />
+              </component>
+            </hidDescriptor>
+          </value>
+        </object>
+        <object type="CGraphicComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="bIntelHackGliderOn" type="Bool">False</value>
+          <value name="bCastShadow" type="Bool">True</value>
+          <value name="bReceiveShadow" type="Bool">True</value>
+          <value name="bCastAmbientShadow" type="Bool">True</value>
+          <value name="olgLightGroup" type="Hash">00000001</value>
+          <value name="bAllowCullBySize" type="Bool">True</value>
+          <value name="agAmbientGroup" type="Hash">00000000</value>
+          <value name="bBehaveLikeAPickup" type="Bool">False</value>
+          <value name="bShowInReflection" type="Bool">True</value>
+          <value name="bAlwaysShowInReflection" type="Bool">False</value>
+          <value name="bOverrideLODSphere" type="Bool">False</value>
+          <value name="fLODSphereRadius" type="Float">0</value>
+          <value name="hidSkyOcclusion0" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion1" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion2" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion3" type="Hash">FFFFFFFF</value>
+          <value name="hidGroundColor" type="Hash">FFFFFFFF</value>
+          <value name="hidObjectHeight" type="Float">3</value>
+          <value name="hidHeightAbove" type="Float">0</value>
+          <value name="hidHasAmbientValues" type="Bool">False</value>
+          <object type="object">
+            <value name="hidIndex" type="UInt32">0</value>
+            <value name="text_objModel" type="String">graphics\objects\ladders\ladderwood16steps.xbg</value>
+            <value name="objModel" type="Hash">2DB94DBD</value>
+            <value name="hidMeshName" type="String"></value>
+            <value name="text_hidNodeName" type="String">LadderWood16steps</value>
+            <value name="hidNodeName" type="Hash">982376CD</value>
+            <value name="text_hidNodeNameLOD0" type="String">LadderWood16steps_LOD0</value>
+            <value name="hidNodeNameLOD0" type="Hash">B8EB1353</value>
+            <value name="hidDetailObject" type="Bool">False</value>
+          </object>
+        </object>
+        <object type="CStaticPhysComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_hidResourceId" type="String">graphics\objects\ladders\ladderwood16steps.hkx</value>
+          <value name="hidResourceId" type="Hash">6D555871</value>
+          <value name="bUseMaxTerrainSlope" type="Bool">False</value>
+          <value name="bIgnoreInExplosions" type="Bool">False</value>
+          <value name="bAnimateable" type="Bool">False</value>
+          <value name="bLargeEntity" type="Bool">False</value>
+          <value name="hidResourceIndex" type="BinHex">00000000</value>
+        </object>
+        <object type="CLadder">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="iOverrideLadderSteps" type="BinHex">FFFFFFFF</value>
+          <value name="sndClimbSound" type="BinHex">3078303034433634383900</value>
+          <value name="sndtpClimbSoundType" type="BinHex">0B000000</value>
+        </object>
+        <object type="CPersistComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="selLevel" type="UInt32">1</value>
+          <object type="enumLevel">
+            <object type="enum">
+              <value name="Value" type="String">None</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Limited</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Full</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Critical</value>
+            </object>
+          </object>
+        </object>
+        <object type="CCountersComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="archStimEffectTable" type="String">tables.StimEffectTables.ObjectDefault</value>
+        </object>
+        <object type="CParticleFXComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <object type="ParticleSystems" />
+        </object>
+        <object type="CLadderNetworkComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+        </object>
+        <object type="CMissionComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_hidMissionLayerPath" type="String"></value>
+          <value name="hidMissionLayerPath" type="Hash">FFFFFFFF</value>
+          <value name="text_hidCategory" type="String"></value>
+          <value name="hidCategory" type="Hash">FFFFFFFF</value>
+          <value name="ForceMerge" type="Bool">True</value>
+        </object>
+      </object>
+    </object>
+  </object>
+  <object type="EntityPrototype">
+    <value name="Name" type="String">Ladders.LadderWood18steps.Multi</value>
+    <object type="Entity">
+      <value name="hidName" type="String">OA_Ladder.Ladders.LadderWood18steps.Multi</value>
+      <value name="disEntityId" type="UInt64">4318</value>
+      <value name="text_hidEntityClass" type="String">CEntity</value>
+      <value name="hidEntityClass" type="Hash">50C95067</value>
+      <value name="hidResourceCount" type="UInt32">4</value>
+      <value name="hidPos" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidAngles" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidPos_precise" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidConstEntity" type="Bool">False</value>
+      <object type="Components">
+        <object type="CFileDescriptorComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_fileName" type="String">graphics\objects\ladders\ladderwood18steps.xml</value>
+          <value name="fileName" type="Hash">233AB849</value>
+          <value name="hidDescriptor" type="Rml">
+            <hidDescriptor>
+              <component class="GraphicComponent" version="2" detail="0">
+                <object index="0" boneName="LadderWood18steps_LOD0" bboxMin="-0.300001,-0.025,0.031691" bboxMax="0.300001,0.025,5.6295" />
+                <resource fileName="graphics\Objects\Ladders\LadderWood18steps.xbg" bboxMin="-0.300002,-0.025,0.031691" bboxMax="0.300001,0.025,5.6295" />
+                <skeleton name="LadderWood18steps" pos="0,0,0" rot="1,-0,-0,-0" />
+              </component>
+              <component class="StaticPhysComponent">
+                <resource fileName="graphics\Objects\Ladders\LadderWood18steps.hkx" />
+              </component>
+            </hidDescriptor>
+          </value>
+        </object>
+        <object type="CGraphicComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="bIntelHackGliderOn" type="Bool">False</value>
+          <value name="bCastShadow" type="Bool">True</value>
+          <value name="bReceiveShadow" type="Bool">True</value>
+          <value name="bCastAmbientShadow" type="Bool">True</value>
+          <value name="olgLightGroup" type="Hash">00000001</value>
+          <value name="bAllowCullBySize" type="Bool">True</value>
+          <value name="agAmbientGroup" type="Hash">00000000</value>
+          <value name="bBehaveLikeAPickup" type="Bool">False</value>
+          <value name="bShowInReflection" type="Bool">True</value>
+          <value name="bAlwaysShowInReflection" type="Bool">False</value>
+          <value name="bOverrideLODSphere" type="Bool">False</value>
+          <value name="fLODSphereRadius" type="Float">0</value>
+          <value name="hidSkyOcclusion0" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion1" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion2" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion3" type="Hash">FFFFFFFF</value>
+          <value name="hidGroundColor" type="Hash">FFFFFFFF</value>
+          <value name="hidObjectHeight" type="Float">3</value>
+          <value name="hidHeightAbove" type="Float">0</value>
+          <value name="hidHasAmbientValues" type="Bool">False</value>
+          <object type="object">
+            <value name="hidIndex" type="UInt32">0</value>
+            <value name="text_objModel" type="String">graphics\objects\ladders\ladderwood18steps.xbg</value>
+            <value name="objModel" type="Hash">33707D0E</value>
+            <value name="hidMeshName" type="String"></value>
+            <value name="text_hidNodeName" type="String">LadderWood18steps</value>
+            <value name="hidNodeName" type="Hash">A22917BD</value>
+            <value name="text_hidNodeNameLOD0" type="String">LadderWood18steps_LOD0</value>
+            <value name="hidNodeNameLOD0" type="Hash">EA9D3855</value>
+            <value name="hidDetailObject" type="Bool">False</value>
+          </object>
+        </object>
+        <object type="CStaticPhysComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_hidResourceId" type="String">graphics\objects\ladders\ladderwood18steps.hkx</value>
+          <value name="hidResourceId" type="Hash">739C68C2</value>
+          <value name="bUseMaxTerrainSlope" type="Bool">False</value>
+          <value name="bIgnoreInExplosions" type="Bool">False</value>
+          <value name="bAnimateable" type="Bool">False</value>
+          <value name="bLargeEntity" type="Bool">False</value>
+          <value name="hidResourceIndex" type="BinHex">00000000</value>
+        </object>
+        <object type="CLadder">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="iOverrideLadderSteps" type="BinHex">FFFFFFFF</value>
+          <value name="sndClimbSound" type="BinHex">3078303034433634383900</value>
+          <value name="sndtpClimbSoundType" type="BinHex">0B000000</value>
+        </object>
+        <object type="CPersistComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="selLevel" type="UInt32">1</value>
+          <object type="enumLevel">
+            <object type="enum">
+              <value name="Value" type="String">None</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Limited</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Full</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Critical</value>
+            </object>
+          </object>
+        </object>
+        <object type="CCountersComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="archStimEffectTable" type="String">tables.StimEffectTables.ObjectDefault</value>
+        </object>
+        <object type="CParticleFXComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <object type="ParticleSystems" />
+        </object>
+        <object type="CLadderNetworkComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+        </object>
+        <object type="CMissionComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_hidMissionLayerPath" type="String"></value>
+          <value name="hidMissionLayerPath" type="Hash">FFFFFFFF</value>
+          <value name="text_hidCategory" type="String"></value>
+          <value name="hidCategory" type="Hash">FFFFFFFF</value>
+          <value name="ForceMerge" type="Bool">True</value>
+        </object>
+      </object>
+    </object>
+  </object>
+  <object type="EntityPrototype">
+    <value name="Name" type="String">Ladders.LadderWood20steps.Multi</value>
+    <object type="Entity">
+      <value name="hidName" type="String">OA_Ladder.Ladders.LadderWood20steps.Multi</value>
+      <value name="disEntityId" type="UInt64">4320</value>
+      <value name="text_hidEntityClass" type="String">CEntity</value>
+      <value name="hidEntityClass" type="Hash">50C95067</value>
+      <value name="hidResourceCount" type="UInt32">4</value>
+      <value name="hidPos" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidAngles" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidPos_precise" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidConstEntity" type="Bool">False</value>
+      <object type="Components">
+        <object type="CFileDescriptorComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_fileName" type="String">graphics\objects\ladders\ladderwood20steps.xml</value>
+          <value name="fileName" type="Hash">A90F9EBC</value>
+          <value name="hidDescriptor" type="Rml">
+            <hidDescriptor>
+              <component class="GraphicComponent" version="2" detail="0">
+                <object index="0" boneName="LadderWood20steps_LOD0" bboxMin="-0.300002,-0.025,3.8147e-008" bboxMax="0.3,0.025,6.18514" />
+                <resource fileName="graphics\Objects\Ladders\LadderWood20steps.xbg" bboxMin="-0.300002,-0.025,3.8147e-008" bboxMax="0.300001,0.025,6.19501" />
+                <skeleton name="LadderWood20steps" pos="0,0,0" rot="1,-0,-0,-0" />
+              </component>
+              <component class="StaticPhysComponent">
+                <resource fileName="graphics\Objects\Ladders\LadderWood20steps.hkx" />
+              </component>
+            </hidDescriptor>
+          </value>
+        </object>
+        <object type="CGraphicComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="bIntelHackGliderOn" type="Bool">False</value>
+          <value name="bCastShadow" type="Bool">True</value>
+          <value name="bReceiveShadow" type="Bool">True</value>
+          <value name="bCastAmbientShadow" type="Bool">True</value>
+          <value name="olgLightGroup" type="Hash">00000001</value>
+          <value name="bAllowCullBySize" type="Bool">True</value>
+          <value name="agAmbientGroup" type="Hash">00000000</value>
+          <value name="bBehaveLikeAPickup" type="Bool">False</value>
+          <value name="bShowInReflection" type="Bool">True</value>
+          <value name="bAlwaysShowInReflection" type="Bool">False</value>
+          <value name="bOverrideLODSphere" type="Bool">False</value>
+          <value name="fLODSphereRadius" type="Float">0</value>
+          <value name="hidSkyOcclusion0" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion1" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion2" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion3" type="Hash">FFFFFFFF</value>
+          <value name="hidGroundColor" type="Hash">FFFFFFFF</value>
+          <value name="hidObjectHeight" type="Float">3</value>
+          <value name="hidHeightAbove" type="Float">0</value>
+          <value name="hidHasAmbientValues" type="Bool">False</value>
+          <object type="object">
+            <value name="hidIndex" type="UInt32">0</value>
+            <value name="text_objModel" type="String">graphics\objects\ladders\ladderwood20steps.xbg</value>
+            <value name="objModel" type="Hash">B9455BFB</value>
+            <value name="hidMeshName" type="String"></value>
+            <value name="text_hidNodeName" type="String">LadderWood20steps</value>
+            <value name="hidNodeName" type="Hash">7F928F4D</value>
+            <value name="text_hidNodeNameLOD0" type="String">LadderWood20steps_LOD0</value>
+            <value name="hidNodeNameLOD0" type="Hash">27C00BE0</value>
+            <value name="hidDetailObject" type="Bool">False</value>
+          </object>
+        </object>
+        <object type="CStaticPhysComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_hidResourceId" type="String">graphics\objects\ladders\ladderwood20steps.hkx</value>
+          <value name="hidResourceId" type="Hash">F9A94E37</value>
+          <value name="bUseMaxTerrainSlope" type="Bool">False</value>
+          <value name="bIgnoreInExplosions" type="Bool">False</value>
+          <value name="bAnimateable" type="Bool">False</value>
+          <value name="bLargeEntity" type="Bool">False</value>
+          <value name="hidResourceIndex" type="BinHex">00000000</value>
+        </object>
+        <object type="CLadder">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="iOverrideLadderSteps" type="BinHex">FFFFFFFF</value>
+          <value name="sndClimbSound" type="BinHex">3078303034433634383900</value>
+          <value name="sndtpClimbSoundType" type="BinHex">0B000000</value>
+        </object>
+        <object type="CPersistComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="selLevel" type="UInt32">1</value>
+          <object type="enumLevel">
+            <object type="enum">
+              <value name="Value" type="String">None</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Limited</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Full</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Critical</value>
+            </object>
+          </object>
+        </object>
+        <object type="CCountersComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="archStimEffectTable" type="String">tables.StimEffectTables.ObjectDefault</value>
+        </object>
+        <object type="CParticleFXComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <object type="ParticleSystems" />
+        </object>
+        <object type="CLadderNetworkComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+        </object>
+        <object type="CMissionComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_hidMissionLayerPath" type="String"></value>
+          <value name="hidMissionLayerPath" type="Hash">FFFFFFFF</value>
+          <value name="text_hidCategory" type="String"></value>
+          <value name="hidCategory" type="Hash">FFFFFFFF</value>
+          <value name="ForceMerge" type="Bool">True</value>
+        </object>
+      </object>
+    </object>
+  </object>
+  <object type="EntityPrototype">
+    <value name="Name" type="String">Ladders.LadderWood22steps.Multi</value>
+    <object type="Entity">
+      <value name="hidName" type="String">OA_Ladder.Ladders.LadderWood22steps.Multi</value>
+      <value name="disEntityId" type="UInt64">4322</value>
+      <value name="text_hidEntityClass" type="String">CEntity</value>
+      <value name="hidEntityClass" type="Hash">50C95067</value>
+      <value name="hidResourceCount" type="UInt32">4</value>
+      <value name="hidPos" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidAngles" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidPos_precise" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidConstEntity" type="Bool">False</value>
+      <object type="Components">
+        <object type="CFileDescriptorComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_fileName" type="String">graphics\objects\ladders\ladderwood22steps.xml</value>
+          <value name="fileName" type="Hash">ADFA4E81</value>
+          <value name="hidDescriptor" type="Rml">
+            <hidDescriptor>
+              <component class="GraphicComponent" version="2" detail="0">
+                <object index="0" boneName="LadderWood22steps_LOD0" bboxMin="-0.300001,-0.025,3.8147e-008" bboxMax="0.300001,0.025,6.73527" />
+                <resource fileName="graphics\Objects\Ladders\LadderWood22steps.xbg" bboxMin="-0.300001,-0.025,3.8147e-008" bboxMax="0.300001,0.025,6.73527" />
+                <skeleton name="LadderWood22steps" pos="0,0,0" rot="1,-0,-0,-0" />
+              </component>
+              <component class="StaticPhysComponent">
+                <resource fileName="graphics\Objects\Ladders\LadderWood22steps.hkx" />
+              </component>
+            </hidDescriptor>
+          </value>
+        </object>
+        <object type="CGraphicComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="bIntelHackGliderOn" type="Bool">False</value>
+          <value name="bCastShadow" type="Bool">True</value>
+          <value name="bReceiveShadow" type="Bool">True</value>
+          <value name="bCastAmbientShadow" type="Bool">True</value>
+          <value name="olgLightGroup" type="Hash">00000001</value>
+          <value name="bAllowCullBySize" type="Bool">True</value>
+          <value name="agAmbientGroup" type="Hash">00000000</value>
+          <value name="bBehaveLikeAPickup" type="Bool">False</value>
+          <value name="bShowInReflection" type="Bool">True</value>
+          <value name="bAlwaysShowInReflection" type="Bool">False</value>
+          <value name="bOverrideLODSphere" type="Bool">False</value>
+          <value name="fLODSphereRadius" type="Float">0</value>
+          <value name="hidSkyOcclusion0" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion1" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion2" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion3" type="Hash">FFFFFFFF</value>
+          <value name="hidGroundColor" type="Hash">FFFFFFFF</value>
+          <value name="hidObjectHeight" type="Float">3</value>
+          <value name="hidHeightAbove" type="Float">0</value>
+          <value name="hidHasAmbientValues" type="Bool">False</value>
+          <object type="object">
+            <value name="hidIndex" type="UInt32">0</value>
+            <value name="text_objModel" type="String">graphics\objects\ladders\ladderwood22steps.xbg</value>
+            <value name="objModel" type="Hash">BDB08BC6</value>
+            <value name="hidMeshName" type="String"></value>
+            <value name="text_hidNodeName" type="String">LadderWood22steps</value>
+            <value name="hidNodeName" type="Hash">325A2E46</value>
+            <value name="text_hidNodeNameLOD0" type="String">LadderWood22steps_LOD0</value>
+            <value name="hidNodeNameLOD0" type="Hash">7FACB221</value>
+            <value name="hidDetailObject" type="Bool">False</value>
+          </object>
+        </object>
+        <object type="CStaticPhysComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_hidResourceId" type="String">graphics\objects\ladders\ladderwood22steps.hkx</value>
+          <value name="hidResourceId" type="Hash">FD5C9E0A</value>
+          <value name="bUseMaxTerrainSlope" type="Bool">False</value>
+          <value name="bIgnoreInExplosions" type="Bool">False</value>
+          <value name="bAnimateable" type="Bool">False</value>
+          <value name="bLargeEntity" type="Bool">False</value>
+          <value name="hidResourceIndex" type="BinHex">00000000</value>
+        </object>
+        <object type="CLadder">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="iOverrideLadderSteps" type="BinHex">FFFFFFFF</value>
+          <value name="sndClimbSound" type="BinHex">3078303034433634383900</value>
+          <value name="sndtpClimbSoundType" type="BinHex">0B000000</value>
+        </object>
+        <object type="CPersistComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="selLevel" type="UInt32">1</value>
+          <object type="enumLevel">
+            <object type="enum">
+              <value name="Value" type="String">None</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Limited</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Full</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Critical</value>
+            </object>
+          </object>
+        </object>
+        <object type="CCountersComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="archStimEffectTable" type="String">tables.StimEffectTables.ObjectDefault</value>
+        </object>
+        <object type="CParticleFXComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <object type="ParticleSystems" />
+        </object>
+        <object type="CLadderNetworkComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+        </object>
+        <object type="CMissionComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_hidMissionLayerPath" type="String"></value>
+          <value name="hidMissionLayerPath" type="Hash">FFFFFFFF</value>
+          <value name="text_hidCategory" type="String"></value>
+          <value name="hidCategory" type="Hash">FFFFFFFF</value>
+          <value name="ForceMerge" type="Bool">True</value>
+        </object>
+      </object>
+    </object>
+  </object>
+  <object type="EntityPrototype">
+    <value name="Name" type="String">Ladders.LadderWood29steps.Multi</value>
+    <object type="Entity">
+      <value name="hidName" type="String">OA_Ladder.Ladders.LadderWood29steps.Multi</value>
+      <value name="disEntityId" type="UInt64">4324</value>
+      <value name="text_hidEntityClass" type="String">CEntity</value>
+      <value name="hidEntityClass" type="Hash">50C95067</value>
+      <value name="hidResourceCount" type="UInt32">4</value>
+      <value name="hidPos" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidAngles" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidPos_precise" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidConstEntity" type="Bool">False</value>
+      <object type="Components">
+        <object type="CFileDescriptorComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_fileName" type="String">graphics\objects\ladders\ladderwood29steps.xml</value>
+          <value name="fileName" type="Hash">551AB576</value>
+          <value name="hidDescriptor" type="Rml">
+            <hidDescriptor>
+              <component class="GraphicComponent" version="2" detail="0">
+                <object index="0" boneName="LadderWood29steps_LOD0" bboxMin="-0.300001,-0.025,3.8147e-008" bboxMax="0.300001,0.025,8.83372" />
+                <resource fileName="graphics\Objects\Ladders\LadderWood29steps.xbg" bboxMin="-0.300001,-0.025,0" bboxMax="0.300001,0.025,8.83372" />
+                <skeleton name="LadderWood29steps" pos="0,0,0" rot="1,-0,-0,-0" />
+              </component>
+              <component class="StaticPhysComponent">
+                <resource fileName="graphics\Objects\Ladders\LadderWood29steps.hkx" />
+              </component>
+            </hidDescriptor>
+          </value>
+        </object>
+        <object type="CGraphicComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="bIntelHackGliderOn" type="Bool">False</value>
+          <value name="bCastShadow" type="Bool">True</value>
+          <value name="bReceiveShadow" type="Bool">True</value>
+          <value name="bCastAmbientShadow" type="Bool">True</value>
+          <value name="olgLightGroup" type="Hash">00000001</value>
+          <value name="bAllowCullBySize" type="Bool">True</value>
+          <value name="agAmbientGroup" type="Hash">00000000</value>
+          <value name="bBehaveLikeAPickup" type="Bool">False</value>
+          <value name="bShowInReflection" type="Bool">True</value>
+          <value name="bAlwaysShowInReflection" type="Bool">False</value>
+          <value name="bOverrideLODSphere" type="Bool">False</value>
+          <value name="fLODSphereRadius" type="Float">0</value>
+          <value name="hidSkyOcclusion0" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion1" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion2" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion3" type="Hash">FFFFFFFF</value>
+          <value name="hidGroundColor" type="Hash">FFFFFFFF</value>
+          <value name="hidObjectHeight" type="Float">3</value>
+          <value name="hidHeightAbove" type="Float">0</value>
+          <value name="hidHasAmbientValues" type="Bool">False</value>
+          <object type="object">
+            <value name="hidIndex" type="UInt32">0</value>
+            <value name="text_objModel" type="String">graphics\objects\ladders\ladderwood29steps.xbg</value>
+            <value name="objModel" type="Hash">45507031</value>
+            <value name="hidMeshName" type="String"></value>
+            <value name="text_hidNodeName" type="String">LadderWood29steps</value>
+            <value name="hidNodeName" type="Hash">589DDE85</value>
+            <value name="text_hidNodeNameLOD0" type="String">LadderWood29steps_LOD0</value>
+            <value name="hidNodeNameLOD0" type="Hash">5C8D3565</value>
+            <value name="hidDetailObject" type="Bool">False</value>
+          </object>
+        </object>
+        <object type="CStaticPhysComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_hidResourceId" type="String">graphics\objects\ladders\ladderwood29steps.hkx</value>
+          <value name="hidResourceId" type="Hash">05BC65FD</value>
+          <value name="bUseMaxTerrainSlope" type="Bool">False</value>
+          <value name="bIgnoreInExplosions" type="Bool">False</value>
+          <value name="bAnimateable" type="Bool">False</value>
+          <value name="bLargeEntity" type="Bool">False</value>
+          <value name="hidResourceIndex" type="BinHex">00000000</value>
+        </object>
+        <object type="CLadder">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="iOverrideLadderSteps" type="BinHex">FFFFFFFF</value>
+          <value name="sndClimbSound" type="BinHex">3078303034433634383900</value>
+          <value name="sndtpClimbSoundType" type="BinHex">0B000000</value>
+        </object>
+        <object type="CPersistComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="selLevel" type="UInt32">1</value>
+          <object type="enumLevel">
+            <object type="enum">
+              <value name="Value" type="String">None</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Limited</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Full</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Critical</value>
+            </object>
+          </object>
+        </object>
+        <object type="CCountersComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="archStimEffectTable" type="String">tables.StimEffectTables.ObjectDefault</value>
+        </object>
+        <object type="CParticleFXComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <object type="ParticleSystems" />
+        </object>
+        <object type="CLadderNetworkComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+        </object>
+        <object type="CMissionComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_hidMissionLayerPath" type="String"></value>
+          <value name="hidMissionLayerPath" type="Hash">FFFFFFFF</value>
+          <value name="text_hidCategory" type="String"></value>
+          <value name="hidCategory" type="Hash">FFFFFFFF</value>
+          <value name="ForceMerge" type="Bool">True</value>
+        </object>
+      </object>
+    </object>
+  </object>
+  <object type="EntityPrototype">
+    <value name="Name" type="String">Ladders.LadderWood36steps.Multi</value>
+    <object type="Entity">
+      <value name="hidName" type="String">OA_Ladder.Ladders.LadderWood36steps.Multi</value>
+      <value name="disEntityId" type="UInt64">4326</value>
+      <value name="text_hidEntityClass" type="String">CEntity</value>
+      <value name="hidEntityClass" type="Hash">50C95067</value>
+      <value name="hidResourceCount" type="UInt32">4</value>
+      <value name="hidPos" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidAngles" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidPos_precise" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidConstEntity" type="Bool">False</value>
+      <object type="Components">
+        <object type="CFileDescriptorComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_fileName" type="String">graphics\objects\ladders\ladderwood36steps.xml</value>
+          <value name="fileName" type="Hash">659F313B</value>
+          <value name="hidDescriptor" type="Rml">
+            <hidDescriptor>
+              <component class="GraphicComponent" version="2" detail="0">
+                <object index="0" boneName="LadderWood36steps_LOD0" bboxMin="-0.300001,-0.025,3.8147e-008" bboxMax="0.300001,0.025,10.9183" />
+                <resource fileName="graphics\Objects\Ladders\LadderWood36steps.xbg" bboxMin="-0.300001,-0.025,3.8147e-008" bboxMax="0.300001,0.025,10.9183" />
+                <skeleton name="LadderWood36steps" pos="0,0,0" rot="1,-0,-0,-0" />
+              </component>
+              <component class="StaticPhysComponent">
+                <resource fileName="graphics\Objects\Ladders\LadderWood36steps.hkx" />
+              </component>
+            </hidDescriptor>
+          </value>
+        </object>
+        <object type="CGraphicComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="bIntelHackGliderOn" type="Bool">False</value>
+          <value name="bCastShadow" type="Bool">True</value>
+          <value name="bReceiveShadow" type="Bool">True</value>
+          <value name="bCastAmbientShadow" type="Bool">True</value>
+          <value name="olgLightGroup" type="Hash">00000001</value>
+          <value name="bAllowCullBySize" type="Bool">True</value>
+          <value name="agAmbientGroup" type="Hash">00000000</value>
+          <value name="bBehaveLikeAPickup" type="Bool">False</value>
+          <value name="bShowInReflection" type="Bool">True</value>
+          <value name="bAlwaysShowInReflection" type="Bool">False</value>
+          <value name="bOverrideLODSphere" type="Bool">False</value>
+          <value name="fLODSphereRadius" type="Float">0</value>
+          <value name="hidSkyOcclusion0" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion1" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion2" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion3" type="Hash">FFFFFFFF</value>
+          <value name="hidGroundColor" type="Hash">FFFFFFFF</value>
+          <value name="hidObjectHeight" type="Float">3</value>
+          <value name="hidHeightAbove" type="Float">0</value>
+          <value name="hidHasAmbientValues" type="Bool">False</value>
+          <object type="object">
+            <value name="hidIndex" type="UInt32">0</value>
+            <value name="text_objModel" type="String">graphics\objects\ladders\ladderwood36steps.xbg</value>
+            <value name="objModel" type="Hash">75D5F47C</value>
+            <value name="hidMeshName" type="String"></value>
+            <value name="text_hidNodeName" type="String">LadderWood36steps</value>
+            <value name="hidNodeName" type="Hash">0FBC67E4</value>
+            <value name="text_hidNodeNameLOD0" type="String">LadderWood36steps_LOD0</value>
+            <value name="hidNodeNameLOD0" type="Hash">54D08DCC</value>
+            <value name="hidDetailObject" type="Bool">False</value>
+          </object>
+        </object>
+        <object type="CStaticPhysComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_hidResourceId" type="String">graphics\objects\ladders\ladderwood36steps.hkx</value>
+          <value name="hidResourceId" type="Hash">3539E1B0</value>
+          <value name="bUseMaxTerrainSlope" type="Bool">False</value>
+          <value name="bIgnoreInExplosions" type="Bool">False</value>
+          <value name="bAnimateable" type="Bool">False</value>
+          <value name="bLargeEntity" type="Bool">False</value>
+          <value name="hidResourceIndex" type="BinHex">00000000</value>
+        </object>
+        <object type="CLadder">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="iOverrideLadderSteps" type="BinHex">FFFFFFFF</value>
+          <value name="sndClimbSound" type="BinHex">3078303034433634383900</value>
+          <value name="sndtpClimbSoundType" type="BinHex">0B000000</value>
+        </object>
+        <object type="CPersistComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="selLevel" type="UInt32">1</value>
+          <object type="enumLevel">
+            <object type="enum">
+              <value name="Value" type="String">None</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Limited</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Full</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Critical</value>
+            </object>
+          </object>
+        </object>
+        <object type="CCountersComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="archStimEffectTable" type="String">tables.StimEffectTables.ObjectDefault</value>
+        </object>
+        <object type="CParticleFXComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <object type="ParticleSystems" />
+        </object>
+        <object type="CLadderNetworkComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+        </object>
+        <object type="CMissionComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_hidMissionLayerPath" type="String"></value>
+          <value name="hidMissionLayerPath" type="Hash">FFFFFFFF</value>
+          <value name="text_hidCategory" type="String"></value>
+          <value name="hidCategory" type="Hash">FFFFFFFF</value>
+          <value name="ForceMerge" type="Bool">True</value>
+        </object>
+      </object>
+    </object>
+  </object>
+  <object type="EntityPrototype">
+    <value name="Name" type="String">Ladders.LadderWood6steps.Multi</value>
+    <object type="Entity">
+      <value name="hidName" type="String">OA_Ladder.Ladders.LadderWood6steps.Multi</value>
+      <value name="disEntityId" type="UInt64">4328</value>
+      <value name="text_hidEntityClass" type="String">CEntity</value>
+      <value name="hidEntityClass" type="Hash">50C95067</value>
+      <value name="hidResourceCount" type="UInt32">4</value>
+      <value name="hidPos" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidAngles" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidPos_precise" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidConstEntity" type="Bool">False</value>
+      <object type="Components">
+        <object type="CFileDescriptorComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_fileName" type="String">graphics\objects\ladders\ladderwood5steps.xml</value>
+          <value name="fileName" type="Hash">77AA9F79</value>
+          <value name="hidDescriptor" type="Rml">
+            <hidDescriptor>
+              <component class="GraphicComponent" version="2" detail="0">
+                <object index="0" boneName="LadderWood5steps_LOD0" bboxMin="-0.300001,-0.025,3.8147e-008" bboxMax="0.300001,0.025,1.99125" />
+                <resource fileName="graphics\Objects\Ladders\LadderWood5steps.xbg" bboxMin="-0.300001,-0.025,0" bboxMax="0.300001,0.025,1.99125" />
+                <skeleton name="LadderWood5steps" pos="0,0,0" rot="1,-0,-0,-0" />
+              </component>
+              <component class="StaticPhysComponent">
+                <resource fileName="graphics\Objects\Ladders\LadderWood5steps.hkx" />
+              </component>
+            </hidDescriptor>
+          </value>
+        </object>
+        <object type="CGraphicComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="bIntelHackGliderOn" type="Bool">False</value>
+          <value name="bCastShadow" type="Bool">True</value>
+          <value name="bReceiveShadow" type="Bool">True</value>
+          <value name="bCastAmbientShadow" type="Bool">True</value>
+          <value name="olgLightGroup" type="Hash">00000001</value>
+          <value name="bAllowCullBySize" type="Bool">True</value>
+          <value name="agAmbientGroup" type="Hash">00000000</value>
+          <value name="bBehaveLikeAPickup" type="Bool">False</value>
+          <value name="bShowInReflection" type="Bool">True</value>
+          <value name="bAlwaysShowInReflection" type="Bool">False</value>
+          <value name="bOverrideLODSphere" type="Bool">False</value>
+          <value name="fLODSphereRadius" type="Float">0</value>
+          <value name="hidSkyOcclusion0" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion1" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion2" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion3" type="Hash">FFFFFFFF</value>
+          <value name="hidGroundColor" type="Hash">FFFFFFFF</value>
+          <value name="hidObjectHeight" type="Float">3</value>
+          <value name="hidHeightAbove" type="Float">0</value>
+          <value name="hidHasAmbientValues" type="Bool">False</value>
+          <object type="object">
+            <value name="hidIndex" type="UInt32">0</value>
+            <value name="text_objModel" type="String">graphics\objects\ladders\ladderwood5steps.xbg</value>
+            <value name="objModel" type="Hash">67E05A3E</value>
+            <value name="hidMeshName" type="String"></value>
+            <value name="text_hidNodeName" type="String">LadderWood5steps</value>
+            <value name="hidNodeName" type="Hash">DB31D268</value>
+            <value name="text_hidNodeNameLOD0" type="String">LadderWood5steps_LOD0</value>
+            <value name="hidNodeNameLOD0" type="Hash">06D3E63F</value>
+            <value name="hidDetailObject" type="Bool">False</value>
+          </object>
+        </object>
+        <object type="CStaticPhysComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_hidResourceId" type="String">graphics\objects\ladders\ladderwood5steps.hkx</value>
+          <value name="hidResourceId" type="Hash">270C4FF2</value>
+          <value name="bUseMaxTerrainSlope" type="Bool">False</value>
+          <value name="bIgnoreInExplosions" type="Bool">False</value>
+          <value name="bAnimateable" type="Bool">False</value>
+          <value name="bLargeEntity" type="Bool">False</value>
+          <value name="hidResourceIndex" type="BinHex">00000000</value>
+        </object>
+        <object type="CLadder">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="iOverrideLadderSteps" type="BinHex">FFFFFFFF</value>
+          <value name="sndClimbSound" type="BinHex">3078303034433634383900</value>
+          <value name="sndtpClimbSoundType" type="BinHex">0B000000</value>
+        </object>
+        <object type="CPersistComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="selLevel" type="UInt32">1</value>
+          <object type="enumLevel">
+            <object type="enum">
+              <value name="Value" type="String">None</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Limited</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Full</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Critical</value>
+            </object>
+          </object>
+        </object>
+        <object type="CCountersComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="archStimEffectTable" type="String">tables.StimEffectTables.ObjectDefault</value>
+        </object>
+        <object type="CParticleFXComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <object type="ParticleSystems" />
+        </object>
+        <object type="CLadderNetworkComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+        </object>
+        <object type="CMissionComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_hidMissionLayerPath" type="String"></value>
+          <value name="hidMissionLayerPath" type="Hash">FFFFFFFF</value>
+          <value name="text_hidCategory" type="String"></value>
+          <value name="hidCategory" type="Hash">FFFFFFFF</value>
+          <value name="ForceMerge" type="Bool">True</value>
+        </object>
+      </object>
+    </object>
+  </object>
+  <object type="EntityPrototype">
+    <value name="Name" type="String">Ladders.LadderWood8steps.Multi</value>
+    <object type="Entity">
+      <value name="hidName" type="String">OA_Ladder.Ladders.LadderWood8steps.Multi</value>
+      <value name="disEntityId" type="UInt64">4330</value>
+      <value name="text_hidEntityClass" type="String">CEntity</value>
+      <value name="hidEntityClass" type="Hash">50C95067</value>
+      <value name="hidResourceCount" type="UInt32">4</value>
+      <value name="hidPos" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidAngles" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidPos_precise" type="Vector3">
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </value>
+      <value name="hidConstEntity" type="Bool">False</value>
+      <object type="Components">
+        <object type="CFileDescriptorComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_fileName" type="String">graphics\objects\ladders\ladderwood08steps.xml</value>
+          <value name="fileName" type="Hash">E2B46789</value>
+          <value name="hidDescriptor" type="Rml">
+            <hidDescriptor>
+              <component class="GraphicComponent" version="2" detail="0">
+                <object index="0" boneName="LadderWood08steps_LOD0" bboxMin="-0.300001,-0.025,3.8147e-008" bboxMax="0.300001,0.025,2.55864" />
+                <resource fileName="graphics\Objects\Ladders\LadderWood08steps.xbg" bboxMin="-0.300001,-0.025,3.8147e-008" bboxMax="0.300001,0.025,2.55864" />
+                <skeleton name="LadderWood08steps" pos="0,0,0" rot="1,-0,-0,-0" />
+              </component>
+              <component class="StaticPhysComponent">
+                <resource fileName="graphics\Objects\Ladders\LadderWood08steps.hkx" />
+              </component>
+            </hidDescriptor>
+          </value>
+        </object>
+        <object type="CGraphicComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="bIntelHackGliderOn" type="Bool">False</value>
+          <value name="bCastShadow" type="Bool">True</value>
+          <value name="bReceiveShadow" type="Bool">True</value>
+          <value name="bCastAmbientShadow" type="Bool">True</value>
+          <value name="olgLightGroup" type="Hash">00000001</value>
+          <value name="bAllowCullBySize" type="Bool">True</value>
+          <value name="agAmbientGroup" type="Hash">00000000</value>
+          <value name="bBehaveLikeAPickup" type="Bool">False</value>
+          <value name="bShowInReflection" type="Bool">True</value>
+          <value name="bAlwaysShowInReflection" type="Bool">False</value>
+          <value name="bOverrideLODSphere" type="Bool">False</value>
+          <value name="fLODSphereRadius" type="Float">0</value>
+          <value name="hidSkyOcclusion0" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion1" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion2" type="Hash">FFFFFFFF</value>
+          <value name="hidSkyOcclusion3" type="Hash">FFFFFFFF</value>
+          <value name="hidGroundColor" type="Hash">FFFFFFFF</value>
+          <value name="hidObjectHeight" type="Float">3</value>
+          <value name="hidHeightAbove" type="Float">0</value>
+          <value name="hidHasAmbientValues" type="Bool">False</value>
+          <object type="object">
+            <value name="hidIndex" type="UInt32">0</value>
+            <value name="text_objModel" type="String">graphics\objects\ladders\ladderwood08steps.xbg</value>
+            <value name="objModel" type="Hash">F2FEA2CE</value>
+            <value name="hidMeshName" type="String"></value>
+            <value name="text_hidNodeName" type="String">LadderWood08steps</value>
+            <value name="hidNodeName" type="Hash">045E1C09</value>
+            <value name="text_hidNodeNameLOD0" type="String">LadderWood08steps_LOD0</value>
+            <value name="hidNodeNameLOD0" type="Hash">7138743A</value>
+            <value name="hidDetailObject" type="Bool">False</value>
+          </object>
+        </object>
+        <object type="CStaticPhysComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_hidResourceId" type="String">graphics\objects\ladders\ladderwood08steps.hkx</value>
+          <value name="hidResourceId" type="Hash">B212B702</value>
+          <value name="bUseMaxTerrainSlope" type="Bool">False</value>
+          <value name="bIgnoreInExplosions" type="Bool">False</value>
+          <value name="bAnimateable" type="Bool">False</value>
+          <value name="bLargeEntity" type="Bool">False</value>
+          <value name="hidResourceIndex" type="BinHex">00000000</value>
+        </object>
+        <object type="CLadder">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="iOverrideLadderSteps" type="BinHex">FFFFFFFF</value>
+          <value name="sndClimbSound" type="BinHex">3078303034433634383900</value>
+          <value name="sndtpClimbSoundType" type="BinHex">0B000000</value>
+        </object>
+        <object type="CPersistComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="selLevel" type="UInt32">1</value>
+          <object type="enumLevel">
+            <object type="enum">
+              <value name="Value" type="String">None</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Limited</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Full</value>
+            </object>
+            <object type="enum">
+              <value name="Value" type="String">Critical</value>
+            </object>
+          </object>
+        </object>
+        <object type="CCountersComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="archStimEffectTable" type="String">tables.StimEffectTables.ObjectDefault</value>
+        </object>
+        <object type="CParticleFXComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <object type="ParticleSystems" />
+        </object>
+        <object type="CLadderNetworkComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+        </object>
+        <object type="CMissionComponent">
+          <value name="hidHasAliasName" type="Bool">False</value>
+          <value name="text_hidMissionLayerPath" type="String"></value>
+          <value name="hidMissionLayerPath" type="Hash">FFFFFFFF</value>
+          <value name="text_hidCategory" type="String"></value>
+          <value name="hidCategory" type="Hash">FFFFFFFF</value>
+          <value name="ForceMerge" type="Bool">True</value>
+        </object>
+      </object>
+    </object>
+  </object>
+</object>

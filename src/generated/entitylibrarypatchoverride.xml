@@ -1,0 +1,24 @@
+﻿<object type="EntityLibraries" hash="BCDD10B4">
+  <object external="01_Curves.xml" />
+  <object external="02_gadgets.xml" />
+  <object external="03_IGE_Archetypes.xml" />
+  <object external="04_multiplayer.xml" />
+  <object external="05_OA_BuildingAccessories.xml" />
+  <object external="06_OA_Buildings.xml" />
+  <object external="07_OA_Burnable.xml" />
+  <object external="08_OA_CoverObjects.xml" />
+  <object external="09_OA_DetailObjects.xml" />
+  <object external="10_OA_Explosives.xml" />
+  <object external="11_OA_Furniture.xml" />
+  <object external="12_OA_Ladder.xml" />
+  <object external="13_OA_Lights.xml" />
+  <object external="14_OA_StreetSigns.xml" />
+  <object external="15_object_archetypes.xml" />
+  <object external="16_pickups.xml" />
+  <object external="17_pile_archetypes.xml" />
+  <object external="18_StimEmitters.xml" />
+  <object external="19_STP_archetypes.xml" />
+  <object external="20_vehicle.xml" />
+  <object external="21_WeaponProperties.xml" />
+  <object external="22_weapons.xml" />
+</object>

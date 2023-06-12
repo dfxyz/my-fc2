@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<Root>
+    <Import file="Config\InputActionMapCommon.xml"/>
+    
+    <ActionMap name="showconsole" >
+    
+        <Import actionmap="common_showconsole"/>
+        
+    </ActionMap>
+    
+    <ActionMap name="system" resendOnChange="0" >
+    
+        <Import actionmap="showconsole"/>
+		<Import actionmap="common_scry_alwaysactive"/>
+        <Import actionmap="common_system"/>
+        
+        <Binding signal="cheat_StartBuddyRescue">
+			<Input input="kb:rctrl" action="press"/>
+			<Input input="kb:f7" action="press"/>
+		</Binding>
+	    <Binding signal="cheat_StartInfamySpike">
+			<Input input="kb:rshift" action="press"/>
+			<Input input="kb:f7" action="press"/>
+		</Binding>
+    </ActionMap>
+    
+    <ActionMap name="quicksaveload" resendOnChange="0" >
+    		<Import actionmap="quicksaveload_remap" optional=""/>
+        <Binding input="kb:f5" action="release" signal="quicksave"/>
+        <Binding input="kb:f9" action="release" signal="quickload"/>
+    </ActionMap>
+    
+    <ActionMap name="kb_move" >
+    
+        <Import actionmap="system"/>
+        
+    </ActionMap>
+    
+    <ActionMap name="move" >
+
+        <Import actionmap="common_move"/>
+        <Import actionmap="system"/>
+        
+    </ActionMap>
+    
+    <ActionMap name="look" >
+    
+        <Import actionmap="common_look"/>
+        <Import actionmap="system"/>
+
+		<PadFilter name="right_thumb" device="pad" padAccelerationBoostAmplitude="0" >
+			<StickyHelper curve="Weapons.AimCurves.Pad_Sticky" radius="1.2" strength="0.01" accelerationCutoffRadius="0.5" distanceForFullSticky="10" distanceForNoSticky="2"/>
+			<FollowEnemyHelper curve="Weapons.AimCurves.Pad_Sticky" radius="1.0" strength="0.005"/>
+			<IronSightHelper height="0.05" duration="0.2" distanceFactor="0.1" distanceFactorHeight="0.05" startSnapPercentage="0.75">
+			    <radius>
+			        <Casual value="1"/>
+			        <Experienced value="0.5"/>
+			        <Hardcore value="0.25"/>
+			        <Infamous value="0.125"/>
+			    </radius>
+			</IronSightHelper>
+			<ShootCorrectionHelper radius="0.5" strength="1" maxDistance="15"/>
+			<Binding input="right_thumb_leftright" axis="0" sensitivity="0.9" curve="Weapons.AimCurves.Pad_LookLeftRight"/>
+			<Binding input="right_thumb_updown" axis="1" sensitivity="0.4" curve="Weapons.AimCurves.Pad_LookUpDown"/>
+		</PadFilter>
+		<Binding input="pad:right_thumb" action="update" signal="look"/>
+        
+    </ActionMap>
+    
+    <ActionMap name="weapons" >
+        <Import actionmap="common_weapons"/>
+        <Import actionmap="system"/>
+        <Import actionmap="common_gadget_remap" optional=""/>
+        
+        <Binding input="pad:back" action="press" signal="toggle_gadget"/>
+        <Binding input="kb:5" action="press" signal="toggle_gadget"/>
+        <NoResend input="pad:back"/>
+        <NoResend input="kb:5"/>
+    </ActionMap>
+    
+    <ActionMap name="free_camera" resendOnChange="0">
+    
+        <Import actionmap="system"/>
+		<Import actionmap="kb_move"/>
+        <Import actionmap="common_free_camera"/>
+        
+    </ActionMap>
+    
+    <ActionMap name="menus" resendOnChange="0">
+    
+        <Import actionmap="common_menus"/>
+        <Import actionmap="system"/>
+        <Import actionmap="quicksaveload"/>
+
+        <Binding input="kb:escape" action="release" signal="show_pausemenu"/>
+		<Binding input="pad:start" action="release" signal="show_pausemenu"/>
+        
+    </ActionMap>
+    
+    <ActionMap name="spectator_camera" resendOnChange="0">
+    
+        <Import actionmap="kb_move"/>
+        <Import actionmap="common_spectator_camera"/>
+        <Import actionmap="system"/>
+        
+    </ActionMap>
+    
+    <ActionMap name="gameplay" >
+    
+		<Import actionmap="move"/>
+		<Import actionmap="look"/>
+		<Import actionmap="weapons"/>
+        <Import actionmap="common_gameplay"/>
+        <Import actionmap="system"/>
+        
+    </ActionMap>
+    
+    <ActionMap name="default" >
+    
+		<Import actionmap="gameplay"/>
+		<Import actionmap="menus"/>
+        <Import actionmap="common_default"/>
+        <Import actionmap="system"/>
+        
+    </ActionMap>
+    
+    <ActionMap name="basic" >
+      
+		<Import actionmap="menus"/>
+        <Import actionmap="common_basic"/>
+        <Import actionmap="system"/>
+       
+    </ActionMap>
+    
+    <ActionMap name="editor" >
+    
+		<Import actionmap="gameplay"/>
+        <Import actionmap="common_editor"/>
+        <Import actionmap="system"/>
+        
+    </ActionMap>
+    
+    <ActionMap name="cinematic" >
+    
+		<Import actionmap="basic"/>
+        <Import actionmap="common_cinematic"/>
+        <Import actionmap="system"/>
+        
+    </ActionMap>
+    
+    <ActionMap name="cinematic_nopausemenu" >
+    
+        <Import actionmap="common_basic"/>
+        <Import actionmap="common_cinematic"/>
+        <Import actionmap="system"/>
+        
+    </ActionMap>
+    
+    <ActionMap name="malaria_major_attack" resendOnChange="0">
+    
+		<Import actionmap="basic"/>
+        <Import actionmap="common_malaria_major_attack"/>
+        <Import actionmap="system"/>
+        
+    </ActionMap>
+    
+    <ActionMap name="buddydown" resendOnChange="0">
+    
+		<Import actionmap="basic"/>
+        <Import actionmap="common_buddydown"/>
+        <Import actionmap="system"/>
+        
+    </ActionMap>
+    
+    <ActionMap name="buddydown_execute" resendOnChange="0">
+    
+		<Import actionmap="buddydown"/>
+        <Import actionmap="common_buddydown_execute"/>
+        <Import actionmap="system"/>
+        
+    </ActionMap>
+    
+    <ActionMap name="buddydown_cradle" resendOnChange="0">
+    
+		<Import actionmap="buddydown"/>
+        <Import actionmap="common_buddydown_cradle"/>
+        <Import actionmap="system"/>
+        
+    </ActionMap>
+    
+    <ActionMap name="lyingdown" resendOnChange="0">
+    
+		<Import actionmap="basic"/>
+		<Import actionmap="look"/>
+        <Import actionmap="common_lyingdown"/>
+        <Import actionmap="system"/>
+        
+    </ActionMap>
+    
+    <ActionMap name="in_vehicle" >
+    
+		<Import actionmap="basic"/>
+        <Import actionmap="common_in_vehicle"/>
+        <Import actionmap="system"/>
+        
+    </ActionMap>
+    
+    <ActionMap name="driving" >
+		<Import actionmap="in_vehicle"/>
+		<Import actionmap="kb_move"/>
+		<Import actionmap="common_gadget_remap" optional=""/>
+        <Import actionmap="common_driving"/>
+        <Import actionmap="system"/>
+        
+        <Binding input="kb:5" action="press" signal="toggle_gadget"/>
+		<Binding input="pad:back" action="press" signal="toggle_gadget"/>
+		
+		<NoResend input="pad:back"/>
+        <NoResend input="kb:5"/>
+    </ActionMap>
+    
+    <ActionMap name="map_driving" >
+    		<Import actionmap="common_reload_remap" optional=""/>
+        <Import actionmap="driving"/>
+        <Binding input="kb:r" action="press"   signal="flipside"/>
+				<Binding input="pad:x" action="press"   signal="flipside"/>
+    </ActionMap>
+    
+    <ActionMap name="passenger" >
+    
+		<Import actionmap="basic"/>
+		<Import actionmap="kb_move"/>
+	    <Import actionmap="look"/>
+        <Import actionmap="common_passenger"/>
+        <Import actionmap="system"/>
+        
+    </ActionMap>
+    
+    <ActionMap name="ladder" >
+    
+        <Import actionmap="basic"/>
+        <Import actionmap="look"/>
+        <Import actionmap="common_ladder"/>
+        <Import actionmap="system"/>
+        
+    </ActionMap>
+    
+    <ActionMap name="ied" >
+    
+        <Import actionmap="basic"/>
+        <Import actionmap="gameplay"/>
+		<Import actionmap="weapons"/>
+        <Import actionmap="common_ied"/>
+        <Import actionmap="system"/>
+        
+    </ActionMap>
+
+    <ActionMap name="ied_in_vehicle">
+        <Import actionmap="passenger"/>
+
+		<Binding input="mouse:rb" action="press" signal=""/>
+		<Binding input="mouse:rb" action="release" signal=""/>
+		<Binding input="pad:left_trigger" action="press" signal=""/>
+		<Binding input="pad:left_trigger" action="release" signal=""/>
+	</ActionMap>
+
+    <ActionMap name="mortar" >
+    
+        <Import actionmap="default"/>
+        <Import actionmap="common_mortar"/>
+        <Import actionmap="system"/>
+        
+    </ActionMap>
+    
+    <ActionMap name="mapcompass" >
+    
+	    <Import actionmap="default"/>
+        <Import actionmap="common_mapcompass"/>
+        <NoResend input="pad:back"/>
+        <NoResend input="kb:5"/>
+        
+    </ActionMap>
+    
+    <ActionMap name="paragliderdriving" >
+    
+		<Import actionmap="in_vehicle"/>
+		<Import actionmap="kb_move"/>
+        <Import actionmap="common_paragliderdriving"/>
+        <Import actionmap="system"/>
+        
+    </ActionMap>
+    
+    <ActionMap name="vehicle_transitions" >
+    
+		<Import actionmap="basic"/>
+        <Import actionmap="common_vehicle_transitions"/>
+        <Import actionmap="system"/>
+        
+    </ActionMap>
+    
+    <ActionMap name="using_mounted_weapon" >
+    
+		<Import actionmap="basic"/>
+		<Import actionmap="weapons"/>
+        <Import actionmap="common_using_mounted_weapon"/>
+        <Import actionmap="system"/>
+        
+    </ActionMap>
+    
+    <ActionMap name="healPlayer" >
+    
+		<Import actionmap="basic"/>
+        <Import actionmap="common_healPlayer"/>
+        <Import actionmap="system"/>
+        
+    </ActionMap>
+    
+    <ActionMap name="pausemenu" >
+    
+        <Import actionmap="showconsole"/>
+        <Import actionmap="common_pausemenu"/>
+        <Import actionmap="system"/>
+        
+    </ActionMap>
+    
+    <ActionMap name="emptyactionmap" resendOnChange="0">
+    
+        <Import actionmap="common_emptyactionmap"/>
+        <Import actionmap="system"/>
+        
+    </ActionMap>
+    
+    <ActionMap name="machete_finish" >
+    
+        <Import actionmap="common_machete_finish"/>
+		<Import actionmap="basic"/>
+        <Import actionmap="system"/>
+        
+    </ActionMap>
+    
+    <ActionMap name="briefinginteraction" >
+				<Import actionmap="basic"/>
+        <Import actionmap="look"/>
+        <Import actionmap="common_briefinginteraction"/>
+        <Import actionmap="system"/>     
+    </ActionMap>
+    
+    <ActionMap name="briefing" >
+				<Import actionmap="briefinginteraction"/>
+				<Import actionmap="move"/>
+        <Import actionmap="common_briefing"/>
+        <Import actionmap="system"/>
+        <NoResend input="pad:back"/>
+        <NoResend input="kb:5"/>  
+    </ActionMap>
+   
+    <ActionMap name="map_briefing" >
+    		<Import actionmap="common_reload_remap" optional=""/>
+        <Import actionmap="briefing"/>
+        <Binding input="kb:r" action="press"   signal="flipside"/>
+				<Binding input="pad:x" action="press"   signal="flipside"/>
+        <NoResend input="pad:back"/>
+        <NoResend input="kb:5"/>
+    </ActionMap>
+   
+   	<ActionMap name="briefing_no_map" >
+				<Import actionmap="look"/>
+				<Import actionmap="move"/>
+        <Import actionmap="basic"/>
+        <Import actionmap="common_interaction"/> 
+    </ActionMap>
+    
+    <ActionMap name="dominoinputlistener" > 
+				<Import actionmap="basic"/>
+				<Import actionmap="move"/>
+        <Import actionmap="common_dominoinputlistener"/>
+        <Import actionmap="system"/>   
+    </ActionMap>
+    
+    <ActionMap name="watch" >
+    
+		<Import actionmap="common_basic"/>
+		<Import actionmap="weapons"/>
+        <Import actionmap="common_watch"/>
+        <Import actionmap="system"/>
+        
+    </ActionMap>
+    
+    <ActionMap name="magma_dpad" >
+    
+        <Import actionmap="common_magma_dpad"/>
+        <Import actionmap="system"/>
+        
+    </ActionMap>
+    
+    <ActionMap name="scry" >
+		<Import actionmap="common_scry_alwaysactive"/>
+        <Import actionmap="common_scry"/>
+        <Import actionmap="system"/>
+        
+    </ActionMap>
+    
+</Root>
